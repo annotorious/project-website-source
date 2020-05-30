@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Annotorious | A Javascript Library for Image Annotation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ $style := resources.Get "scss/splash.scss" | toCSS (dict "targetPath" "css/splash.css" "enableSourceMap" true) }}  
+    <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">  
+  </head>
+
+  <body>
+    <div class="jumbo-header">
+      <img id="header-background" src="/images/splash-header.jpg" />
+      <div class="jumbo-header-foreground">
+        <div class="jumbo-header-logo-wrapper">
+          <div class="jumbo-header-logo">Annotorious</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="navbar" class="jumbo-header-navbar">
+      <ul>
+        <li><a href="getting-started">Getting Started</a></li>
+        <li><a href="api-docs">API Docs</a></li>
+        <li><a href="guides">Guides</a></li>
+        <li><a href="about">About</a></li>
+        <li class="github"><a href="https://github.com/recogito/annotorious"><img src="/images/github-logo.svg"></a></li>
+      </ul>
+    </div>
+
+    <div class="column">
+      <div class="download-latest">
+        <h2>A JavaScript library for image annotation.</h2>
+        <p>
+          Add drawing, commenting and labeling functionality to images on your website <br/>
+          with a few lines of JavaScript.
+        </p>
+               
+        <a class="download-button" href="#">Download Annotorious v2.0.1</a>
+
+        <p class="osd-link">
+          Or get the latest <a href="#">OpenSeadragon plugin</a>.
+        </p>
+      </div>
+
+      <div>
+        {{ .Content }}
+      </div>
+
+      <div class="message">
+        <p>
+          <strong>Integrate anywhere.</strong> Annotorious has no server-side dependencies and 
+          makes no assumptions about your technology stack or backend. Roll your own custom  
+          integration with the <a href="#">JavaScript API</a>, or follow one of the 
+          <a href="#">guides</a> for simple out-of-the-box recipes.          
+        </p>
+      </div>
+
+      <div class="divider-image">
+        <img id="cogs" src="/images/splash-cogs.jpg" />
+      </div>
+
+      <div class="message">
+        <p>
+          <strong> Customize &amp; extend.</strong> Create your own extension components 
+          for the annotation editor. Change the look and feel of everything with CSS. 
+          Use <a href="#">formatters</a> to apply rule-based styles to annotations.
+        </p>
+      </div>
+
+      <div class="divider-image">
+        <img id="lego" src="/images/splash-lego.jpg" />
+      </div>
+
+      <div class="download-openseadragon">
+        <img src="/annotorious-osd-stylized.png" width="300" />
+        <p>
+          Annotorious is also available as a plugin to <a href="#">OpenSeadragon</a>, a JavaScript 
+          viewer for high-resolution zoomable images. <a href="#">Learn more</a>.
+        </p>  
+        <a class="download-button" href="#">Download OpenSeadragon Plugin v2.0.1</a>        
+      </div>
+    </div>
+    
+    <footer>
+      <!-- TODO -->
+    </footer>
+
+    <script type="text/javascript" src="/js/annotorious.min.js"></script>
+    <script type="text/javascript" src="/js/splash-gadgets.js"></script>
+  </body>
+</html>
