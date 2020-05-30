@@ -45,12 +45,17 @@ html, body {
   }
 
   .r6o-editor {
-    z-index:0;
+    z-index:1;
 
     .inner .footer button.r6o-btn {
       background-color:#979797;
       border:none;
     }
+
+  }
+
+  svg {
+    z-index:0;
   }
 
 }
@@ -120,11 +125,24 @@ p {
   box-shadow:0px 1px 3px rgba(55, 55, 55, 0.15), 0px 1px 1px rgba(55, 55, 55, 0.1);
   z-index:2;
 
-  .r6o-editor .r6o-widget.comment {
-    font-family:'Nunito', Arial, Helvetica, sans-serif;
-    font-size:15px;
-    line-height:140%;
-    padding:12px;
+  .r6o-editor {
+
+    .inner .footer {
+     
+      button.r6o-btn, button.r6o-btn:hover {
+        background-color:#f28f1e;
+        border:none;
+      }
+
+    }
+
+    .r6o-widget.comment {
+      font-family:'Nunito', Arial, Helvetica, sans-serif;
+      font-size:15px;
+      line-height:140%;
+      padding:12px;
+    }
+  
   }
 
 }
