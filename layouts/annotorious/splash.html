@@ -6,6 +6,8 @@
     {{ $style := resources.Get "scss/splash.scss" | toCSS (dict "targetPath" "css/splash.css" "enableSourceMap" true) }}  
     <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">  
     <link rel="apple-touch-icon" href="/images/annotorious-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/annotorious-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/annotorious-touch-icon-144.png">
   </head>
 
   <body>
@@ -73,7 +75,7 @@
       </div>
 
       <div id="openseadragon" class="download-openseadragon">
-        <img src="/annotorious-osd-stylized.png" width="300" />
+        <img src="/images/annotorious-osd-stylized.png" width="300" />
         <p>
           Annotorious is also available as a plugin to <a href="#">OpenSeadragon</a>, a JavaScript 
           viewer for high-resolution zoomable images. <a href="#">Learn more</a>.
