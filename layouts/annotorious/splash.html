@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ $style := resources.Get "scss/splash.scss" | toCSS (dict "targetPath" "css/splash.css" "enableSourceMap" true) }}  
     <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">  
+    <link rel="apple-touch-icon" href="/images/annotorious-touch-icon.png">
   </head>
 
   <body>
@@ -38,7 +39,7 @@
         <a class="download-button" href="#">Download Annotorious v2.0.1</a>
 
         <p class="osd-link">
-          Or get the latest <a href="#">OpenSeadragon plugin</a>.
+          Or get the latest <a href="#openseadragon">OpenSeadragon plugin</a>.
         </p>
       </div>
 
@@ -71,7 +72,7 @@
         <img id="lego" src="/images/splash-lego.jpg" />
       </div>
 
-      <div class="download-openseadragon">
+      <div id="openseadragon" class="download-openseadragon">
         <img src="/annotorious-osd-stylized.png" width="300" />
         <p>
           Annotorious is also available as a plugin to <a href="#">OpenSeadragon</a>, a JavaScript 
