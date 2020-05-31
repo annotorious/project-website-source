@@ -2,9 +2,11 @@
 title: "API Reference"
 date: 2020-05-17T14:14:36+02:00
 draft: false
+current: 'Annotorious'
 ---
 
-{{< APIDocTab current="Annotorious" >}}
+> This is the API documentation for the standard version of Annotorious. 
+> You can switch to the documentation for the OpenSeadragon plugin.
 
 ## Initializing Annotorious
 

@@ -15,6 +15,15 @@
     </div>
 
     <div class="table-of-contents">
+      <!-- div class="tabs">
+        {{ if eq .Params.current "Annotorious" }}
+          <a href="#" class="tab annotorious current">Annotorious</a>
+          <a href="#" class="tab annotorious-osd">OpenSeadragon</a>
+        {{ else }}
+          <a href="#" class="tab annotorious">Annotorious</a>
+          <a href="#" class="tab annotorious-osd current">OpenSeadragon</a>
+        {{ end }}
+      </div -->
       {{ .TableOfContents }}
     </div>
   </body>
