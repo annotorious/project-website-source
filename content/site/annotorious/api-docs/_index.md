@@ -4,41 +4,60 @@ date: 2020-05-17T14:14:36+02:00
 draft: false
 ---
 
+{{< APIDocTab current="Annotorious" >}}
+
 ## Initializing Annotorious
 
 Initialize an Annotorious instance on an image with 
 
 ```javascript
+var config = {
+  image: document.getElementById('my-image'),
+  readOnly: true
+};
+
 var anno = Annotorious.init(config);
 ```
 
-The configuration must be an object with the following properties:
+The config object can have the following properties:
 
-| Property    | Value                                                                               | Default |
-|-------------|-------------------------------------------------------------------------------------|---------|
-| `image`     | __REQUIRED__ the DOM image element to make annotate-able or, alternatively, it the element ID | -       |
-| `readOnly`  | Set to `true` to display annotations read-only            | `false`    |
-| `headless`  | Headless mode completely disables the editor popup. Use the events along with [applyTemplate](https://github.com/recogito/annotorious/wiki/API-Reference#applytemplatetemplate-openeditor) to control the annotation lifecycle from outside via the API. Note that headless mode currently doesn’t support shape editing - only shape creation. | `false`    |
+| Property    | Type | Value                                                                               | Default |
+|-------------|------|-------------------------------------------------------------------------------------|---------|
+| `image`     | `Element`, `String` | image element or, alternatively, element ID                          | -       |
+| `readOnly`  | `Boolean` | Set to `true` to display all annotations read-only                             | `false` |
+| `headless`  | `Boolean` | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
 
 ## Instance Methods
 
 ### addAnnotation
 
+```js
+anno.addAnnotation(annotation);
+
+// Display read-only
+anno.addAnnotation(annotation, true);
+```
+
 Adds an annotation programmatically. The format is the 
 [W3C WebAnnotation model](https://github.com/recogito/annotorious/wiki/Web-Annotation-Model). At the moment, 
 only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
 
-| Argument     | Value                                         |
-|--------------|-----------------------------------------------|
-| `annotation` | the annotation in W3C WebAnnotation format    |
+| Argument     | Type    | Value                                                       |
+|--------------|---------|-------------------------------------------------------------|
+| `annotation` | Object  | the annotation according to the W3C WebAnnotation format    |
+| `readOnly`   | Boolean | set the second arg to `true` to display the annotation in read-only mode |
 
 ### removeAnnotation
 
+```js
+anno.removeAnnotation(arg);
+```
+
 Removes an annotation programmatically. 
 
-| Argument     | Value                                         |
-|--------------|-----------------------------------------------|
-| `arg` | the annotation in W3C WebAnnotation format or the annotation ID |
+| Argument     | Type           | Value                                                           |
+|--------------|----------------|-----------------------------------------------------------------|
+| `arg`        | Object, String | the annotation in W3C WebAnnotation format or the annotation ID |
 
 ### setAnnotations
 

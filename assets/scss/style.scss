@@ -62,10 +62,30 @@ body, html {
 
 }
 
+.tabs {
+  padding-bottom:20px;
+  background-color:#fff;
+
+  .tab {
+    display:inline-block;
+    padding:3px 12px;
+    margin-right:5px;
+    text-decoration:none;
+    background-color:#c0c0c0;
+    border-radius:3px;
+    color:#fff;
+  }
+
+  .current {
+    background-color:#f28c1e;
+  }
+
+}
+
 .column {
   position:relative;
   width:100%;
-  padding:120px 240px 80px 20px;
+  padding:120px 20px 80px 240px;
   max-width:980px;
   margin:0 auto;
   box-sizing:border-box;
@@ -79,9 +99,11 @@ body, html {
   left:50%;
   transform: translate(-50%, 0);
   line-height:170%;
+  pointer-events:none;
 
   nav {
-    float:right;
+    float:left;
+    pointer-events:auto;
   }
 
   ul {
@@ -89,16 +111,35 @@ body, html {
     margin:0;
     padding:0 0 0 10px;
   }
-}
 
+  li {
+    font-weight:bold;
+  }
 
-h2 {
-  padding:0;
-  margin:0;
+  ul ul li {
+    font-weight:normal;
+  }
+
+  a {
+    text-decoration:none;
+  }
+
+  a:hover {
+    text-decoration:underline;
+  }
 }
 
 a {
   color:#333;
+}
+
+h2, h3, h4 {
+  margin:0;
+  padding:0;
+}
+
+h3 {
+  padding-top:20px;
 }
 
 .highlight pre {
@@ -111,14 +152,9 @@ p > code {
   font-weight:bold;
 }
 
-h3, h4 {
-  margin:0;
-  padding:0;
-}
-
 table {
   border-collapse:collapse;
-  min-width:65%;
+  width:100%;
   margin:30px 0;
 
   th {
