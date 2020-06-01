@@ -17,15 +17,19 @@
       <div class="table-of-contents">
         <nav>
           <ul>
-            {{ range .Pages }}
-              <li>
-                <a href="{{.Permalink}}">{{.Title}}</a>
-              </li>
-            {{ end }}
+            <li><a href="{{.Parent.Permalink}}">Getting Started</a></li>
+            <li>
+              <ul>
+                {{ range .Pages }}
+                  <li>
+                    <a href="{{.Permalink}}">{{.Title}}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
     </div>
   </body>
 </html>
-

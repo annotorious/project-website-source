@@ -2,6 +2,7 @@
 title: "Web Annotation"
 date: 2020-05-17T14:33:09+02:00
 draft: false
+subsection: "getting-started"
 ---
 
 Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). For the 
