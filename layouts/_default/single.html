@@ -9,31 +9,9 @@
 
   <body>
     {{ partial "header.html" }}
-    <div class="column">
+    <div class="column full-width">
       <div class="main-content">
         {{ .Content }}
-      </div>
-
-      <div class="table-of-contents subsections">
-        <nav>
-          <ul>
-            <li><a href="{{.Parent.Permalink}}">{{.Parent.Title}}</a></li>
-            <li>
-              <ul>
-                {{ $currentPage := . }}
-                {{ range where .Site.Pages "Params.subsection" .Params.subsection }}
-                  <li>
-                    {{ if eq $currentPage.Title .Title}}
-                      <a href="{{.Permalink}}" class="active">{{.Title}}</a>
-                    {{ else }}
-                      <a href="{{.Permalink}}">{{.Title}}</a>
-                    {{ end }}
-                  </li>
-                {{ end }}
-              </ul>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   </body>

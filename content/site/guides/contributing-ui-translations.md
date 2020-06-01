@@ -2,6 +2,7 @@
 title: "Contributing UI Translations"
 date: 2020-06-01T20:04:18+02:00
 draft: false
+layout: "section-page"
 subsection: "guides"
 ---
 

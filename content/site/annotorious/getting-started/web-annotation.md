@@ -2,6 +2,7 @@
 title: "Web Annotation Model"
 date: 2020-05-17T14:33:09+02:00
 draft: false
+layout: "section-page"
 subsection: "getting-started"
 weight: 3
 ---

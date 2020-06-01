@@ -2,6 +2,7 @@
 title: "Using Firebase for Storage"
 date: 2020-05-01T13:28:54+02:00
 draft: false
+layout: "section-page"
 subsection: "guides"
 ---
 
