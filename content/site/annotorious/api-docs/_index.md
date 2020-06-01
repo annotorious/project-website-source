@@ -2,6 +2,7 @@
 title: "API Reference"
 date: 2020-05-17T14:14:36+02:00
 draft: false
+layout: "api-doc"
 current: 'Annotorious'
 ---
 

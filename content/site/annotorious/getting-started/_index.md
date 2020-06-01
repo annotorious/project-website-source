@@ -2,6 +2,7 @@
 title: "Getting Started"
 date: 2020-05-17T14:10:57+02:00
 draft: false
+layout: "overview"
 ---
 
 If you use npm, `npm install @recogito/annotorious` and then
