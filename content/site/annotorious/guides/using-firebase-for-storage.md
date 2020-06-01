@@ -33,13 +33,12 @@ The HTML below provides a minimal, but fully working storage example.
   <head>
     <meta charset="utf-8" />
     <title>Annotorious | Firebase Demo</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://recogito.github.io/annotorious/annotorious.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <script src="js/annotorious.min.js"></script>
+    <script src="js/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="js/firebasejs/7.14.3/firebase-firestore.js"></script>
     <script>
-      // Firebase will auto-generate this config for you when you create your app.
-      // Just paste your own settings in here.
+      // Firebase will auto-generate this config for you when you 
+      // create your app. Just paste your own settings in here.
       var firebaseConfig = {
         apiKey: "-- your firebase api key here --",
         authDomain: "-- your authdomain here --",
@@ -63,7 +62,7 @@ The HTML below provides a minimal, but fully working storage example.
       }
 
       window.onload = function() {
-        var image = document.getElementById('hallstatt');
+        var image = document.getElementById('my-image');
         var anno = Annotorious.init({ image });
 
         // Load annotations for this image
@@ -98,11 +97,7 @@ The HTML below provides a minimal, but fully working storage example.
   </head>
   <body>
     <div id="content">      
-      <img id="hallstatt" src="https://recogito.github.io/annotorious/640px-Hallstatt.jpg">
-      <p class="caption">
-        Sample image source: <a href="http://commons.wikimedia.org/wiki/File:Hallstatt_300.jpg">Hallstatt,
-        Austria</a>, by Nick Csakany/Wikimedia Commons. Public Domain.
-      </p>
+      <img id="my-image" src="/images/my-image.jpg">
     </div>
   </body>
 </html>
