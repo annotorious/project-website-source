@@ -1,14 +1,23 @@
 ---
-title: "Web Annotation"
+title: "Web Annotation Model"
 date: 2020-05-17T14:33:09+02:00
 draft: false
 subsection: "getting-started"
+weight: 3
 ---
 
-Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). For the 
-time being, the only supported `selector` type is a single __FragmentSelector__ with a rectangle
-selection, according to the [W3C Media Fragments URI](https://www.w3.org/TR/media-frags/) format,
-using the `xywh` scheme and pixel coordinates.
+# The W3C Web Annotation Model 
+
+Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Only a limited range 
+of the specification is supported at the moment.
+
+- Only annotations with a single rectangle selection
+- `selector` must be a __FragmentSelector__, according to the 
+  [W3C Media Fragments URI](https://www.w3.org/TR/media-frags/) format
+- Only `xywh` scheme with pixel coordinates
+- `id` __should__ be provided, but can be any alphanumeric string
+- When creating new annotations, Annotorious will automatically generate globally unique IDs in the
+  form `#{uuid}`
 
 ```json
 { 
