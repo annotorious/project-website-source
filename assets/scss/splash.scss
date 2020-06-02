@@ -131,7 +131,12 @@ p {
      
       button.r6o-btn, button.r6o-btn:hover {
         background-color:#f28f1e;
-        border:none;
+        border-color:#f28f1e;
+      }
+
+      button.r6o-btn.outline {
+        color:#df8218;
+        background-color:#fff;
       }
 
     }
