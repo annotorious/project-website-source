@@ -12,6 +12,15 @@
     <div class="column">
       <div class="main-content">
         {{ .Content }}
+
+        <div class="section-overview">
+          {{ range .Pages }}
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p class="blurb">
+              {{ .Params.blurb }} <a href="{{ .Permalink }}">Read more...</a>
+            </p>
+          {{ end }}
+        </div>
       </div>
 
       <div class="table-of-contents">

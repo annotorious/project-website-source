@@ -152,6 +152,27 @@ body, html {
 
 }
 
+.section-overview {
+  padding-top:30px;
+
+  h2 {
+
+    a {
+      text-decoration:none;
+    }
+
+    a:hover {
+      text-decoration:underline;
+    }
+
+  }
+
+  p.blurb {
+    padding-bottom:20px;
+  }
+
+}
+
 a {
   color:#333;
 }
@@ -164,6 +185,10 @@ h1, h2, h3, h4 {
 h1 {
   font-size:22px;
   padding-bottom:10px;
+}
+
+h2 {
+  font-size:19px;
 }
 
 h3 {

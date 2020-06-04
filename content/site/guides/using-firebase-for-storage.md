@@ -4,6 +4,8 @@ date: 2020-05-01T13:28:54+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
+blurb: "In order to store annotations, you need a server backend that is able to handle W3C Web Annotation. This guide provides a simple recipe for using Firebase, an online cloud storage server by Google, as your personal annotation server."
+weight: 1
 ---
 
 # Using Firebase for Storage

@@ -4,6 +4,8 @@ date: 2020-06-01T20:04:18+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
+blurb: "We want to make our user interface available in as many languages as possible. If you want to help: contributing a translation is easy. This guide shows you how."
+weight: 2
 ---
 
 We want to make Annotorious available in as many languages as possible. If you want to help: providing a translation is easy - and because Annotorious doesn't have many labeled user interface elements, it's also not a lot of work.
