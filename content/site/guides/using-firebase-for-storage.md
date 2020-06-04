@@ -4,7 +4,7 @@ date: 2020-05-01T13:28:54+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "In order to store annotations, you need a server backend that is able to handle W3C Web Annotation. This guide provides a simple recipe for using Firebase, an online cloud storage server by Google, as your personal annotation server."
+blurb: "In order to store annotations, you need a server backend that is able to handle W3C Web Annotations. This guide provides a simple recipe for using Firebase, an online cloud storage service by Google, as your personal annotation server."
 weight: 1
 ---
 
@@ -12,12 +12,15 @@ weight: 1
 
 A quick and easy way to set up your own annotation store without managing your own server is 
 through [Firebase](https://firebase.google.com/), a web application development platform by Google.
- 
 Firebase includes a cloud-based document database with a JavaScript SDK for storing, updating and 
 deleting JSON records. All you need to do is wire up the Firebase storage SDK operations with the corresponding events from Annotorious.
 
-E.g. when Annotorious fires the `createAnnotation` event, store the annotation
-via the `.add()` method on the cloud storage SDK. Storage operations return a `Promise`, so you can execute
+![Firebase Screenshot](/images/guides/firebase.png)
+ 
+## Using Events for Storage 
+
+When Annotorious fires the `createAnnotation` event, store the annotation via the `.add()` 
+method on the cloud storage SDK. Storage operations return a `Promise`, so you can execute
 code after completion, and handle connection errors.
 
 ```javascript
@@ -28,7 +31,8 @@ anno.on('createAnnotation', function(annotation) {
 });
 ```
 
-The HTML below provides a minimal, but fully working storage example.
+In the same way, wire up the rest of the events - `update`, `delete` - with the storage API. The
+HTML below provides a minimal, but fully working example.
 
 ```html
 <!DOCTYPE html>

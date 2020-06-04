@@ -69,6 +69,12 @@ body, html {
   max-width:980px;
   margin:0 auto;
   box-sizing:border-box;
+
+  img {
+    margin:20px 0;
+    max-width:100%;
+  }
+
 }
 
 .column.full-width {
@@ -183,11 +189,12 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size:22px;
+  font-size:24px;
   padding-bottom:10px;
 }
 
 h2 {
+  margin-top:30px;
   font-size:19px;
 }
 

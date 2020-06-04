@@ -4,9 +4,49 @@ date: 2020-06-04T11:46:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "We welcome contributions to Annotorious and RecogitoJS. This work-in-progress guide aims to explain where to find what in the codebase, and how you can set up your development environment."
+blurb: "We welcome contributions! Both to our code as well as our documentation. This (work-in-progress) guide aims to explain how to contribute, where to find what in the codebase, and how to set up a development environment for hacking on Annotorious or RecogitoJS."
 weight: 9
 ---
+
+# Hacker's Guide to Annotorious and RecogitoJS
+
+We welcome pull requests to Annotorious and RecogitoJS - both to the code, as well as to our documentation! To contribute,
+simply fork the relevant repository and hack away.
+
+## Repositories 
+
+...
+
+## Developing
+
+- Clone the repository
+- Run `npm install` to download project dependencies
+- Run `npm start` to launch the project in dev mode, with hot-reloading enabled
+- Go to <http://localhost:3000/>
+
+## Building a distribution bundle
+
+- Run `npm run build` to build a distribution bundle
+- The distribution files will be in the `dist` folder
+
+Want to find your way around in the source code? Read our [Guided Tour of the Codebase](https://github.com/recogito/annotorious/wiki/Guided-Tour).  
+
+
+To contribute to Annotorious, simply fork [our repository](https://github.com/recogito/annotorious) and hack away. We welcome pull requests - both for our code, as well as for our documentation!
+
+## Developing
+
+- Clone the repository
+- Run `npm install` to download project dependencies
+- Run `npm start` to launch the project in dev mode, with hot-reloading enabled
+- Go to <http://localhost:3000/>
+
+## Building a distribution bundle
+
+- Run `npm run build` to build a distribution bundle
+- The distribution files will be in the `dist` folder
+
+Want to find your way around in the source code? Read our [Guided Tour of the Codebase](https://github.com/recogito/annotorious/wiki/Guided-Tour).  
 
 When working on __RecogitoJS__ or __Annotorious__, you may sometimes need to modify code in 
 __recogito-client-core__. To make this work, you have to `npm link` your local projects.
