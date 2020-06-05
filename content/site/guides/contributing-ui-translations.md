@@ -10,7 +10,7 @@ weight: 2
 
 # Contributing UI Translations
 
-We want to make Annotorious available in as many languages as possible. If you want to help: providing a translation is easy - and because Annotorious doesn't have many labeled user interface elements, it's also not a lot of work.
+We want to make our software available in as many languages as possible. If you want to help: providing a translation is easy - and because there are not many labeled user interface elements, it's also not a lot of work.
 
 ## Message Dictionaries
 
