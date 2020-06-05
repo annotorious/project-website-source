@@ -54,7 +54,7 @@ Many thanks in advance! If you have questions, do get in touch via the [Annotori
 | hi | Hindi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
 | it | Italian | Partial   | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
 | sv | Swedish | Partial   | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
-| ur | Urdo | Complete   | [messages_ur.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ur.json) |
+| ur | Urdu | Complete   | [messages_ur.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ur.json) |
 
 Your language isn't on this list? Consider contributing!
 
