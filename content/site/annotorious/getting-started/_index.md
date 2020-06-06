@@ -16,3 +16,4 @@ __Click the annotation below__ to edit. __Click and drag the mouse__ to create a
 new annotation.
 
 {{< inline-demo >}}
+

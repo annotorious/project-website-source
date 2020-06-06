@@ -4,22 +4,17 @@ date: 2020-05-17T14:33:09+02:00
 draft: false
 layout: "section-page"
 subsection: "getting-started"
-blurb: "Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Learn the basics of how annotations are serialized to and from JSON."
+blurb: "Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Learn the basics of how annotations are encoded as JSON, and what parts of the standard Annotorious currently supports."
 weight: 3
 ---
 
 # The W3C Web Annotation Model 
 
 Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Only a limited range 
-of the specification is supported at the moment.
+of the specification is supported at the moment. Current limitations are:
 
-- Only annotations with a single rectangle selection
-- `selector` must be a __FragmentSelector__, according to the 
-  [W3C Media Fragments URI](https://www.w3.org/TR/media-frags/) format
-- Only `xywh` scheme with pixel coordinates
-- `id` __should__ be provided, but can be any alphanumeric string
-- When creating new annotations, Annotorious will automatically generate globally unique IDs in the
-  form `#{uuid}`
+- Annotations with a __single rectangle__ shape
+- The [W3C Media Fragments](https://www.w3.org/TR/media-frags/) `FragmentSelector` is the only currently supported selector type
 
 ```json
 { 
@@ -39,3 +34,9 @@ of the specification is supported at the moment.
   }
 }
 ```
+
+## Annotation IDs
+
+Annotations should have a value for `id`. When creating a new annotation, Annotorious will 
+automatically assign a globally unique ID in the form `#{uuid}`. In principle, however,
+Annotorious accepts any alphanumeric string for the ID. 

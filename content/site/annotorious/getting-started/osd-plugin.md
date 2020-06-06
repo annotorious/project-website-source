@@ -10,9 +10,9 @@ weight: 2
 
 # Getting Started with the OpenSeadragon Plugin
 
-The __OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/) viewer for zoomable high-resolution images.
-
-Click the annotation to edit. Hold `SHIFT` while clicking and dragging the mouse to create a new annotation.
+The __OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/)
+viewer for zoomable high-resolution images. Click the annotation to edit. Hold `SHIFT` while clicking 
+and dragging the mouse to create a new annotation.
 
 {{< inline-osd-demo >}}
 

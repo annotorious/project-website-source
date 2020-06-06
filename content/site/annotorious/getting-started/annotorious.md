@@ -4,7 +4,7 @@ date: 2020-06-01T10:20:00+02:00
 draft: false
 layout: "section-page"
 subsection: "getting-started"
-blurb: "Annotorious comes in two flavours. The __standard version__ works on normal images embedded in websites or web applications."
+blurb: "The Annotorious __standard version__ works on normal images embedded in websites or web applications."
 weight: 1
 ---
 
