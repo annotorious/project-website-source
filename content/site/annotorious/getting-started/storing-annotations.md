@@ -4,6 +4,7 @@ date: 2020-06-01T10:20:00+02:00
 draft: false
 layout: "section-page"
 subsection: "getting-started"
+blurb: "To store annotations, you need an annotation server. __Annotorious does not include a built-in storage solution__. Learn how you can set up your own storage system that fits your needs." 
 weight: 4
 ---
 

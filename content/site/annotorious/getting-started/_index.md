@@ -5,44 +5,14 @@ draft: false
 layout: "section-index"
 ---
 
-If you use npm, `npm install @recogito/annotorious` and then
+# Getting Started with Annotorious
 
-```javascript
-import { Annotorious } from '@recogito/annotorious';
+Annotorious is a JavaScript library for image annotation. Add drawing, commenting 
+and labeling functionality to images on your website with just a few lines of code. 
+Use the JavaScript API to integrate Annotorious with your own applications, or 
+customize and extend it with your own styles and add-on components. 
 
-const anno = new Annotorious({
-  image: document.getElementById('my-image')
-});
-```
+__Click the annotation below__ to edit. __Click and drag the mouse__ to create a 
+new annotation.
 
-Otherwise download the [latest release](https://github.com/recogito/annotorious/releases/latest)
-and add the script to your HTML page at the end of the `<body>` section.
-
-```html
-<body>
-  <div id="content">
-    <img id="hallstatt" src="640px-Hallstatt.jpg">
-  </div>
-  <script>
-    (function() {
-      var anno = Annotorious.init({
-        image: 'hallstatt' // image element or ID
-      });
-
-      anno.loadAnnotations('annotations.w3c.json');
-
-      // Add event handlers using .on  
-      r.on('createAnnotation', function(annotation) {
-        // Do something
-      });
-    })()
-  </script>
-
-  <script type="text/javascript" src="annotorious-2.0.1-alpha.min.js"></script>
-</body>
-```
-
-For more information on using Annotorious, see the full [API Reference](https://github.com/recogito/annotorious/wiki/API-Reference).
-
-
-
+{{< inline-demo >}}

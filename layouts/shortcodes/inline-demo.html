@@ -1,0 +1,43 @@
+<div class="inline-demo">
+  <img id="hallstatt" src="/images/640px-Hallstatt.jpg">
+  <p class="image-caption">
+    Sample image source: <a href="http://commons.wikimedia.org/wiki/File:Hallstatt_300.jpg">Hallstatt,
+    Austria</a>, by Nick Csakany/Wikimedia Commons. Public Domain.
+  </p>
+</div>
+<script type="text/javascript" src="/js/annotorious.min.js"></script>
+<script>
+  var sampleAnnotation = { 
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "id": "#a88b22d0-6106-4872-9435-c78b5e89fede",
+    "type": "Annotation",
+    "body": [{
+      "type": "TextualBody",
+      "value": "It's Hallstatt in Upper Austria"
+    }, {
+      "type": "TextualBody",
+      "purpose": "tagging",
+      "value": "Hallstatt"
+    }, {
+      "type": "TextualBody",
+      "purpose": "tagging",
+      "value": "Upper Austria"
+    }],
+    "target": {
+      "selector": {
+        "type": "FragmentSelector",
+        "conformsTo": "http://www.w3.org/TR/media-frags/",
+        "value": "xywh=pixel:270,120,90,170"
+      }
+    }
+  };
+
+  window.onload = function() {
+    var anno = Annotorious.init({
+      image: 'hallstatt',
+      locale: 'auto'
+    });
+
+    anno.addAnnotation(sampleAnnotation);
+  }
+</script>
