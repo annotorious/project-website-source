@@ -7,32 +7,45 @@ layout: "single"
 
 # About Annotorious
 
-Annotorious is a modernized reboot of my outdated original [Annotorious](https://github.com/annotorious/annotorious), 
-which I'm no longer supporting.
+Annotorious is a modernized reboot of the now outdated original [Annotorious](https://github.com/annotorious/annotorious).
 
 ## License
 
-Annotrious is licensed under the terms of the [BSD 3-Clause](https://github.com/recogito/annotorious/blob/master/LICENSE) 
-license. That basically means: feel free to use this code in whatever way you wish, for non-commerical and commercial
-projects. But keep the attribution/license file included. And bear in mind: this code comes as is. You get it for free,
-if breaks something, [please report an issue](https://github.com/recogito/annotorious/issues), but don't complain to us ;-)
+Annotorious is licensed under the terms of the [BSD 3-Clause](https://github.com/recogito/annotorious/blob/master/LICENSE) 
+license. That basically means: you can use this code for free, in whatever way you want, for non-commerical and commercial
+projects. But keep the attribution/license file included - and bear in mind: this code comes as is, don't come complaining 
+to us stuff breaks ;-)
 
 ## Need Help?
 
 Get in touch via our [Annotorious Gitter chat](https://gitter.im/recogito/annotorious). If you encounter bugs, or
 have feature requests, please report them via our GitHub issue trackers:
 
-- __[annotorious/issues](https://github.com/recogito/annotorious/issues)__ for the Annotorious standard version
-- __[annotorious-openseadragon/issues](https://github.com/recogito/annotorious-openseadragon/issues)__
+- __[Annotorious Issue Tracker](https://github.com/recogito/annotorious/issues)__ for the standard version
+- __[Annotorious OpenSeadragon Issue Tracker](https://github.com/recogito/annotorious-openseadragon/issues)__
   for the OpenSeadragon plugin
 
 ## Source Code
 
-All source code is available on our [recogito GitHub organization](https://github.com/recogito), hosted 
-in the following repositories:
+All source code is available on via the __[recogito](https://github.com/recogito)__ GitHub organization. The key 
+repositories are:
 
-- __[annotatorious](https://github.com/recogito/annotorious)__ for the standard version
-- __[annotatorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__ for the OpenSeadragon plugin
-- __[recogito-client-core](https://github.com/recogito/recogito-client-core)__ for shared base components
+- __[recogito/annotorious](https://github.com/recogito/annotorious)__ for the standard version
+- __[recogito/annotorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__ for the OpenSeadragon plugin
+- __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__ for shared base components
 
-## Image Attribution
+## Attribution & Acknowledgements
+
+This website uses the following photographs:
+
+- [Photo of Blue, Pink, and Green Led Light](https://www.pexels.com/photo/photo-of-blue-pink-and-green-led-light-775907/)
+  by [Tabitha Mort](https://www.pexels.com/@dellamortphotography), licensed for free use, as landing page header background
+- [Cog wheels](https://www.flickr.com/photos/ky0ncheng/36286089223/) by Flickr user 
+  [Ky0n Cheng](https://www.flickr.com/photos/ky0ncheng/), Public Domain, as landing page decoration image
+- [Lego bricks red](https://www.flickr.com/photos/janusman/6347760720/) by Flickr user 
+  [Alejandro](https://www.flickr.com/photos/janusman/), CC BY-NC-ND 2.0, as landing page decoration image
+- [Hallstatt, Austria](http://commons.wikimedia.org/wiki/File:Hallstatt_300.jpg) by Nick Csakany/Wikimedia Commons,
+  Public Domain, as sample annotation image 
+
+The Annotorious logo font is [Megrim](https://fonts.google.com/specimen/Megrim) by Daniel Johnson, 
+licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
