@@ -8,6 +8,12 @@ blurb: "Annotorious comes in two flavours. The __standard version__ works on nor
 weight: 1
 ---
 
+# Getting Started with Annotorious
+
+The Annotorious standard version works on normal images embedded in websites or web applications.
+
+## Using NPM
+
 If you use npm, `npm install @recogito/annotorious` and then
 
 ```javascript
@@ -18,7 +24,9 @@ const anno = new Annotorious({
 });
 ```
 
-Otherwise download the [latest release](https://github.com/recogito/annotorious/releases/latest)
+## Using the Script Tag
+
+Download the [latest release](https://github.com/recogito/annotorious/releases/latest)
 and add the script to your HTML page at the end of the `<body>` section.
 
 ```html
