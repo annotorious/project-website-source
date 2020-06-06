@@ -1,3 +1,50 @@
 <div class="inline-demo">
-  -- <i>TODO</i> inline demo --
+  <style>
+    .openseadragon-canvas {
+      outline:none; 
+      background-color:#f4f4f4 !important;
+      border-radius:3px;
+    }
+  </style>
+  <div id="openseadragon" style="width: 640px; height: 480px;"></div>
 </div>
+<script type="text/javascript" src="/js/openseadragon/openseadragon.2.4.2.min.js"></script>
+<script type="text/javascript" src="/js/openseadragon-annotorious.min.js"></script>
+<script>
+  var sampleAnnotation = { 
+    "@context": "http://www.w3.org/ns/anno.jsonld",
+    "id": "#07475897-d2eb-4dce-aa12-ecb50771c734",
+    "type": "Annotation",
+    "body": [{
+      "type": "TextualBody",
+      "value": "Annotation"
+    }],
+    "target": {
+      "selector": {
+        "type": "FragmentSelector",
+        "conformsTo": "http://www.w3.org/TR/media-frags/",
+        "value": "xywh=540,240,180,340"
+      }
+    }
+  };
+
+  window.onload = function() {
+    var viewer = OpenSeadragon({
+      id: "openseadragon",
+      prefixUrl: "/js/openseadragon/images/",
+      tileSources: {
+        type: "image",
+        url: "/images/1280px-Hallstatt.jpg"
+      },
+      gestureSettingsTouch: {
+        pinchRotate: true
+      }
+    });
+
+    var anno = OpenSeadragon.Annotorious(viewer, {
+      locale: 'auto'
+    });
+
+    anno.addAnnotation(sampleAnnotation);
+  }
+</script>
