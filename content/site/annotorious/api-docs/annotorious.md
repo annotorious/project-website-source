@@ -5,8 +5,11 @@ draft: false
 layout: "api-doc"
 ---
 
-> This is the API documentation for the standard version of Annotorious. 
-> You can switch to the documentation for the OpenSeadragon plugin.
+# API Reference: Annotorious
+
+> The __standard version__ of Annotorious works on normal images embedded in websites
+> or web applications. The API reference for the Annotorious OpenSeadragon plugin is 
+> available [here](/site/annotorious/api-docs/osd-plugin).
 
 ## Initializing Annotorious
 

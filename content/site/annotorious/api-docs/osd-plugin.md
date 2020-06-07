@@ -5,7 +5,13 @@ draft: false
 layout: "api-doc"
 ---
 
-## Initializing OpenSeadragon Annotorious
+# API Reference: OpenSeadragon Plugin
+
+> The __OpenSeadragon Plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/),
+> zoomable image viewer. The API reference for the Annotorious standard version is available 
+> [here](/site/annotorious/api-docs/annotorious).
+
+## Initializing the Plugin
 
 Initialize Annotorious on an OpenSeadragon viewer instance with 
 
@@ -19,11 +25,9 @@ The `config` is optional, and must be an object with the following properties:
 |-------------|-------------------------------------------------------------------------------------|---------|
 | `readOnly`  | Set to `true` to display annotations read-only            | `false`    |
 
-<br/><br/>
-
 ## Instance Methods
 
-### `addAnnotation(annotation)`
+### addAnnotation
 
 Adds an annotation programmatically. The format is the 
 [W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model). 
@@ -33,9 +37,7 @@ At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is
 |--------------|-----------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format    |
 
-<br/>
-
-### `removeAnnotation(arg)`
+### removeAnnotation
 
 Removes an annotation programmatically. 
 
@@ -43,9 +45,7 @@ Removes an annotation programmatically.
 |--------------|-----------------------------------------------|
 | `arg` | the annotation in W3C WebAnnotation format or the annotation ID |
 
-<br/>
-
-### `setAnnotations(annotations)`
+### setAnnotations
 
 Renders the list of annotations to the image, removing any previously
 existing annotations.
@@ -54,10 +54,7 @@ existing annotations.
 |---------------|-----------------------------------------------|
 | `annotations` | array of annotations in W3C WebAnnotation format |
 
-
-<br/>
-
-### `loadAnnotations(url)`
+### loadAnnotations
 
 Loads annotations from a JSON file. The method returns a promise, in 
 case you want to perform an action after the annotations have loaded.
@@ -72,15 +69,11 @@ anno.loadAnnotations(url).then(function(annotations) {
 |-----------|------------------------------------------|
 | `url`     | the URL to HTTP GET the annotations from |
 
-<br/>
-
-### `getAnnotations()`
+### getAnnotations
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
-<br/>
-
-### `selectAnnotation(arg)`
+### selectAnnotation
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
 
@@ -93,9 +86,7 @@ Selects an annotation programmatically, highlighting its shape, and opening the 
 |-----------|------------------------------------------|
 | `arg` | the annotation or the annotation ID |
 
-<br/>
-
-### `panTo(arg, immediately)`
+### panTo
 
 Pans the OpenSeadragon viewport to the specified annotation.
 
@@ -104,9 +95,7 @@ Pans the OpenSeadragon viewport to the specified annotation.
 | `arg` | the annotation or the annotation ID |
 | `immediately` | if `true` pans without animation |
 
-<br/>
-
-### `fitBounds(arg, immediately)`
+### fitBounds
 
 Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation.
 
@@ -115,15 +104,11 @@ Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified ann
 | `arg` | the annotation or the annotation ID |
 | `immediately` | if `true` pans and zooms without animation |
 
-<br/>
-
-### `destroy()`
+### destroy
 
 Destroys this instance of Annotorious, removing the annotation layer on the image.
 
-<br/>
-
-### `on(event, callback)` 
+### on
 
 Subscribe to an event. (See [Events](#events) for the list.)
 
@@ -132,9 +117,7 @@ Subscribe to an event. (See [Events](#events) for the list.)
 | `event`    | the name of the event                          |
 | `callback` | the function to call when the event is emitted |
 
-<br/>
-
-### `off(event[, callback])`
+### off
 
 Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.
@@ -144,11 +127,9 @@ all event handlers for this event will be unsubscribed.
 | `event`    | the name of the event                       |
 | `callback` | the function used when binding to the event |
 
-<br/><br/>
-
 ## Events
 
-### `selectAnnotation(annotation)` 
+### selectAnnotation
 
 Fired when the user selects an annotation. Note that this event will __not__ fire when 
 the selection is made programmatically through the `selectAnnotation(arg)` API method.
@@ -158,9 +139,7 @@ the selection is made programmatically through the `selectAnnotation(arg)` API m
 |--------------|--------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format |
 
-<br/>
-
-### `createAnnotation(annotation)` 
+### createAnnotation
 
 Fired when a new annotation is created from a user selection.
 
@@ -168,9 +147,7 @@ Fired when a new annotation is created from a user selection.
 |--------------|--------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format |
 
-<br/>
-
-### `updateAnnotation(annotation, previous)`
+### updateAnnotation
 
 Fired when an existing annotation was updated.
 
@@ -179,9 +156,7 @@ Fired when an existing annotation was updated.
 | `annotation` | the updated annotation                 |
 | `previous`   | the annotation state before the update |
 
-<br/>
-
-### `deleteAnnotation(annotation)`
+### deleteAnnotation
 
 Fired when an existing annotation was deleted.
 
@@ -189,9 +164,7 @@ Fired when an existing annotation was deleted.
 |--------------|----------------------------------------|
 | `annotation` | the deleted annotation                 |
 
-<br/>
-
-### `mouseEnterAnnotation(annotation, event)`
+### mouseEnterAnnotation
 
 Fired when the mouse moves into an existing annotation.
 
@@ -200,9 +173,7 @@ Fired when the mouse moves into an existing annotation.
 | `annotation` | the annotation                         |
 | `event`      | the original mouse event               |
 
-<br/>
-
-### `mouseLeaveAnnotation(annotation, event)`
+### mouseLeaveAnnotation
 
 Fired when the mouse moves out of an existing annotation.
 
@@ -210,5 +181,3 @@ Fired when the mouse moves out of an existing annotation.
 |--------------|----------------------------------------|
 | `annotation` | the annotation                         |
 | `event`      | the original mouse event               |
-
-<br/>
