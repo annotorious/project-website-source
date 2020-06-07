@@ -5,6 +5,4 @@ draft: false
 layout: "single"
 ---
 
-[Annotorious](annotorious)
-
-[OpenSeadragon Plugin](osd-plugin)
+{{< api-doc-selection >}}

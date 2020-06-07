@@ -63,6 +63,64 @@ body, html {
 
 }
 
+.api-doc-selection {
+  text-align:center;
+
+  ul {
+    margin:0;
+    padding:30px 0 0 0;
+    list-style-type:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  li {
+    display:inline-block;
+    margin:0 10px;
+  }
+  
+  a {
+    text-decoration:none;
+  }
+
+  a.logo {
+    display:inline-block;
+    width:400px;
+    height:140px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:3px;
+    border-width:1px;
+    border-style:solid;
+    box-shadow:0px 1px 12px rgba(55, 55, 55, 0.15), 0px 1px 1px rgba(55, 55, 55, 0.1);
+  }
+
+  .logo.annotorious {
+    background:#333;
+    border-color:#333;
+    font-family:Megrim;
+    font-size:44px;
+    color:#fff;
+    box-shadow:0px 1px 12px rgba(55, 55, 55, 0.35), 0px 1px 1px rgba(55, 55, 55, 0.2);
+  }
+
+  .logo.osd-plugin {
+    border-color:#dadce0;
+    
+    img {
+      width:300px;
+    }
+  
+  }
+
+  p a:hover {
+    text-decoration:underline;
+  }
+
+}
+
 .column {
   position:relative;
   width:100%;
