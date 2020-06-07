@@ -1,50 +1,67 @@
 ---
-title: "Openseadragon"
-date: 2020-05-17T14:15:19+02:00
+title: "API Docs | Annotorious"
+date: 2020-05-17T14:14:36+02:00
 draft: false
+layout: "api-doc"
 ---
 
-## Initializing OpenSeadragon Annotorious
+> This is the API documentation for the standard version of Annotorious. 
+> You can switch to the documentation for the OpenSeadragon plugin.
 
-Initialize Annotorious on an OpenSeadragon viewer instance with 
+## Initializing Annotorious
+
+Initialize an Annotorious instance on an image with 
 
 ```javascript
-var anno = OpenSeadragon.Annotorious(viewer, config);
+var config = {
+  image: document.getElementById('my-image'),
+  readOnly: true
+};
+
+var anno = Annotorious.init(config);
 ```
 
-The `config` is optional, and must be an object with the following properties:
+The config object can have the following properties:
 
-| Property    | Value                                                                               | Default |
-|-------------|-------------------------------------------------------------------------------------|---------|
-| `readOnly`  | Set to `true` to display annotations read-only            | `false`    |
-
-<br/><br/>
+| Property    | Type | Value                                                                               | Default |
+|-------------|------|-------------------------------------------------------------------------------------|---------|
+| `image`     | `Element`, `String` | image element or, alternatively, element ID                          | -       |
+| `readOnly`  | `Boolean` | Set to `true` to display all annotations read-only                             | `false` |
+| `headless`  | `Boolean` | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
 
 ## Instance Methods
 
-### `addAnnotation(annotation)`
+### addAnnotation
+
+```js
+anno.addAnnotation(annotation);
+
+// Display read-only
+anno.addAnnotation(annotation, true);
+```
 
 Adds an annotation programmatically. The format is the 
-[W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model). 
-At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
+[W3C WebAnnotation model](https://github.com/recogito/annotorious/wiki/Web-Annotation-Model). At the moment, 
+only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
 
-| Argument     | Value                                         |
-|--------------|-----------------------------------------------|
-| `annotation` | the annotation in W3C WebAnnotation format    |
+| Argument     | Type    | Value                                                       |
+|--------------|---------|-------------------------------------------------------------|
+| `annotation` | Object  | the annotation according to the W3C WebAnnotation format    |
+| `readOnly`   | Boolean | set the second arg to `true` to display the annotation in read-only mode |
 
-<br/>
+### removeAnnotation
 
-### `removeAnnotation(arg)`
+```js
+anno.removeAnnotation(arg);
+```
 
 Removes an annotation programmatically. 
 
-| Argument     | Value                                         |
-|--------------|-----------------------------------------------|
-| `arg` | the annotation in W3C WebAnnotation format or the annotation ID |
+| Argument     | Type           | Value                                                           |
+|--------------|----------------|-----------------------------------------------------------------|
+| `arg`        | Object, String | the annotation in W3C WebAnnotation format or the annotation ID |
 
-<br/>
-
-### `setAnnotations(annotations)`
+### setAnnotations
 
 Renders the list of annotations to the image, removing any previously
 existing annotations.
@@ -53,10 +70,7 @@ existing annotations.
 |---------------|-----------------------------------------------|
 | `annotations` | array of annotations in W3C WebAnnotation format |
 
-
-<br/>
-
-### `loadAnnotations(url)`
+### loadAnnotations
 
 Loads annotations from a JSON file. The method returns a promise, in 
 case you want to perform an action after the annotations have loaded.
@@ -71,15 +85,19 @@ anno.loadAnnotations(url).then(function(annotations) {
 |-----------|------------------------------------------|
 | `url`     | the URL to HTTP GET the annotations from |
 
-<br/>
-
-### `getAnnotations()`
+### getAnnotations
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
-<br/>
+### setAnnotationsVisible
 
-### `selectAnnotation(arg)`
+Shows or hides the annotation layer.
+
+| Argument  | Value                                    |
+|-----------|------------------------------------------|
+| `visible` | if `true` show the annotation layer, otherwise hide it |
+
+### selectAnnotation
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
 
@@ -92,37 +110,28 @@ Selects an annotation programmatically, highlighting its shape, and opening the 
 |-----------|------------------------------------------|
 | `arg` | the annotation or the annotation ID |
 
-<br/>
+### applyTemplate
 
-### `panTo(arg, immediately)`
+When a new annotation is created, Annotorious will automatically apply the given 
+template. The template can be a single annotation body, or an array of bodies.
+If `openEditor` is set to true, the editor popup will open, allowing the user to 
+edit the annotation normally. Otherwise, Annotorious will __instantly__ create an 
+annotation from the template bodies __only__. The editor will not open. 
 
-Pans the OpenSeadragon viewport to the specified annotation.
+Use this method if you want to implement batch- or fast annotation modes, where
+the same annotation should be applied repeatedly, and the user should only take
+care of drawing selections.
 
-| Argument  | Value                                    |
-|-----------|------------------------------------------|
-| `arg` | the annotation or the annotation ID |
-| `immediately` | if `true` pans without animation |
+| Argument   | Value                                    |
+|------------|------------------------------------------|
+| `template` | the template body or list of bodies to apply automatically |
+| `openEditor` | if `true`, the editor will open after the template is applied |
 
-<br/>
-
-### `fitBounds(arg, immediately)`
-
-Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation.
-
-| Argument  | Value                                    |
-|-----------|------------------------------------------|
-| `arg` | the annotation or the annotation ID |
-| `immediately` | if `true` pans and zooms without animation |
-
-<br/>
-
-### `destroy()`
+### destroy
 
 Destroys this instance of Annotorious, removing the annotation layer on the image.
 
-<br/>
-
-### `on(event, callback)` 
+### on
 
 Subscribe to an event. (See [Events](#events) for the list.)
 
@@ -131,9 +140,7 @@ Subscribe to an event. (See [Events](#events) for the list.)
 | `event`    | the name of the event                          |
 | `callback` | the function to call when the event is emitted |
 
-<br/>
-
-### `off(event[, callback])`
+### off
 
 Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.
@@ -143,11 +150,9 @@ all event handlers for this event will be unsubscribed.
 | `event`    | the name of the event                       |
 | `callback` | the function used when binding to the event |
 
-<br/><br/>
-
 ## Events
 
-### `selectAnnotation(annotation)` 
+### selectAnnotation
 
 Fired when the user selects an annotation. Note that this event will __not__ fire when 
 the selection is made programmatically through the `selectAnnotation(arg)` API method.
@@ -157,9 +162,7 @@ the selection is made programmatically through the `selectAnnotation(arg)` API m
 |--------------|--------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format |
 
-<br/>
-
-### `createAnnotation(annotation)` 
+### createAnnotation
 
 Fired when a new annotation is created from a user selection.
 
@@ -167,9 +170,7 @@ Fired when a new annotation is created from a user selection.
 |--------------|--------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format |
 
-<br/>
-
-### `updateAnnotation(annotation, previous)`
+### updateAnnotation
 
 Fired when an existing annotation was updated.
 
@@ -178,9 +179,7 @@ Fired when an existing annotation was updated.
 | `annotation` | the updated annotation                 |
 | `previous`   | the annotation state before the update |
 
-<br/>
-
-### `deleteAnnotation(annotation)`
+### deleteAnnotation
 
 Fired when an existing annotation was deleted.
 
@@ -188,9 +187,7 @@ Fired when an existing annotation was deleted.
 |--------------|----------------------------------------|
 | `annotation` | the deleted annotation                 |
 
-<br/>
-
-### `mouseEnterAnnotation(annotation, event)`
+### mouseEnterAnnotation
 
 Fired when the mouse moves into an existing annotation.
 
@@ -199,9 +196,7 @@ Fired when the mouse moves into an existing annotation.
 | `annotation` | the annotation                         |
 | `event`      | the original mouse event               |
 
-<br/>
-
-### `mouseLeaveAnnotation(annotation, event)`
+### mouseLeaveAnnotation
 
 Fired when the mouse moves out of an existing annotation.
 
@@ -210,4 +205,4 @@ Fired when the mouse moves out of an existing annotation.
 | `annotation` | the annotation                         |
 | `event`      | the original mouse event               |
 
-<br/>
+
