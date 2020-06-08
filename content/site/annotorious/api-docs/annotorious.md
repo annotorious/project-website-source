@@ -37,10 +37,7 @@ The config object can have the following properties:
 ### addAnnotation
 
 ```js
-anno.addAnnotation(annotation);
-
-// Display read-only
-anno.addAnnotation(annotation, true);
+anno.addAnnotation(annotation [, readOnly]);
 ```
 
 Adds an annotation programmatically. The format is the 
@@ -66,6 +63,10 @@ Removes an annotation programmatically.
 
 ### setAnnotations
 
+```js
+anno.setAnnotations(annotations);
+```
+
 Renders the list of annotations to the image, removing any previously
 existing annotations.
 
@@ -74,6 +75,10 @@ existing annotations.
 | `annotations` | array of annotations in W3C WebAnnotation format |
 
 ### loadAnnotations
+
+```js
+anno.loadAnnotations(url);
+```
 
 Loads annotations from a JSON file. The method returns a promise, in 
 case you want to perform an action after the annotations have loaded.
@@ -90,9 +95,17 @@ anno.loadAnnotations(url).then(function(annotations) {
 
 ### getAnnotations
 
+```js
+anno.getAnnotations();
+```
+
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
 ### setAnnotationsVisible
+
+```js
+anno.setAnnotationsVisible(visible);
+```
 
 Shows or hides the annotation layer.
 
@@ -101,6 +114,10 @@ Shows or hides the annotation layer.
 | `visible` | if `true` show the annotation layer, otherwise hide it |
 
 ### selectAnnotation
+
+```js
+anno.selectAnnotations(arg);
+```
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
 
@@ -114,6 +131,10 @@ Selects an annotation programmatically, highlighting its shape, and opening the 
 | `arg` | the annotation or the annotation ID |
 
 ### applyTemplate
+
+```js
+anno.applyTemplate(template);
+```
 
 When a new annotation is created, Annotorious will automatically apply the given 
 template. The template can be a single annotation body, or an array of bodies.
@@ -132,9 +153,17 @@ care of drawing selections.
 
 ### destroy
 
+```js
+anno.destroy();
+```
+
 Destroys this instance of Annotorious, removing the annotation layer on the image.
 
 ### on
+
+```js
+anno.on(event, callback);
+```
 
 Subscribe to an event. (See [Events](#events) for the list.)
 
@@ -144,6 +173,10 @@ Subscribe to an event. (See [Events](#events) for the list.)
 | `callback` | the function to call when the event is emitted |
 
 ### off
+
+```js
+anno.off(event [, callback]);
+```
 
 Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.
@@ -157,6 +190,12 @@ all event handlers for this event will be unsubscribed.
 
 ### selectAnnotation
 
+```js
+anno.on('selectAnnotation', function(annotation) {
+  // 
+});
+```
+
 Fired when the user selects an annotation. Note that this event will __not__ fire when 
 the selection is made programmatically through the `selectAnnotation(arg)` API method.
 
@@ -167,6 +206,12 @@ the selection is made programmatically through the `selectAnnotation(arg)` API m
 
 ### createAnnotation
 
+```js
+anno.on('createAnnotation', function(annotation) {
+  // 
+});
+```
+
 Fired when a new annotation is created from a user selection.
 
 | Argument     | Value                                      |
@@ -174,6 +219,12 @@ Fired when a new annotation is created from a user selection.
 | `annotation` | the annotation in W3C WebAnnotation format |
 
 ### updateAnnotation
+
+```js
+anno.on('updateAnnotation', function(annotation, previous) {
+  // 
+});
+```
 
 Fired when an existing annotation was updated.
 
@@ -184,6 +235,12 @@ Fired when an existing annotation was updated.
 
 ### deleteAnnotation
 
+```js
+anno.on('deleteAnnotation', function(annotation) {
+  // 
+});
+```
+
 Fired when an existing annotation was deleted.
 
 | Argument     | Value                                  |
@@ -191,6 +248,12 @@ Fired when an existing annotation was deleted.
 | `annotation` | the deleted annotation                 |
 
 ### mouseEnterAnnotation
+
+```js
+anno.on('mouseEnterAnnotation', function(annotation, event) {
+  // 
+});
+```
 
 Fired when the mouse moves into an existing annotation.
 
@@ -200,6 +263,12 @@ Fired when the mouse moves into an existing annotation.
 | `event`      | the original mouse event               |
 
 ### mouseLeaveAnnotation
+
+```js
+anno.on('mouseLeaveAnnotation', function(annotation, event) {
+  // 
+});
+```
 
 Fired when the mouse moves out of an existing annotation.
 
