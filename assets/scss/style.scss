@@ -8,6 +8,9 @@ body, html {
   font-family:'Nunito', Arial, Helvetica, sans-serif;
   font-size:15px;
   line-height:160%;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 .navbar {
@@ -128,6 +131,7 @@ body, html {
   max-width:980px;
   margin:0 auto;
   box-sizing:border-box;
+  flex:1;
 
   img {
     margin:10px 0;
