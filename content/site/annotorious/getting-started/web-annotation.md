@@ -6,6 +6,9 @@ layout: "section-page"
 subsection: "getting-started"
 blurb: "Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Learn the basics of how annotations are encoded as JSON, and what parts of the standard Annotorious currently supports."
 weight: 3
+meta_title: "Annotorious & Web Annotation"
+meta_description: "Learn the basics of how Annotorious uses the W3C Web Annotation standard"
+meta_link: "https://recogito.github.io/site/annotorious/getting-started/web-annotation"
 ---
 
 # The W3C Web Annotation Model 

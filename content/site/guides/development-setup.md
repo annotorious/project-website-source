@@ -6,6 +6,9 @@ layout: "section-page"
 subsection: "guides"
 blurb: "We welcome contributions! Both to our code as well as our documentation. This (work-in-progress) guide aims to explain how to contribute, where to find what in the codebase, and how to set up a development environment for hacking on Annotorious or RecogitoJS."
 weight: 9
+meta_title: "Development Setup"
+meta_description: "This guide explains how to contribute to Annotorious & RecogitoJS, where to find what in the codebase, and how to set up a development environment"
+meta_link: "https://recogito.github.io/site/guides/development-setup"
 ---
 
 # Hacker's Guide to Annotorious and RecogitoJS

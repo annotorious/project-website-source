@@ -6,6 +6,9 @@ layout: "section-page"
 subsection: "getting-started"
 blurb: "The __OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/) viewer for zoomable high-resolution images."
 weight: 2
+meta_title: "Getting Started With Annotorious OpenSeadragon"
+meta_description: "Examples and instructions for getting started with the Annotorious OpenSeadragon plugin for image annotation"
+meta_link: "https://recogito.github.io/site/annotorious/getting-started/osd-plugin"
 ---
 
 # Getting Started with the OpenSeadragon Plugin

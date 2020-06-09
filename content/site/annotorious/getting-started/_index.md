@@ -3,6 +3,9 @@ title: "Getting Started"
 date: 2020-05-17T14:10:57+02:00
 draft: false
 layout: "section-index"
+meta_title: "Getting Started With Annotorious"
+meta_description: "Examples and instructions for getting started with the Annotorious image annotation library"
+meta_link: "https://recogito.github.io/site/annotorious/getting-started"
 ---
 
 # Getting Started with Annotorious

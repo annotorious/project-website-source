@@ -3,6 +3,9 @@ title: "Guides"
 date: 2020-05-01T13:28:19+02:00
 draft: false
 layout: "section-index"
+meta_title: "Guides"
+meta_description: "Guides and recipes for various topics around Annotorious and RecogitoJS"
+meta_link: "https://recogito.github.io/site/guides"
 ---
 
 # Guides

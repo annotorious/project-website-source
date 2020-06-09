@@ -3,6 +3,9 @@ title: "API Docs | Annotorious OSD Plugin"
 date: 2020-05-17T14:15:19+02:00
 draft: false
 layout: "api-doc"
+meta_title: "Annotorious OpenSeadragon API"
+meta_description: "API Documentation for the Annotorious OpenSeadragon plugin"
+meta_link: "https://recogito.github.io/site/annotorious/api-docs/osd-plugin"
 ---
 
 # API Reference: OpenSeadragon Plugin

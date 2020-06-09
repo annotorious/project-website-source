@@ -6,6 +6,9 @@ layout: "section-page"
 subsection: "getting-started"
 blurb: "To store annotations, you need an annotation server. __Annotorious does not come with built-in storage__. Learn how you can use the JavaScript API to set up your own solution that fits your needs." 
 weight: 4
+meta_title: "Getting Started: Storing Annotations"
+meta_description: "Learn how you can use the Annotorious JavaScript API to integrate a storage backend"
+meta_link: "https://recogito.github.io/site/annotorious/getting-started/storing-annotations"
 ---
 
 # Storing Annotations

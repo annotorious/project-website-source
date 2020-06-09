@@ -3,6 +3,9 @@ title: "API Docs | Annotorious"
 date: 2020-05-17T14:14:36+02:00
 draft: false
 layout: "api-doc"
+meta_title: "Annotorious API Docs"
+meta_description: "API Documentation for the Annotorious image annotation library"
+meta_link: "https://recogito.github.io/site/annotorious/api-docs/annotorious"
 ---
 
 # API Reference: Annotorious
