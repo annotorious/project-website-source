@@ -29,6 +29,10 @@ The `config` is optional, and must be an object with the following properties:
 
 ### addAnnotation
 
+```js
+anno.addAnnotation(annotation);
+```
+
 Adds an annotation programmatically. The format is the 
 [W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model). 
 At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
@@ -39,6 +43,10 @@ At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is
 
 ### removeAnnotation
 
+```js
+anno.removeAnnotation(arg);
+```
+
 Removes an annotation programmatically. 
 
 | Argument     | Value                                         |
@@ -46,6 +54,10 @@ Removes an annotation programmatically.
 | `arg` | the annotation in W3C WebAnnotation format or the annotation ID |
 
 ### setAnnotations
+
+```js
+anno.setAnnotations(annotations);
+```
 
 Renders the list of annotations to the image, removing any previously
 existing annotations.
@@ -55,6 +67,10 @@ existing annotations.
 | `annotations` | array of annotations in W3C WebAnnotation format |
 
 ### loadAnnotations
+
+```js
+anno.loadAnnotations(url);
+```
 
 Loads annotations from a JSON file. The method returns a promise, in 
 case you want to perform an action after the annotations have loaded.
@@ -71,9 +87,17 @@ anno.loadAnnotations(url).then(function(annotations) {
 
 ### getAnnotations
 
+```js
+anno.getAnnotations();
+```
+
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
 ### selectAnnotation
+
+```js
+anno.selectAnnotations(arg);
+```
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
 
@@ -88,6 +112,10 @@ Selects an annotation programmatically, highlighting its shape, and opening the 
 
 ### panTo
 
+```js
+anno.panTo(arg [, immediately]);
+```
+
 Pans the OpenSeadragon viewport to the specified annotation.
 
 | Argument  | Value                                    |
@@ -96,6 +124,10 @@ Pans the OpenSeadragon viewport to the specified annotation.
 | `immediately` | if `true` pans without animation |
 
 ### fitBounds
+
+```js
+anno.fitBounds(arg [, immediately]);
+```
 
 Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation.
 
@@ -106,9 +138,17 @@ Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified ann
 
 ### destroy
 
+```js
+anno.destroy();
+```
+
 Destroys this instance of Annotorious, removing the annotation layer on the image.
 
 ### on
+
+```js
+anno.on(event, callback);
+```
 
 Subscribe to an event. (See [Events](#events) for the list.)
 
@@ -118,6 +158,10 @@ Subscribe to an event. (See [Events](#events) for the list.)
 | `callback` | the function to call when the event is emitted |
 
 ### off
+
+```js
+anno.off(event [, callback]);
+```
 
 Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.
@@ -134,12 +178,23 @@ all event handlers for this event will be unsubscribed.
 Fired when the user selects an annotation. Note that this event will __not__ fire when 
 the selection is made programmatically through the `selectAnnotation(arg)` API method.
 
+```js
+anno.on('selectAnnotation', function(annotation) {
+  // 
+});
+```
 
 | Argument     | Value                                      |
 |--------------|--------------------------------------------|
 | `annotation` | the annotation in W3C WebAnnotation format |
 
 ### createAnnotation
+
+```js
+anno.on('createAnnotation', function(annotation) {
+  // 
+});
+```
 
 Fired when a new annotation is created from a user selection.
 
@@ -148,6 +203,12 @@ Fired when a new annotation is created from a user selection.
 | `annotation` | the annotation in W3C WebAnnotation format |
 
 ### updateAnnotation
+
+```js
+anno.on('updateAnnotation', function(annotation, previous) {
+  // 
+});
+```
 
 Fired when an existing annotation was updated.
 
@@ -158,6 +219,12 @@ Fired when an existing annotation was updated.
 
 ### deleteAnnotation
 
+```js
+anno.on('deleteAnnotation', function(annotation) {
+  // 
+});
+```
+
 Fired when an existing annotation was deleted.
 
 | Argument     | Value                                  |
@@ -165,6 +232,12 @@ Fired when an existing annotation was deleted.
 | `annotation` | the deleted annotation                 |
 
 ### mouseEnterAnnotation
+
+```js
+anno.on('mouseEnterAnnotation', function(annotation, event) {
+  // 
+});
+```
 
 Fired when the mouse moves into an existing annotation.
 
@@ -174,6 +247,12 @@ Fired when the mouse moves into an existing annotation.
 | `event`      | the original mouse event               |
 
 ### mouseLeaveAnnotation
+
+```js
+anno.on('mouseLeaveAnnotation', function(annotation, event) {
+  // 
+});
+```
 
 Fired when the mouse moves out of an existing annotation.
 
