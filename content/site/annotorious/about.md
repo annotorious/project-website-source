@@ -49,3 +49,6 @@ This website uses the following photographs:
 
 The Annotorious logo font is [Megrim](https://fonts.google.com/specimen/Megrim) by Daniel Johnson, 
 licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
+
+The Annotorious Editor popup uses icons from the [IcoFont](https://icofont.com/) icon set, licensed under 
+the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
