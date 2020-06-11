@@ -40,6 +40,7 @@ This website uses the following photographs:
 
 - [Photo of Blue, Pink, and Green Led Light](https://www.pexels.com/photo/photo-of-blue-pink-and-green-led-light-775907/)
   by [Tabitha Mort](https://www.pexels.com/@dellamortphotography), licensed for free use, as landing page header background
+  and social media preview image
 - [Cog wheels](https://www.flickr.com/photos/ky0ncheng/36286089223/) by Flickr user 
   [Ky0n Cheng](https://www.flickr.com/photos/ky0ncheng/), Public Domain, as landing page decoration image
 - [Lego bricks red](https://www.flickr.com/photos/janusman/6347760720/) by Flickr user 
