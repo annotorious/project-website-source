@@ -50,7 +50,7 @@ Create the viewer and initialize the Annotorious plugin.
 </script>
 ```
 
-The plugin takes a config object as optional second argument. See the [API Reference](https://github.com/recogito/annotorious-openseadragon/wiki/API-Reference) for details.
+The plugin takes a config object as optional second argument. See the [API Reference](/site/annotorious/api-docs/osd-plugin/) for details.
 
 ```javascript
 var anno = OpenSeadragon.Annotorious(viewer, config);

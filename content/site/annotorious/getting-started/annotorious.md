@@ -56,7 +56,7 @@ and add the script to your HTML page at the end of the `<body>` section.
 </body>
 ```
 
-For more information on using Annotorious, see the full [API Reference](https://github.com/recogito/annotorious/wiki/API-Reference).
+For more information on using Annotorious, see the full [API Reference](/site/annotorious/api-docs/annotorious/).
 
 
 

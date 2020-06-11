@@ -19,7 +19,7 @@ __Click and drag the mouse__ to create a new annotation.
 __Current features of Annotorious include:__
 
 - Editable rectangle shapes: draw with click & drag, resize and move after creation
-- A [rich JavaScript API](#) for integrating Annotorious with your own application,
+- A [rich JavaScript API](/site/annotorious/api-docs/) for integrating Annotorious with your own application,
   tweaking its behavior, handling user auth info, etc.
 - All SVG and CSS-based, allowing you to customize styles on everything 
 - Component-based architecture that allows you to extend the editor with custom widgets
