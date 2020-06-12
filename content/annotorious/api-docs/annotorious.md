@@ -44,7 +44,7 @@ anno.addAnnotation(annotation [, readOnly]);
 ```
 
 Adds an annotation programmatically. The format is the 
-[W3C WebAnnotation model](https://github.com/recogito/annotorious/wiki/Web-Annotation-Model). At the moment, 
+[W3C WebAnnotation model](/annotorious/getting-started/web-annotation). At the moment, 
 only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
 
 | Argument     | Type    | Value                                                       |
@@ -105,7 +105,7 @@ Returns all annotations according to the current rendered state, in W3C Web Anno
 anno.loadAnnotations(url);
 ```
 
-Loads annotations from a JSON file. The method returns a promise, in 
+Loads annotations from a JSON URL. The method returns a promise, in 
 case you want to perform an action after the annotations have loaded.
 
 ```javascript
