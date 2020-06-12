@@ -4,9 +4,9 @@ date: 2020-05-17T14:00:29+02:00
 draft: false
 type: "annotorious"
 layout: "splash"
-meta_title: "Annotorious"
-meta_description: "A JavaScript image annotation library. Add drawing, commenting and labeling functionality to images on your website with a few lines of JavaScript."
-meta_link: "https://recogito.github.io/site/annotorious"
+meta_title: "Annotorious | JavaScript image annotation library"
+meta_description: "Add drawing, commenting and labeling functionality to images on your website with a few lines of JavaScript."
+meta_link: "https://recogito.github.io/annotorious"
 ---
 
 ```js
