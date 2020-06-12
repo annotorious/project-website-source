@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Annotorious | A Javascript Library for Image Annotation</title>
+    <title>Annotorious | A Javascript Image Annotation Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ $style := resources.Get "scss/splash.scss" | toCSS (dict "targetPath" "css/splash.css" "enableSourceMap" true) }}  
     <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">  
