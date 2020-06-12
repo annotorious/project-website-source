@@ -43,8 +43,8 @@ This website uses the following photographs:
   and social media preview image
 - [Cog wheels](https://www.flickr.com/photos/ky0ncheng/36286089223/) by Flickr user 
   [Ky0n Cheng](https://www.flickr.com/photos/ky0ncheng/), Public Domain, as landing page decoration image
-- [Lego bricks red](https://www.flickr.com/photos/janusman/6347760720/) by Flickr user 
-  [Alejandro](https://www.flickr.com/photos/janusman/), CC BY-NC-ND 2.0, as landing page decoration image
+- [lego bricks](https://www.flickr.com/photos/38953258@N08/19079091750/) by Flickr user 
+  [Ally.M](https://www.flickr.com/photos/38953258@N08/), CC BY-NC-ND 2.0, as landing page decoration image
 - [Hallstatt, Austria](http://commons.wikimedia.org/wiki/File:Hallstatt_300.jpg) by Nick Csakany/Wikimedia Commons,
   Public Domain, as sample annotation image 
 
