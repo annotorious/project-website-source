@@ -11,15 +11,13 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 
 # Getting Started with Annotorious
 
-Annotorious lets your users make rectangle selections on images and add comments
-and labels. Try it out on the image below:
-
-- __Click the annotation__ to edit comment and tags
-- __Click and drag__ with the mouse to create a new annotation
+Annotorious lets your users draw rectangle selections on images and add comments
+and labels. Try it out on the image below: __click the annotation__ to edit, __click and drag__ 
+with the mouse to create a new annotation
 
 {{< inline-demo >}}
 
-## Importing via Script Tag
+## Include Script Tag
 
 To include Annotorious on your page, download the [latest release](https://github.com/recogito/annotorious/releases/latest)
 and add the script at the end of the `<body>` section.
@@ -69,7 +67,7 @@ const anno = new Annotorious({
 });
 ```
 
-# Annotorious OpenSeadragon Plugin
+# OpenSeadragon Plugin
 
 There is a separate version of Annotorious which plugs into the [OpenSeadragon viewer](http://openseadragon.github.io/)
 for high-resolution images. Setup is just as easy as for the standard version. [Read more](/annotorious/getting-started/osd-plugin)
