@@ -8,7 +8,7 @@ blurb: "The Annotorious __standard version__ works on normal images embedded in 
 weight: 1
 meta_title: "Getting Started With Annotorious"
 meta_description: "Examples and instructions for getting started with the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/site/annotorious/getting-started/annotorious"
+meta_link: "https://recogito.github.io/annotorious/getting-started/annotorious"
 ---
 
 # Getting Started with Annotorious
@@ -56,7 +56,7 @@ and add the script to your HTML page at the end of the `<body>` section.
 </body>
 ```
 
-For more information on using Annotorious, see the full [API Reference](/site/annotorious/api-docs/annotorious/).
+For more information on using Annotorious, see the full [API Reference](/annotorious/api-docs/annotorious/).
 
 
 

@@ -8,7 +8,7 @@ blurb: "The __OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http
 weight: 2
 meta_title: "Getting Started With Annotorious OpenSeadragon"
 meta_description: "Examples and instructions for getting started with the Annotorious OpenSeadragon plugin for image annotation"
-meta_link: "https://recogito.github.io/site/annotorious/getting-started/osd-plugin"
+meta_link: "https://recogito.github.io/annotorious/getting-started/osd-plugin"
 ---
 
 # Getting Started with the OpenSeadragon Plugin
@@ -50,7 +50,7 @@ Create the viewer and initialize the Annotorious plugin.
 </script>
 ```
 
-The plugin takes a config object as optional second argument. See the [API Reference](/site/annotorious/api-docs/osd-plugin/) for details.
+The plugin takes a config object as optional second argument. See the [API Reference](/annotorious/api-docs/osd-plugin/) for details.
 
 ```javascript
 var anno = OpenSeadragon.Annotorious(viewer, config);

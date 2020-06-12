@@ -5,14 +5,14 @@ draft: false
 layout: "api-doc"
 meta_title: "Annotorious OpenSeadragon API"
 meta_description: "API Documentation for the Annotorious OpenSeadragon plugin"
-meta_link: "https://recogito.github.io/site/annotorious/api-docs/osd-plugin"
+meta_link: "https://recogito.github.io/annotorious/api-docs/osd-plugin"
 ---
 
 # API Reference: OpenSeadragon Plugin
 
 > The __OpenSeadragon Plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/),
 > zoomable image viewer. The API reference for the Annotorious standard version is available 
-> [here](/site/annotorious/api-docs/annotorious).
+> [here](/annotorious/api-docs/annotorious).
 
 ## Initializing the Plugin
 

@@ -5,7 +5,7 @@ draft: false
 layout: "section-index"
 meta_title: "Getting Started With Annotorious"
 meta_description: "Examples and instructions for getting started with the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/site/annotorious/getting-started"
+meta_link: "https://recogito.github.io/annotorious/getting-started"
 ---
 
 # Getting Started with Annotorious
@@ -19,7 +19,7 @@ __Click and drag the mouse__ to create a new annotation.
 __Current features of Annotorious include:__
 
 - Editable rectangle shapes: draw with click & drag, resize and move after creation
-- A [rich JavaScript API](/site/annotorious/api-docs/) for integrating Annotorious with your own application,
+- A [rich JavaScript API](/annotorious/api-docs/) for integrating Annotorious with your own application,
   tweaking its behavior, handling user auth info, etc.
 - All SVG and CSS-based, allowing you to customize styles on everything 
 - Component-based architecture that allows you to extend the editor with custom widgets

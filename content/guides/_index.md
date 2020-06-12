@@ -5,7 +5,7 @@ draft: false
 layout: "section-index"
 meta_title: "Guides"
 meta_description: "Guides and recipes for various topics around Annotorious and RecogitoJS"
-meta_link: "https://recogito.github.io/site/guides"
+meta_link: "https://recogito.github.io/guides"
 ---
 
 # Guides

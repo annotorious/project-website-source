@@ -5,14 +5,14 @@ draft: false
 layout: "api-doc"
 meta_title: "Annotorious API Docs"
 meta_description: "API Documentation for the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/site/annotorious/api-docs/annotorious"
+meta_link: "https://recogito.github.io/annotorious/api-docs/annotorious"
 ---
 
 # API Reference: Annotorious
 
 > The __standard version__ of Annotorious works on normal images embedded in websites
 > or web applications. The API reference for the Annotorious OpenSeadragon plugin is 
-> available [here](/site/annotorious/api-docs/osd-plugin).
+> available [here](/annotorious/api-docs/osd-plugin).
 
 ## Initializing Annotorious
 
