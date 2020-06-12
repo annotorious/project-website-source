@@ -1,11 +1,26 @@
 <div class="navbar">
   <header>
     <ul>
-      <li><a href="/annotorious/">Home</a></li>
-      <li><a href="/annotorious/getting-started">Getting Started</a></li>
-      <li><a href="/annotorious/api-docs">API Docs</a></li>
-      <li><a href="/guides">Guides</a></li>
-      <li><a href="/annotorious/about">About</a></li>
+      <li>
+        <a href="/annotorious/">Home</a>
+      </li>
+
+      <li class='{{ cond (eq .Dir "annotorious/getting-started/") "current" "" }}'>
+        <a href="/annotorious/getting-started">Getting Started</a>
+      </li>
+
+      <li class='{{ cond (eq .Dir "annotorious/api-docs/") "current" "" }}'>
+        <a href="/annotorious/api-docs">API Docs</a>
+      </li>
+      
+      <li class='{{ cond (eq .Dir "guides/") "current" "" }}'>
+        <a href="/guides">Guides</a>
+      </li>
+      
+      <li class='{{ cond (eq .Title "About") "current" "" }}'>
+        <a href="/annotorious/about">About</a>
+      </li>
+      
       <li class="github"><a href="https://github.com/recogito/annotorious"><img src="/images/github-logo.svg"></a></li>
     </ul>
   </header>
