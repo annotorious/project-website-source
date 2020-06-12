@@ -209,6 +209,8 @@ anno.setAuthInfo(arg);
 Specifies user authentication information. Annotorious will use this information when annotations
 are created or updated, and display them in the editor popup. 
 
+![Editor popup example](/images/setAuthInfo.png)
+
 `arg` is an object with the following properties:
 
 | Property      | Type | Value                                             |
