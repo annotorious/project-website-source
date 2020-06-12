@@ -27,6 +27,13 @@ OpenSeadragon script.
 <script src="openseadragon/openseadragon.2.4.2.min.js"></script>
 <script src="openseadragon-annotorious.min.js"></script>
 ```
+
+Alternatively, grab the plugin script from CDN.
+
+```html
+<script src="https://www.jsdelivr.com/package/npm/@recogito/annotorious-openseadragon"></script>
+```
+
 Create the viewer and initialize the Annotorious plugin.
 
 ```html

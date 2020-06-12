@@ -14,14 +14,16 @@
       <div class="main-content">
         {{ .Content }}
 
-        <div class="section-overview">
-          {{ range .Pages }}
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-            <p class="blurb">
-              {{ .Params.blurb | markdownify }} <a href="{{ .Permalink }}">Read more</a>
-            </p>
-          {{ end }}
-        </div>
+        {{ if .Params.include_summaries }}
+          <div class="section-overview">
+            {{ range .Pages }}
+              <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+              <p class="blurb">
+                {{ .Params.blurb | markdownify }} <a href="{{ .Permalink }}">Read more</a>
+              </p>
+            {{ end }}
+          </div>
+        {{ end }}
       </div>
 
       <div class="table-of-contents">

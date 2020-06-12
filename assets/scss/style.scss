@@ -133,6 +133,11 @@ body, html {
   box-sizing:border-box;
   flex:1;
 
+  p {
+    margin:20px 0 40px 0;
+    padding:0;
+  }
+
   img {
     margin:10px 0;
     max-width:100%;
@@ -278,10 +283,16 @@ blockquote {
 
 }
 
-.highlight pre {
-  padding:15px;
-  margin:25px 0;
-  border-radius:3px;
+.highlight {
+  margin-bottom:40px;
+
+  pre {
+    padding:15px;
+    margin:25px 0;
+    border-radius:3px;
+    overflow-x:auto;
+  }
+
 }
 
 li > code, p > code {
@@ -323,7 +334,7 @@ table {
 }
 
 .inline-demo {
-  padding:20px 0;
+  padding:10px 0;
 }
 
 p.image-caption {

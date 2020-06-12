@@ -3,6 +3,7 @@ title: "Getting Started"
 date: 2020-05-17T14:10:57+02:00
 draft: false
 layout: "section-index"
+include_summaries: false
 meta_title: "Getting Started With Annotorious"
 meta_description: "Examples and instructions for getting started with the Annotorious image annotation library"
 meta_link: "https://recogito.github.io/annotorious/getting-started"
@@ -10,18 +11,72 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 
 # Getting Started with Annotorious
 
-Add drawing, commenting and labeling functionality to images on your website with 
-just a few lines of code. __Click the annotation below__ to edit. 
-__Click and drag the mouse__ to create a new annotation.
+Annotorious lets your users make rectangle selections on images and add comments
+and labels. Try it out on the image below:
+
+- __Click the annotation__ to edit comment and tags
+- __Click and drag__ with the mouse to create a new annotation
 
 {{< inline-demo >}}
 
-__Current features of Annotorious include:__
+## Importing via Script Tag
 
-- Editable rectangle shapes: draw with click & drag, resize and move after creation
-- A [rich JavaScript API](/annotorious/api-docs/) for integrating Annotorious with your own application,
-  tweaking its behavior, handling user auth info, etc.
-- All SVG and CSS-based, allowing you to customize styles on everything 
-- Component-based architecture that allows you to extend the editor with custom widgets
+To include Annotorious on your page, download the [latest release](https://github.com/recogito/annotorious/releases/latest)
+and add the script at the end of the `<body>` section.
 
 
+```html
+<body>
+  <div id="content">
+    <img id="hallstatt" src="640px-Hallstatt.jpg">
+  </div>
+  <script>
+    (function() {
+      var anno = Annotorious.init({
+        image: 'hallstatt' // image element or ID
+      });
+
+      anno.loadAnnotations('annotations.w3c.json');
+
+      // Add event handlers using .on  
+      r.on('createAnnotation', function(annotation) {
+        // Do something
+      });
+    })()
+  </script>
+
+  <script type="text/javascript" src="annotorious.min.js"></script>
+</body>
+```
+
+## From CDN
+
+Alternatively, you can grab the script from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.0.3/dist/annotorious.min.js"></script>
+```
+
+## Using NPM
+
+If you use npm, `npm install @recogito/annotorious` and then
+
+```javascript
+import { Annotorious } from '@recogito/annotorious';
+
+const anno = new Annotorious({
+  image: document.getElementById('my-image')
+});
+```
+
+# Annotorious OpenSeadragon Plugin
+
+There is a separate version of Annotorious which plugs into the [OpenSeadragon viewer](http://openseadragon.github.io/)
+for high-resolution images. Setup is just as easy as for the standard version. [Read more](/annotorious/getting-started/osd-plugin)
+
+# Next Steps
+
+Once you have the basics up and running, you will probably want to know more about the data format
+of the annotations, and how you can store them permanently. Read more about the 
+[W3C Web Annotation Model](/annotorious/getting-started/web-annotation) and [how to integrate Annotorious 
+with a backend](/annotorious/getting-started/storing-annotations).
