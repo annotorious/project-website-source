@@ -160,7 +160,7 @@ Removes an annotation programmatically.
 ### .selectAnnotation
 
 ```js
-anno.selectAnnotations(arg);
+anno.selectAnnotation(arg);
 ```
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
@@ -207,7 +207,7 @@ anno.setAuthInfo(arg);
 ```
 
 Specifies user authentication information. Annotorious will use this information when annotations
-are created or updated, and display them in the editor popup. 
+are created or updated, and display it in the editor popup. 
 
 ![Editor popup example](/images/setAuthInfo.png)
 
