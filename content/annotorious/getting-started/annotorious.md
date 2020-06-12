@@ -52,8 +52,14 @@ and add the script to your HTML page at the end of the `<body>` section.
     })()
   </script>
 
-  <script type="text/javascript" src="annotorious-2.0.1-alpha.min.js"></script>
+  <script type="text/javascript" src="annotorious.min.js"></script>
 </body>
+```
+
+Alternatively, include the script via CDN.
+
+```js 
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.0.3/dist/annotorious.min.js"></script>
 ```
 
 For more information on using Annotorious, see the full [API Reference](/annotorious/api-docs/annotorious/).
