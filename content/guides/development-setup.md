@@ -4,7 +4,7 @@ date: 2020-06-04T11:46:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "We welcome contributions! Both to our code as well as our documentation. This (work-in-progress) guide aims to explain how to contribute, where to find what in the codebase, and how to set up a development environment for hacking on Annotorious or RecogitoJS."
+blurb: "We welcome contributions! Both to our code as well as our documentation. This (work-in-progress) guide aims to explain how you can contribute, where you can find what in the codebase, and how you can set up a development environment for hacking on Annotorious or RecogitoJS."
 weight: 9
 meta_title: "Development Setup"
 meta_description: "This guide explains how to contribute to Annotorious & RecogitoJS, where to find what in the codebase, and how to set up a development environment"

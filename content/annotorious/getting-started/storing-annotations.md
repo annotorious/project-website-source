@@ -14,18 +14,17 @@ meta_link: "https://recogito.github.io/annotorious/getting-started/storing-annot
 # Storing Annotations
 
 To store annotations, you need an annotation server or database backend.
-Annotorious - as well as its sister project [RecogitoJS](https://github.com/recogito/recogito) - __do not 
-include their own storage solution__. They provide __the user interface functionality__ for annotation 
-__only__. To store annotations, you need to connect them to your own backend, using the [API](/annotorious/api-docs/).
+Annotorious - as well as its sister project [RecogitoJS](https://github.com/recogito/recogito) - do not 
+include their own storage solution. They provide __the user interface functionality for annotation 
+only__. To store annotations, you need to connect them to your own backend, using the [API](/annotorious/api-docs/).
 
-When an annotation is created, updated or deleted by the user, Annotorious emits the following events 
-through the API:
+When the user creates, updates or deletes an annotation, Annotorious emits the following events:
 
 - __createAnnotation__
 - __updateAnnotation__
 - __deleteAnnotation__
 
-You need to subscribe to these events, and execute the corresponding write operations to your backend. 
+Subscribe to these events, and execute the corresponding write operations to your backend. 
 
 ```javascript
 anno.on('createAnnotation', function(annotation) {
@@ -39,4 +38,5 @@ anno.on('createAnnotation', function(annotation) {
 ## Using Cloud Storage Services
 
 If you don't want to run your own application backend, cloud storage services offer a good alternative.
-See [this example for using Google Firebase](/guides/using-firebase-for-storage/) to create your own free & personal annotation store with minimum effort.
+See [this guide for using Google Firebase](/guides/using-firebase-for-storage/) as your own free & personal 
+annotation store.

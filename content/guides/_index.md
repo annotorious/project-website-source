@@ -12,5 +12,5 @@ meta_link: "https://recogito.github.io/guides"
 # Guides
 
 The __Guides__ section collects miscellaneous articles, tutorials and recipies. If you want to learn about
-a specific topic that isn't covered yet - or want to contribute an article - get in touch via our
+a specific topic that isn't covered yet (or want to contribute an article yourself!) get in touch via our
 [Gitter chat](https://gitter.im/recogito/annotorious).  

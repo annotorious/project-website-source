@@ -28,7 +28,7 @@ OpenSeadragon script.
 <script src="openseadragon-annotorious.min.js"></script>
 ```
 
-Alternatively, grab the plugin script from CDN.
+Alternatively, grab the script from CDN.
 
 ```html
 <script src="https://www.jsdelivr.com/package/npm/@recogito/annotorious-openseadragon"></script>

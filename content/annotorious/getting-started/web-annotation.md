@@ -13,11 +13,12 @@ meta_link: "https://recogito.github.io/annotorious/getting-started/web-annotatio
 
 # The W3C Web Annotation Model 
 
-Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/). Only a limited range 
-of the specification is supported at the moment. Current limitations are:
+Annotorious supports the [W3C Web Annotation model](https://www.w3.org/TR/annotation-model/), an open standard for
+interoperable annotations on the web. However, only a part of the specification is supported at the moment. 
+Current limitations are:
 
-- Annotations with a __single rectangle__ shape
-- The [W3C Media Fragments](https://www.w3.org/TR/media-frags/) `FragmentSelector` is the only currently supported selector type
+- Only annotations with a __single rectangle__ shape are supported
+- The [W3C Media Fragments](https://www.w3.org/TR/media-frags/) `FragmentSelector` is the only supported selector type
 
 ```json
 { 
@@ -40,6 +41,6 @@ of the specification is supported at the moment. Current limitations are:
 
 ## Annotation IDs
 
-Annotations should have a value for `id`. When creating a new annotation, Annotorious will 
-automatically assign a globally unique ID in the form `#{uuid}`. In principle, however,
-Annotorious accepts any alphanumeric string for the ID. 
+When adding an annotation via the API, the annotation should have an `id`. In principle, 
+Annotorious accepts any alphanumeric string. Annotations created by users will automatically 
+get a globally unique ID in the form `#{uuid}`. 

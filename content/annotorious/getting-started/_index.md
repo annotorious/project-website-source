@@ -11,13 +11,13 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 
 # Getting Started with Annotorious
 
-Annotorious lets your users draw rectangle selections on images and add comments
+Annotorious lets your users draw rectangle selections on images, and add comments
 and labels. Try it out on the image below: __click the annotation__ to edit, __click and drag__ 
 with the mouse to create a new annotation
 
 {{< inline-demo >}}
 
-## Include Script Tag
+## Include via Script Tag
 
 To include Annotorious on your page, download the [latest release](https://github.com/recogito/annotorious/releases/latest)
 and add the script at the end of the `<body>` section.

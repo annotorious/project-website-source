@@ -11,17 +11,17 @@ Annotorious is a modernized reboot of the now outdated original [Annotorious](ht
 
 ## License
 
-Annotorious is licensed under the terms of the [BSD 3-Clause](https://github.com/recogito/annotorious/blob/master/LICENSE) 
-license. That basically means: you can use this code for free, in whatever way you want, for non-commerical and commercial
-projects. But keep the attribution/license file included - and bear in mind: this code comes as is, don't come complaining 
-to us stuff breaks ;-)
+Annotorious is licensed under the terms of the [BSD 3-Clause license](https://github.com/recogito/annotorious/blob/master/LICENSE).
+That basically means: you can use this code for free, in whatever way you want, for non-commerical and commercial
+projects. But attribute Annotorious in your project at a suitable location. And bear in mind: this code comes as is, 
+don't come complaining to us stuff breaks ;-)
 
 ## Need Help?
 
 Get in touch via our [Annotorious Gitter chat](https://gitter.im/recogito/annotorious). If you encounter bugs, or
 have feature requests, please report them via our GitHub issue trackers:
 
-- __[Annotorious Issue Tracker](https://github.com/recogito/annotorious/issues)__ for the standard version
+- __[Annotorious Issue Tracker](https://github.com/recogito/annotorious/issues)__ for the Annotorious standard version
 - __[Annotorious OpenSeadragon Issue Tracker](https://github.com/recogito/annotorious-openseadragon/issues)__
   for the OpenSeadragon plugin
 
@@ -30,7 +30,7 @@ have feature requests, please report them via our GitHub issue trackers:
 All source code is available on via the __[recogito](https://github.com/recogito)__ GitHub organization. The key 
 repositories are:
 
-- __[recogito/annotorious](https://github.com/recogito/annotorious)__ for the standard version
+- __[recogito/annotorious](https://github.com/recogito/annotorious)__ for the Annotorious standard version
 - __[recogito/annotorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__ for the OpenSeadragon plugin
 - __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__ for shared base components
 
@@ -50,6 +50,5 @@ This website uses the following photographs:
 
 The Annotorious logo font is [Megrim](https://fonts.google.com/specimen/Megrim) by Daniel Johnson, 
 licensed under the [Open Font License](https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL).
-
 The Annotorious Editor popup uses icons from the [IcoFont](https://icofont.com/) icon set, licensed under 
 the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
