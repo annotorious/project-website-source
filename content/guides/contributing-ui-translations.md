@@ -50,13 +50,13 @@ Many thanks in advance! If you have questions, do get in touch via the [Annotori
 
 | Locale | Language | Status | Dictionary file |
 |--------|----------|--------|-----------------|
-| ar | Arabic   | Partial   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
-| de | German   | Complete | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
-| es | Spanish  | Partial  | [messages_es.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_es.json) |
-| gl | Galician | Partial   | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
+| ar | Arabic   | Complete   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
+| de | German   | Complete  | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
+| es | Spanish  | Complete  | [messages_es.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_es.json) |
+| gl | Galician | Complete  | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
 | hi | Hindi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
-| it | Italian | Partial   | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
-| sv | Swedish | Partial   | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
+| it | Italian | Complete | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
+| sv | Swedish | Complete | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
 | ur | Urdu | Complete   | [messages_ur.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ur.json) |
 
 Your language isn't on this list? Consider contributing!
