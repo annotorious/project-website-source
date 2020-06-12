@@ -19,6 +19,9 @@ Current limitations are:
 
 - Only annotations with a __single rectangle__ shape are supported
 - The [W3C Media Fragments](https://www.w3.org/TR/media-frags/) `FragmentSelector` is the only supported selector type
+- Annotation `TextualBody` types with a `purpose` of `commenting`, `replying` or no `purpose` are displayed as comments
+- Anntation bodies with a `purpose` of `tagging` are displayed as tags
+- Bodies of any other type are ignored (unless you implement your own editor extension)
 
 ```json
 { 
