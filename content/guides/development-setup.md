@@ -42,11 +42,10 @@ To hack on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you
 
 ## Hacking recogito-client-core
 
-> When working on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you might sometimes need to modify code in 
-> __recogito-client-core__. This means you need to change your development setup, so that your project points to a local
-> copy of __recogito-client-core__, rather than the official package published on NPM.
-
-To make this work, you have to `npm link` your local projects.
+> When working on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you may need to modify code in 
+> __recogito-client-core__, too. To do this, you have to set up your environment so that it points to your local
+> copy of __recogito-client-core__, rather than the official package published on NPM. To make this work, you 
+> have to `npm link` your local projects.
 
 - Clone the [recogito-client-core repository](https://github.com/recogito/recogito-client-core)
 - Run `npm install` to install dependencies
