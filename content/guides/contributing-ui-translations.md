@@ -13,12 +13,13 @@ meta_link: "https://recogito.github.io/guides/contributing-ui-translations"
 
 # Contributing UI Translations
 
-We want to make our software available in as many languages as possible. If you want to help: providing a translation is easy - and because there are not many labeled user interface elements, it's also not a lot of work.
+We want to make our user interface available in as many languages as possible. If you want to help: providing a translation is easy - and because there are not many labeled elements, it's not a lot of work.
 
 ## Message Dictionaries
 
-The user interface labels are part of the `recogito-client-core` package, [located here](https://github.com/recogito/recogito-client-core/tree/master/src/i18n). In this folder you will find
-`messages` files, one file for each available translation. 
+The user interface labels are part of `recogito-client-core`, a JavaScript package for common code shared between
+Annotorious and RecogitoJS. In [this folder](https://github.com/recogito/recogito-client-core/tree/master/src/i18n) 
+you will find `messages` files, one file for each available translation. 
 
 Each `messages` file is a dictionary of the default English labels and their translations. For example, 
 here's what the German translation file `messages_de.json` looks like.
@@ -48,16 +49,16 @@ Many thanks in advance! If you have questions, do get in touch via the [Annotori
 
 ## Translations so far
 
-| Locale | Language | Status | Dictionary file |
+| Language | Locale | Status | Dictionary file |
 |--------|----------|--------|-----------------|
-| ar | Arabic   | Complete   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
-| de | German   | Complete  | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
-| es | Spanish  | Complete  | [messages_es.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_es.json) |
-| gl | Galician | Complete  | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
-| hi | Hindi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
-| it | Italian | Complete | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
-| sv | Swedish | Complete | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
-| ur | Urdu | Complete   | [messages_ur.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ur.json) |
+| Arabic | ar   | Complete   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
+| Galician | gl | Complete  | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
+| German | de   | Complete  | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
+| Hindi | hi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
+| Italian | it | Complete | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
+| Spanish | es  | Complete  | [messages_es.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_es.json) |
+| Swedish | sv | Complete | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
+| Urdu | ur | Complete   | [messages_ur.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ur.json) |
 
 Your language isn't on this list? Consider contributing!
 

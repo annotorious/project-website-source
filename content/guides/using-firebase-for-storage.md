@@ -20,7 +20,7 @@ deleting JSON records. All you need to do is wire up the Firebase storage SDK op
 
 ![Firebase Screenshot](/images/guides/firebase.png)
  
-## Using Events for Storage 
+## Annotorious Lifecycle Events 
 
 When Annotorious fires the `createAnnotation` event, store the annotation via the `.add()` 
 method on the cloud storage SDK. Storage operations return a `Promise`, so you can execute
