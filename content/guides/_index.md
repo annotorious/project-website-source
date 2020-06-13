@@ -19,4 +19,4 @@ our [Gitter chat](https://gitter.im/recogito/annotorious).
 > If you want to improve anything about a guide - or contribute a new one - please do so!
 > Simply send us a pull request with your corrections or additions. The guides are
 > part of the [recogito/project-website-source](https://github.com/recogito/project-website-source)
-> GitHub repository. The guides are [located here](https://github.com/recogito/project-website-source/tree/master/content/guides).
+> GitHub repository and are [located here](https://github.com/recogito/project-website-source/tree/master/content/guides).
