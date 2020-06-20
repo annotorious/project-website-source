@@ -41,7 +41,6 @@ Create the viewer and initialize the Annotorious plugin.
   window.onload = function() {
     var viewer = OpenSeadragon({
       id: "openseadragon1",
-      prefixUrl: "openseadragon/images/",
       tileSources: {
         type: "image",
         url: "1280px-Hallstatt.jpg"
@@ -61,4 +60,25 @@ The plugin takes a config object as optional second argument. See the [API Refer
 
 ```javascript
 var anno = OpenSeadragon.Annotorious(viewer, config);
+```
+
+## Using NPM
+
+If you use npm, `npm install @recogito/annotorious-openseadragon` and then
+
+```javascript
+import OpenSeadragon from 'openseadragon';
+import * as Annotorious from '@recogito/annotorious-openseadragon';
+
+const viewer = OpenSeadragon({
+  id: "openseadragon",
+  tileSources: {
+    type: "image",
+    url: "1280px-Hallstatt.jpg"
+  }
+ });
+
+const config = {}; // Optional plugin config options
+
+Annotorious(viewer, config);
 ```
