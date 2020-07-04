@@ -203,7 +203,12 @@ Shows or hides the annotation layer.
 ### .setAuthInfo 
 
 ```js
-anno.setAuthInfo(arg);
+var anno = Annotorious.init({ image: 'my-image' });
+
+anno.setAuthInfo({
+  id: 'http://recogito.example.com/rainer',
+  displayName: 'rainer'
+});
 ```
 
 Specifies user authentication information. Annotorious will use this information when annotations
@@ -211,14 +216,15 @@ are created or updated, and display it in the editor popup.
 
 ![Editor popup example](/images/setAuthInfo.png)
 
-`arg` is an object with the following properties:
+Set this data right after initializing Annotorious, and in case the user login status in your host
+application changes. The argument to `.setAuthInfo` is an object with the following properties:
 
 | Property      | Type | Value                                             |
 |---------------|------|---------------------------------------------|
-| `id`          | String | __REQUIRED__ the user ID, which should be an IRI  |
+| `id`          | String | __REQUIRED__ the user ID, which should be a URI  |
 | `displayName` | String | __REQUIRED__ the user name, for display in the UI |
 
-The data will go into annotation bodies via the `creator` field:
+Annotorious will insert this data into every new annotation body that gets created:
 
 ```javascript
 { 
