@@ -135,6 +135,21 @@ existing annotations.
 |---------------|------|-----------------------------------------|
 | `annotations` | Array | array of annotations in W3C WebAnnotation format |
 
+### .setDrawingTool
+
+```js
+anno.setDrawingTool(toolName);
+```
+
+> This feature is experimental. The API will likely change in the future.
+
+Switches between the different available drawing tools. At the moment, only
+the built-in rubberband rectangle and polygon tools are available. 
+
+| Argument   | Type | Value                                         |
+|------------|------|-----------------------------------------|
+| `toolName` | String | Either `rect` or `polygon` |
+
 ### .off
 
 ```js

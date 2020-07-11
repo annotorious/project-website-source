@@ -246,6 +246,21 @@ Annotorious will insert this data into every new annotation body that gets creat
 }
 ```
 
+### .setDrawingTool
+
+```js
+anno.setDrawingTool(toolName);
+```
+
+> This feature is experimental. The API will likely change in the future.
+
+Switches between the different available drawing tools. At the moment, only
+the built-in rubberband rectangle and polygon tools are available. 
+
+| Argument   | Type | Value                                         |
+|------------|------|-----------------------------------------|
+| `toolName` | String | Either `rect` or `polygon` |
+
 ### .setServerTime 
 
 Set a "server time" timestamp. When using [authInfo](#setauthinfo), this method helps to synchronize the
