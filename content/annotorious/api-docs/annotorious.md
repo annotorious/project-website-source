@@ -31,9 +31,10 @@ The config object can have the following properties:
 
 | Property    | Type | Value                                                                               | Default |
 |-------------|------|-------------------------------------------------------------------------------------|---------|
-| `image`     | `Element`, `String` | image element or, alternatively, element ID                          | -       |
+| `image`     | `Element`, `String` | Image element or, alternatively, element ID                          | -       |
 | `readOnly`  | `Boolean` | Set to `true` to display all annotations read-only                             | `false` |
 | `headless`  | `Boolean` | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
+| `tagVocabulary` | `Array` | A list of strings to use as a pre-defined tag vocabulary in the tagging widget | - |
 
 ## Instance Methods
 

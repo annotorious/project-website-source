@@ -27,6 +27,7 @@ The `config` is optional, and must be an object with the following properties:
 | Property    | Type | Value                                                                       | Default |
 |-------------|------|-------------------------------------------------------------------------------|---------|
 | `readOnly`  | Boolean | Set to `true` to display annotations read-only            | `false`    |
+| `tagVocabulary` | `Array` | A list of strings to use as a pre-defined tag vocabulary in the tagging widget | - |
 
 ## Instance Methods
 
