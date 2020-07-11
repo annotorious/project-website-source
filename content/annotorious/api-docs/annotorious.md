@@ -200,7 +200,6 @@ Shows or hides the annotation layer.
 |-----------|------|------------------------------------|
 | `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
 
-
 ### .setAuthInfo 
 
 ```js

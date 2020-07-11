@@ -45,6 +45,16 @@ At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is
 |--------------|------|-----------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format    |
 
+### .clearAuthInfo
+
+```js
+anno.clearAuthInfo();
+```
+
+Clears the user auth information. Annotorious will no longer insert creator data
+when a new annotation is created or updated. (See [setAuthInfo](#setauthinfo) for 
+more information about creator data.)
+
 ### .destroy
 
 ```js
@@ -135,6 +145,51 @@ existing annotations.
 |---------------|------|-----------------------------------------|
 | `annotations` | Array | array of annotations in W3C WebAnnotation format |
 
+### .setAuthInfo 
+
+```js
+var anno = Annotorious.init({ image: 'my-image' });
+
+anno.setAuthInfo({
+  id: 'http://recogito.example.com/rainer',
+  displayName: 'rainer'
+});
+```
+
+Specifies user authentication information. Annotorious will use this information when annotations
+are created or updated, and display it in the editor popup. 
+
+![Editor popup example](/images/setAuthInfo.png)
+
+Set this data right after initializing Annotorious, and in case the user login status in your host
+application changes. The argument to `.setAuthInfo` is an object with the following properties:
+
+| Property      | Type | Value                                             |
+|---------------|------|---------------------------------------------|
+| `id`          | String | __REQUIRED__ the user ID, which should be a URI  |
+| `displayName` | String | __REQUIRED__ the user name, for display in the UI |
+
+Annotorious will insert this data into every new annotation body that gets created:
+
+```javascript
+{ 
+  type: "Annotation",
+  
+  // ...  
+
+  body:[{
+    type: "TextualBody",
+    value:"My comment",
+    purpose: "commenting",
+    created: "2020-05-18T09:39:47.582Z",
+    creator: {
+      id: "http://recogito.example.com/rainer",
+      name: "rainer"
+    }
+  }]
+}
+```
+
 ### .setDrawingTool
 
 ```js
@@ -149,6 +204,15 @@ the built-in rubberband rectangle and polygon tools are available.
 | Argument   | Type | Value                                         |
 |------------|------|-----------------------------------------|
 | `toolName` | String | Either `rect` or `polygon` |
+
+### .setServerTime 
+
+Set a "server time" timestamp. When using [authInfo](#setauthinfo), this method helps to synchronize the
+`created` timestamp that Annotorious inserts into the annotation with your server environment, avoiding 
+problems when the clock isn't properly set in the user's browser.
+
+After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
+server time the user's local clock.
 
 ### .off
 
