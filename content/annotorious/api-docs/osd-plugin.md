@@ -103,6 +103,46 @@ anno.loadAnnotations(url).then(function(annotations) {
 |-----------|------|------------------------------------|
 | `url`     | String | the URL to HTTP GET the annotations from |
 
+### .off
+
+```js
+anno.off(event [, callback]);
+```
+
+Unsubscribe from an event. If no callback is provided,
+all event handlers for this event will be unsubscribed.
+
+| Argument   | Type | Value                                       |
+|------------|------|---------------------------------------|
+| `event`    | String | the name of the event                       |
+| `callback` | Function | the function used when binding to the event |
+
+### .on
+
+```js
+anno.on(event, callback);
+```
+
+Subscribe to an event. (See [Events](#events) for the list.)
+
+| Argument   | Type | Value                                          |
+|------------|------|------------------------------------------|
+| `event`    | String | the name of the event                          |
+| `callback` | Function | the function to call when the event is emitted |
+
+### .panTo
+
+```js
+anno.panTo(arg [, immediately]);
+```
+
+Pans the OpenSeadragon viewport to the specified annotation.
+
+| Argument  | Type | Value                                    |
+|-----------|------|------------------------------------|
+| `arg` | String, Object | the annotation or the annotation ID |
+| `immediately` | Boolean | if `true` pans without animation |
+
 ### .removeAnnotation
 
 ```js
@@ -190,6 +230,21 @@ Annotorious will insert this data into every new annotation body that gets creat
 }
 ```
 
+### .setDrawingEnabled
+
+```js
+anno.setDrawingEnabled(enabled);
+```
+
+Switches the OpenSeadragon viewer from its normal zoom & pan behavior to 
+"drawing mode". That means the user no longer needs to hold __SHIFT__ in 
+order to start drawing. Instead, drawing starts immediately when clicking and
+holding the mouse button.
+
+| Argument      | Type | Value                                         |
+|---------------|------|-----------------------------------------|
+| `enabled` | Boolean | if `true` OpenSeadragon switches from navigation to drawing mode |
+
 ### .setDrawingTool
 
 ```js
@@ -214,48 +269,21 @@ problems when the clock isn't properly set in the user's browser.
 After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
 server time the user's local clock.
 
-### .off
-
-```js
-anno.off(event [, callback]);
-```
-
-Unsubscribe from an event. If no callback is provided,
-all event handlers for this event will be unsubscribed.
-
-| Argument   | Type | Value                                       |
-|------------|------|---------------------------------------|
-| `event`    | String | the name of the event                       |
-| `callback` | Function | the function used when binding to the event |
-
-### .on
-
-```js
-anno.on(event, callback);
-```
-
-Subscribe to an event. (See [Events](#events) for the list.)
-
-| Argument   | Type | Value                                          |
-|------------|------|------------------------------------------|
-| `event`    | String | the name of the event                          |
-| `callback` | Function | the function to call when the event is emitted |
-
-### .panTo
-
-```js
-anno.panTo(arg [, immediately]);
-```
-
-Pans the OpenSeadragon viewport to the specified annotation.
-
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `arg` | String, Object | the annotation or the annotation ID |
-| `immediately` | Boolean | if `true` pans without animation |
-
-
 ## Events
+
+### cancelSelection
+
+```js
+anno.on('cancelSelection', function(selection) {
+  // 
+});
+```
+
+Fired when the creates a selection and then aborts by clicking cancel.
+
+| Argument     | Type | Value                                      |
+|--------------|------|--------------------------------------|
+| `selection` | Object | the canceled selection in W3C WebAnnotation format |
 
 ### createAnnotation
 
