@@ -241,6 +241,9 @@ Switches the OpenSeadragon viewer from its normal zoom & pan behavior to
 order to start drawing. Instead, drawing starts immediately when clicking and
 holding the mouse button.
 
+After the annotation is created or canceled, OpenSeadragon automatically 
+switches back to normal zoom & pan behavior. 
+
 | Argument      | Type | Value                                         |
 |---------------|------|-----------------------------------------|
 | `enabled` | Boolean | if `true` OpenSeadragon switches from navigation to drawing mode |
