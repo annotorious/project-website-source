@@ -188,18 +188,6 @@ existing annotations.
 |---------------|------|-----------------------------------------|
 | `annotations` | Array | array of annotations in W3C WebAnnotation format |
 
-### .setAnnotationsVisible
-
-```js
-anno.setAnnotationsVisible(visible);
-```
-
-Shows or hides the annotation layer.
-
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
-
 ### .setAuthInfo 
 
 ```js
@@ -260,6 +248,18 @@ the built-in rubberband rectangle and polygon tools are available.
 |------------|------|-----------------------------------------|
 | `toolName` | String | Either `rect` or `polygon` |
 
+### .setVisible
+
+```js
+anno.setAnnotationsVisible(visible);
+```
+
+Shows or hides the annotation layer.
+
+| Argument  | Type | Value                                    |
+|-----------|------|------------------------------------|
+| `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
+
 ### .setServerTime 
 
 Set a "server time" timestamp. When using [authInfo](#setauthinfo), this method helps to synchronize the
@@ -270,6 +270,21 @@ After setting server time, the Annotorious will adjust the `created` timestamps 
 server time the user's local clock.
 
 ## Events
+
+### changeSelectionTarget
+
+```js
+anno.on('changeSelectionTarget', function(target) {
+  // 
+});
+```
+
+Fired when the shape of a newly created selection, or of a selected annotation 
+is moved or resized.
+
+| Argument     | Type | Value                                      |
+|--------------|------|--------------------------------------|
+| `target` | Object | the W3C WebAnnotation target |
 
 ### createAnnotation
 
@@ -284,6 +299,20 @@ Fired when a new annotation is created from a user selection.
 | Argument     | Type | Value                                      |
 |--------------|------|--------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
+
+### createSelection
+
+```js
+anno.on('createSelection', function(selection) {
+  // 
+});
+```
+
+Fired when a new selection shape is drawn on the image.
+
+| Argument     | Type | Value                                      |
+|--------------|------|--------------------------------------|
+| `selection` | Object | the selection object in W3C WebAnnotation format |
 
 ### deleteAnnotation
 
