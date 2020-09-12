@@ -124,6 +124,18 @@ body, html {
 
 }
 
+@media only screen and (max-width: 700px) {
+
+  .column {
+    padding:110px 10px 80px 10px !important;
+  }
+
+  .table-of-contents {
+    display:none;
+  }
+
+}
+
 .column {
   position:relative;
   width:100%;
@@ -363,6 +375,7 @@ footer {
 
   .inner {
     width:100%;
+    box-sizing:border-box;
     padding:30px 20px;
     max-width:980px;
     margin:0 auto;
