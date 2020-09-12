@@ -52,7 +52,7 @@ and add the script at the end of the `<body>` section.
 Alternatively, you can grab the script from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.0.4/dist/annotorious.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.0.7/dist/annotorious.min.js"></script>
 ```
 
 ## Using NPM
