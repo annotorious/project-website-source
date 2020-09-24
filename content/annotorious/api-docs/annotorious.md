@@ -31,10 +31,13 @@ The config object can have the following properties:
 
 | Property    | Type | Value                                                                               | Default |
 |-------------|------|-------------------------------------------------------------------------------------|---------|
-| `image`     | `Element`, `String` | Image element or, alternatively, element ID                          | -       |
-| `readOnly`  | `Boolean` | Set to `true` to display all annotations read-only                             | `false` |
-| `headless`  | `Boolean` | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
-| `tagVocabulary` | `Array` | A list of strings to use as a pre-defined tag vocabulary in the tagging widget | - |
+| `image`     | Element, String | Image element or, alternatively, element ID.                          | -       |
+| `locale`    | String | Sets the user interface language. A two-character language code or `auto` to use the browser setting. | -       |
+| `readOnly`  | Boolean | Set to `true` to display all annotations read-only.                             | `false` |
+| `headless`  | Boolean | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
+| `formatter` | Function | A __Formatter__ function providing custom style rules [see below](). | - |
+| `widgets` | Array | A list of widget definitions for the editor. See [Guide on customizing the editor]().  | - |
+
 
 ## Instance Methods
 
@@ -388,5 +391,35 @@ Fired when an existing annotation was updated.
 | `annotation` | Object | the updated annotation                 |
 | `previous`   | Object | the annotation state before the update |
 
+## Formatters
 
+Per default, Annotorious renders annotations as SVG [group](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g)
+elements with an `a9s-annotation` CSS class. A formatter function allows you to dynamically add additional 
+attributes to the SVG annotation shape elements.
+
+A formatter is a JavaScript function takes a single argument - the annotation - and must return either a string or
+an object. 
+
+- If a string is returned, it will be appended to the annotation element CSS class list. 
+- If an object is returned, it should have one or more of the following properties:
+  - `className` a string to be added to the CSS class list
+  - `data-*` a data attribute to add to the annotation SVG element
+  - `style` a list of CSS styles (in the form of a string) 
+
+```js
+// This simple formatter will add an extra 'long' CSS class to long comments
+var formatter1 = function(annotation) {
+
+  // ... TODO
+
+}
+
+// This formatter will add usernames from the annotation as a data attribute
+// and apply an inline style (red outline) where multiple users have annotated
+var formatter2 = function(annotation) {
+
+  // ... TODO
+
+}
+```
 
