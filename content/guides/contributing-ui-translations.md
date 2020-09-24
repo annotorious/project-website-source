@@ -1,11 +1,11 @@
 ---
-title: "Contributing UI Translations"
+title: "Contributing Translations"
 date: 2020-06-01T20:04:18+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "We want to make our user interface available in as many languages as possible. If you want to help: contributing a translation is easy. This guide explains how."
-weight: 2
+weight: 3
 meta_title: "Contributing UI Translations"
 meta_description: "We want to make our user interface available in as many languages as possible. If you want to help: contributing a translation is easy. This guide explains how"
 meta_link: "https://recogito.github.io/guides/contributing-ui-translations"

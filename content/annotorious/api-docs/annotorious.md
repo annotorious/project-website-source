@@ -35,9 +35,8 @@ The config object can have the following properties:
 | `locale`    | String | Sets the user interface language. A two-character language code or `auto` to use the browser setting. | -       |
 | `readOnly`  | Boolean | Set to `true` to display all annotations read-only.                             | `false` |
 | `headless`  | Boolean | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
-| `formatter` | Function | A __Formatter__ function providing custom style rules [see below](). | - |
-| `widgets` | Array | A list of widget definitions for the editor. See [Guide on customizing the editor]().  | - |
-
+| `formatter` | Function | A __Formatter__ function providing custom style rules [see below](#formatters). | - |
+| `widgets` | Array | A list of widget definitions for the editor. Per default, the editor will contain the __comment/reply__ widget, followed by the __tagging_ widget. See the [Guide on customizing the editor](/guides/editor-customization/) for how to change that.  | - |
 
 ## Instance Methods
 
@@ -406,20 +405,75 @@ an object.
   - `data-*` a data attribute to add to the annotation SVG element
   - `style` a list of CSS styles (in the form of a string) 
 
+### String Example
+
 ```js
-// This simple formatter will add an extra 'long' CSS class to long comments
-var formatter1 = function(annotation) {
+/** 
+ * This simple formatter will add an extra 'long' CSS class to 
+ * long comments
+ */
+var formatter = function(annotation) {
 
-  // ... TODO
+  var longComments = annotation.bodies.filter(function(body) {
+    var isComment = body.type === 'TextualBody' && 
+      (body.purpose === 'commenting' || body.purpose === 'replying');
 
+    var isLong = body.value.length > 100;
+
+    return isComment && isLong;
+  });
+
+  if (longComments.length > 0) {
+    // This annotation contains long comments - add CSS class
+    return 'long';
+  }
 }
 
-// This formatter will add usernames from the annotation as a data attribute
-// and apply an inline style (red outline) where multiple users have annotated
-var formatter2 = function(annotation) {
+var anno = Annotorious.init({
+  image: document.getElementyById('my-image'),
+  locale: 'auto',
+  formatter: formatter
+});
+```
 
-  // ... TODO
+You can then apply a visual style to long comments in your own CSS stylesheet.
 
+```css
+.a9s-annotation.long {
+  stroke-width:4;
+  stroke:red;
 }
+```
+
+### Object Example
+
+```js
+/**
+ * This formatter will add usernames from the annotation as a data
+ * attribute and apply an inline style (red outline) where multiple 
+ * users have annotated
+ */
+var formatter = function(annotation) {
+
+  var contributors = [];
+
+  annotation.bodies.forEach(function(body) {
+    if (body.creator)
+      contributors.push(body.creator.id);
+  });
+
+  if (contributors.length > 1) {
+    return {
+      'data-users': contributors.join(', '),
+      'style': 'stroke-width:2; stroke: red'
+    }
+  }
+}
+
+var anno = Annotorious.init({
+  image: document.getElementyById('my-image'),
+  locale: 'auto',
+  formatter: formatter
+});
 ```
 

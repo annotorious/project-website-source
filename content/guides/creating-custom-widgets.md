@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "__Work in progress.__ A guide that explains the basics of developing your own customized annotation editor."
-weight: 4
+weight: 5
 meta_title: "Creating custom editor widgets"
 meta_description: "This guide explains how you can create custom widgets for the Annotorious/RecogitoJS editor popup" 
 meta_link: "https://recogito.github.io/guides/creating-custom-widgets"
