@@ -20,18 +20,26 @@ and dragging the mouse to create a new annotation.
 {{< inline-osd-demo >}}
 
 Download the [latest release](https://github.com/recogito/annotorious-openseadragon/releases/latest)
-and include it in your web page. Make sure to include the script __after__ the
+and include script and stylesheet file in your web page. Make sure to include the script __after__ the
 OpenSeadragon script.
 
 ```html
+<!-- CSS stylesheet -->
+<link rel="stylesheet" href="annotorious.min.css">
+
+<!-- JS -->
 <script src="openseadragon/openseadragon.2.4.2.min.js"></script>
 <script src="openseadragon-annotorious.min.js"></script>
 ```
 
-Alternatively, grab the script from CDN.
+Alternatively, grab the files from CDN.
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@2.0.8/dist/openseadragon-annotorious.min.js"></script>
+<!-- CSS stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@2.1.0/dist/annotorious.min.css">
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@2.1.0/dist/openseadragon-annotorious.min.js"></script>
 ```
 
 Create the viewer and initialize the Annotorious plugin.

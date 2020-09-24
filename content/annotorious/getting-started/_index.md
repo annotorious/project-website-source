@@ -11,7 +11,7 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 
 # Getting Started with Annotorious
 
-Annotorious lets your users draw rectangle selections on images, and add comments
+Annotorious lets your users draw __rectangle__ and __polygon selections__ on images, and add comments
 and labels. Try it out on the image below: __click the annotation__ to edit, __click and drag__ 
 with the mouse to create a new annotation
 
@@ -20,10 +20,14 @@ with the mouse to create a new annotation
 ## Include via Script Tag
 
 To include Annotorious on your page, download the [latest release](https://github.com/recogito/annotorious/releases/latest)
-and add the script at the end of the `<body>` section.
+and add the script and stylesheet files to your page source code.
 
 
 ```html
+<head>
+  <link rel="stylesheet" href="annotorious.min.css">
+</head>
+
 <body>
   <div id="content">
     <img id="hallstatt" src="640px-Hallstatt.jpg">
@@ -49,10 +53,14 @@ and add the script at the end of the `<body>` section.
 
 ## From CDN
 
-Alternatively, you can grab the script from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
+Alternatively, you can grab script and stylesheet from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.0.7/dist/annotorious.min.js"></script>
+<!-- CSS stylesheet -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.css">
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.js"></script>
 ```
 
 ## Using NPM
