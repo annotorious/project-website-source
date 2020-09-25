@@ -31,6 +31,6 @@ To make styling more flexible, Annotorious adds a few extras:
 - When the user creates a new selection, Annotorious renders a mask element. You can use this to dim the area outside
   of the selection. (__TODO: example code and image__)
 
-## Customizing the Editor Popup
+## Customizing the Editor Popup Style
 
 [...TODO...]

@@ -65,6 +65,8 @@ in the editor.
 
 ### Widget Code Example
 
+![Editor popup](/images/guides/colorselector-widget.png)
+
 This minimal widget adds a simple color selector to the editor. Clicking the
 selector creates a new annotation body with the purpose `highlighting`.
 
