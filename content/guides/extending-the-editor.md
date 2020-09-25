@@ -1,17 +1,17 @@
 ---
-title: "Customizing the Editor"
+title: "Extending the Editor"
 date: 2020-09-24T14:24:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "This guide explains how you can customize the contents of the Annotorious/RecogitoJS editor popup."
+blurb: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
 weight: 2
 meta_title: "Customizing the Annotorious/RecogitoJS editor"
-meta_description: "This guide explains how you can customize the contents of the Annotorious/RecogitoJS editor popup."
-meta_link: "https://recogito.github.io/guides/customizing-style"
+meta_description: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
+meta_link: "https://recogito.github.io/guides/extending-the-editor"
 ---
 
-# Customizing the Editor
+# Extending the Editor
 
 Per default, the Annotorious/RecogitoJS editor popup features two widgets:
 
