@@ -37,11 +37,17 @@ This example applies custom CSS rules to enable the dim mask and give different 
 annotation outlines.
 
 ```css
+/** Hides the outer shapes - for this style we only need one **/
 svg.a9s-annotationlayer .a9s-selection .a9s-outer, 
 svg.a9s-annotationlayer .a9s-annotation .a9s-outer {
   display:none;
 }
 
+svg.a9s-annotationlayer .a9s-handle .a9s-handle-outer {
+  display:none;
+}
+
+/** New style for the annotation outlines **/
 svg.a9s-annotationlayer .a9s-selection .a9s-inner,
 svg.a9s-annotationlayer .a9s-annotation .a9s-inner  {
   stroke-width:4;
@@ -49,20 +55,18 @@ svg.a9s-annotationlayer .a9s-annotation .a9s-inner  {
   stroke-dasharray:5;
 }
 
+/** Disable the hover effect from the default stylesheet **/
 svg.a9s-annotationlayer .a9s-annotation.editable:hover .a9s-inner {
   fill:transparent;
 }
 
-svg.a9s-annotationlayer .a9s-handle .a9s-handle-outer {
-  display:none;
-}
-
+/** Corner handles **/
 svg.a9s-annotationlayer .a9s-handle .a9s-handle-inner {
   fill:white;
   stroke:white;
-  transform:scale(1, 1);
 }
 
+/** Enable the dim mask, black with 60% transparency **/
 svg.a9s-annotationlayer .a9s-selection-mask {
   fill:rgba(0, 0, 0, 0.6);
 }
