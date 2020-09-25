@@ -6,7 +6,7 @@ layout: "section-page"
 subsection: "guides"
 blurb: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
 weight: 2
-meta_title: "Customizing the Annotorious/RecogitoJS editor"
+meta_title: "Extending the Annotorious/RecogitoJS editor"
 meta_description: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
 meta_link: "https://recogito.github.io/guides/extending-the-editor"
 ---
