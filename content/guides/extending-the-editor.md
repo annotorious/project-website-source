@@ -49,8 +49,10 @@ Each item in the `widgets` array can be one of the following:
 
 - The name of a built-in widget - currently either `COMMENT` or `TAG`
 - A plugin function (see more info on [creating your own widget plugins below]())
-- An object with a `widget` property that has the widget name or plugin function as value, and additional
-  arguments that will serve as configuration for the widget
+- A [React JSX Component](https://reactjs.org/docs/introducing-jsx.html) conforming to the same
+  interface conventions like the built-in widgets (details to come soon...)
+- An object with a `widget` property that has the widget name, plugin function or JSX component as value, and 
+  additional arguments that will be forwarded to the widget as configuration data
 
 ## Extending the Editor 
 
@@ -63,7 +65,7 @@ in the editor.
 > particular the concepts of __annotation bodies__ and body __purposes__, and 
 > [how they relates to editor widgets](/guides/creating-custom-widgets/). 
 
-### Widget Code Example
+### Code Example
 
 ![Editor popup](/images/guides/colorselector-widget.png)
 

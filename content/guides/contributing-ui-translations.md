@@ -51,7 +51,8 @@ Many thanks in advance! If you have questions, do get in touch via the [Annotori
 
 | Language | Locale | Status | Dictionary file |
 |--------|----------|--------|-----------------|
-| Arabic | ar   | Complete   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
+| Arabic | ar  | Complete   | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
+| Czech | cs | Complete | [messages_cs.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_cs.json) |
 | Galician | gl | Complete  | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
 | German | de   | Complete  | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
 | Hindi | hi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
