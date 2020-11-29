@@ -70,6 +70,8 @@ If you use npm, `npm install @recogito/annotorious` and then
 ```javascript
 import { Annotorious } from '@recogito/annotorious';
 
+import '@recogito/annotorious/dist/annotorious.min.css';
+
 const anno = new Annotorious({
   image: document.getElementById('my-image')
 });

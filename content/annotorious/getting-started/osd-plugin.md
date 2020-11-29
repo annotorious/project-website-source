@@ -78,6 +78,8 @@ If you use npm, `npm install @recogito/annotorious-openseadragon` and then
 import OpenSeadragon from 'openseadragon';
 import * as Annotorious from '@recogito/annotorious-openseadragon';
 
+import '@recogito/annotorious-openseadragon/dist/annotorious.min.css';
+
 const viewer = OpenSeadragon({
   id: "openseadragon",
   tileSources: {
