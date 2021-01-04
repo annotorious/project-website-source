@@ -57,10 +57,10 @@ Alternatively, you can grab script and stylesheet from the [jsDelivr CDN](https:
 
 ```html
 <!-- CSS stylesheet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.css">
 
 <!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.js"></script>
 ```
 
 ## Using NPM
