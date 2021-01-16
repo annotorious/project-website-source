@@ -67,7 +67,7 @@ HTML below provides a minimal, but fully working example.
       var findById = function(id) {
         var query = db.collection('annotations').where('id', '==', id);
         return query.get().then(function(querySnapshot) {
-          return query.docs[0];
+          return querySnapshot.docs[0];
         });
       }
 
