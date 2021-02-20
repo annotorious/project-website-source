@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "This guide explains how you can customize the visual appearance of annotations, and apply your own style rules by implementing a Formatter function."
-weight: 2
+weight: 4
 meta_title: "Customizing the visual appearance of Annotorious"
 meta_description: "This guide explains how you can customize the visual appearance of annotations, and apply your own style rules by implementing a Formatter function."
 meta_link: "https://recogito.github.io/guides/customizing-style"
