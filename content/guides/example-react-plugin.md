@@ -1,7 +1,7 @@
 ---
 title: "Example React Plugin"
 date: 2021-02-20T10:28:42+02:00
-draft: false
+draft: true
 layout: "section-page"
 subsection: "guides"
 blurb: "An example Annotorious/RecogitoJS editor plugin built with React."
@@ -40,26 +40,20 @@ import React from "preact/compat";
 import { useState } from "preact/hooks";
 
 const SelectWidget = props => { 
-  // All bodies stored under this widget's purpose 
-  const all = props.annotation ?  
-    props.annotation.bodies.filter(body => 
-      (body.purpose === props.purpose)) : [];
+  // Assumption: there's only a single body 
+  // with this widget's purpose...
+  const existingBody = props.annotation && 
+    props.annotation.bodies.find(body => 
+      body.purpose === props.purpose);
       
-  const lastBody = 
-    all && all.length ? all[all.length - 1] : null;
-
-  // If this widget is configured with a parent widget,
-  // get the bodies stored under the parent purpose
-  const parentAll =
-    props.annotation && props.parent ? 
-      props.annotation.bodies.filter(body => 
-        body.purpose === props.parent) : [];
-
-  const lastParentBody =
-    parentAll && parentAll.length ? parentAll[parentAll.length - 1] : null;
+  // ...and only a single body with parent purpose
+  const parent = props.annotation &&
+      props.annotation.bodies.find(body => 
+        body.purpose === props.parent);
 
   const onChange = (event) => {
-    props.onAppendBody({ value:event.target.value, purpose:props.purpose });
+    // Upsert appends a new body if existingBody == null, and updates otherwise
+    props.onUpsertBody(existingBody, { value: event.target.value, purpose: props.purpose });
   }
 
   const isSelected = (option) => {
