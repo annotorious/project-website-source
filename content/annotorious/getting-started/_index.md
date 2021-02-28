@@ -77,6 +77,31 @@ const anno = new Annotorious({
 });
 ```
 
+# A Note on Image CSS Styles
+
+Because of the way Annotorious works, some CSS style rules applied directly to the \<img\> 
+element can cause compatibility issues. This is especially the case for `position`, `margin` 
+and `padding` rules.
+
+If you need to apply these CSS styles, please do not apply them to the \<img\> directly, but
+instead __wrap the image in a \<div\> and apply your styles to the wrapper \<div\> instead__. 
+
+```html
+<!-- This does not work -->
+<img src="my-image-1.jpg" style="position:absolute; top:10px; left:10px;" >
+<img src="my-image-2.jpg" style="padding:20px" >
+
+<!-- This works -->
+<div style="position:absolute; top:10px; left:10px;">
+  <img src="my-image-1.jpg">
+</div>
+
+<div style="padding:20px;">
+  <img src="my-image-2.jpg">
+</div>
+```
+
+
 # OpenSeadragon Plugin
 
 There is a separate version of Annotorious which plugs into the [OpenSeadragon viewer](http://openseadragon.github.io/)
