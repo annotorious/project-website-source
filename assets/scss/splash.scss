@@ -15,6 +15,14 @@ html, body {
   white-space:nowrap;
 }
 
+@media only screen and (max-width: 800px) {
+
+  .omittable {
+    display:none;
+  }
+
+}
+
 .jumbo-header {
   height:380px;
   width:100%;
