@@ -239,9 +239,15 @@ p {
         border-color:#f28f1e;
       }
 
-      button.r6o-btn.outline {
+      button.r6o-btn.outline,
+      button.r6o-btn.delete-annotation {
         color:#df8218;
         background-color:#fff;
+      }
+
+      button.r6o-btn.delete-annotation:hover {
+        color:#fff;
+        background-color:rgba(#df8218, .7);
       }
 
     }
