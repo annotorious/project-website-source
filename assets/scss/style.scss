@@ -216,6 +216,7 @@ body, html {
   }
 
   p + ul {
+    padding-left:25px;
     margin:-20px 0 30px 0;
   }
 
@@ -232,7 +233,7 @@ body, html {
 
 @media only screen and (max-width: 800px) {
 
-  .column {
+  .column, .column.full-width {
     padding:90px 20px 80px 20px;
   }
 
