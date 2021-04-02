@@ -10,13 +10,13 @@ meta_link: "https://recogito.github.io/annotorious/api-docs/annotorious"
 
 # API Reference: Annotorious
 
-> The __standard version__ of Annotorious works on normal images embedded in websites
-> or web applications. The API reference for the Annotorious OpenSeadragon plugin is 
-> available [here](/annotorious/api-docs/osd-plugin).
+> The __standard version__ of Annotorious works with normal images embedded in websites
+> or web applications. If you are looking for the Annotorious OpenSeadragon plugin,
+> [see here instead](/annotorious/api-docs/osd-plugin).
 
-## Initializing Annotorious
+## Initialization
 
-Initialize an Annotorious instance on an image with 
+When included via `<script>` tag: 
 
 ```javascript
 var config = {
@@ -27,16 +27,30 @@ var config = {
 var anno = Annotorious.init(config);
 ```
 
-The config object can have the following properties:
+With npm:
 
-| Property    | Type | Value                                                                               | Default |
-|-------------|------|-------------------------------------------------------------------------------------|---------|
-| `image`     | Element, String | Image element or, alternatively, element ID.                          | -       |
-| `locale`    | String | Sets the user interface language. A two-character language code or `auto` to use the browser setting. | -       |
-| `readOnly`  | Boolean | Set to `true` to display all annotations read-only.                             | `false` |
-| `headless`  | Boolean | Completely disables the editor popup. Drawing is still possible, and lifecycle events still fire. Can be used in conjunction with [applyTemplate](#applytemplate). Note that headless mode currently supports only shape creation, not editing. | `false`    |
-| `formatter` | Function | A __Formatter__ function providing custom style rules [see below](#formatters). | - |
-| `widgets` | Array | A list of widget definitions for the editor. Per default, the editor will contain the __comment/reply__ widget, followed by the __tagging_ widget. See the [Guide on customizing the editor](/guides/editor-customization/) for how to change that.  | - |
+```javascript
+import { Annotorious } from '@recogito/annotorious';
+import '@recogito/annotorious/dist/annotorious.min.css';
+
+const config = {
+  image: document.getElementById('my-image')
+}
+
+const anno = new Annotorious(config);
+```
+
+The config object supports the following properties:
+
+| Property        | Type           | Default | Description |                                                              
+|-----------------|----------------|---------|-------------|
+| `allowEmpty`    | Boolean        | false   | If `false`, empty annotations are discared when created |
+| `disableEditor` | Boolean        | false   | Disables the editor and runs Annotorious in [headless mode](#). |
+| `formatter`     | Function       | -       | A [formatter function](#formatters) providing custom style rules. |
+| `image`         | Elem \| String | -       | __Required.__ Image DOM element or element ID. |
+| `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
+| `readOnly`      | Boolean        | false   | Display all annotations as read-only. |
+| `widgets`       | Array          | -       | A list of editor widget definitions (defaults to __comment__ and __tag__ widget. |
 
 ## Instance Methods
 

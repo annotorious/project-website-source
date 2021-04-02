@@ -14,17 +14,18 @@ Annotorious is __open source software__ licensed under the [BSD 3-Clause license
 All source code is available on the __[recogito](https://github.com/recogito)__ GitHub organization. The key 
 repositories are:
 
-- __[recogito/annotorious](https://github.com/recogito/annotorious)__ for the Annotorious standard version
-- __[recogito/annotorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__ for the OpenSeadragon plugin
-- __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__ for shared base components
+- __[recogito/annotorious](https://github.com/recogito/annotorious)__ Annotorious (standard version)
+- __[recogito/annotorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__ Annotorious OpenSeadragon plugin
+- __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__ shared base components
+- __[recogito/recogito-client-plugins](https://github.com/recogito/recogito-client-plugins)__ plugins and extensions
 
 
 ## Need Help?
 
-Get in touch via our [Annotorious Gitter chat](https://gitter.im/recogito/annotorious). If you encounter bugs, or
-have feature requests, please report them via our GitHub issue trackers:
+Get in touch via the [Annotorious Gitter chat](https://gitter.im/recogito/annotorious). If you encounter bugs, or
+have feature requests, please report them via the GitHub issue trackers:
 
-- __[Annotorious Issue Tracker](https://github.com/recogito/annotorious/issues)__ for the Annotorious standard version
+- __[Annotorious Issue Tracker](https://github.com/recogito/annotorious/issues)__ for Annotorious standard
 - __[Annotorious OpenSeadragon Issue Tracker](https://github.com/recogito/annotorious-openseadragon/issues)__
   for the OpenSeadragon plugin
 

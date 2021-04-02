@@ -201,8 +201,8 @@ body, html {
 .column {
   position:relative;
   width:100%;
-  padding:40px 20px 80px 240px;
-  max-width:980px;
+  padding:40px 20px 80px 220px;
+  max-width:1120px;
   margin:0 auto;
   box-sizing:border-box;
   flex:1;
@@ -251,7 +251,7 @@ body, html {
 .table-of-contents {
   position:absolute;
   top:40px;
-  left:0;
+  left:15px;
   line-height:180%;
   pointer-events:none;
 
