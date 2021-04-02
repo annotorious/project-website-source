@@ -11,6 +11,11 @@ body, html {
   display:flex;
   flex-direction:column;
   height:100%;
+  overflow-x:hidden;
+}
+
+.no-break {
+  white-space:nowrap;
 }
 
 .navbar {
@@ -144,6 +149,7 @@ body, html {
   li {
     display:inline-block;
     margin:0 10px;
+    padding-bottom:20px;
   }
   
   a {
@@ -161,6 +167,14 @@ body, html {
     border-width:1px;
     border-style:solid;
     box-shadow:0px 1px 12px rgba(55, 55, 55, 0.15), 0px 1px 1px rgba(55, 55, 55, 0.1);
+  }
+
+  @media only screen and (max-width: 800px) {
+    
+    a.logo {
+      width:340px;
+    }
+
   }
 
   .logo.annotorious {
@@ -197,7 +211,7 @@ body, html {
   flex:1;
 
   p {
-    margin:20px 0 40px 0;
+    margin:10px 0 25px 0;
     padding:0;
   }
 
@@ -337,6 +351,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size:24px;
   padding-bottom:10px;
+  line-height:130%;
 }
 
 h2 {

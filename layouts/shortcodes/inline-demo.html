@@ -5,8 +5,17 @@
     Austria</a>, by Nick Csakany/Wikimedia Commons. Public Domain.
   </p>
 </div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@2.1.2/dist/annotorious.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.js"></script>
+<style>
+  @media only screen and (max-width: 800px) {
+
+    .r6o-editor {
+      width:260px !important;
+    }
+
+  }
+</style>
 <script>
   var sampleAnnotation = { 
     "@context": "http://www.w3.org/ns/anno.jsonld",
@@ -28,7 +37,7 @@
       "selector": {
         "type": "FragmentSelector",
         "conformsTo": "http://www.w3.org/TR/media-frags/",
-        "value": "xywh=pixel:270,120,90,170"
+        "value": "xywh=pixel:421,80,151,151"
       }
     }
   };
@@ -36,7 +45,8 @@
   window.onload = function() {
     var anno = Annotorious.init({
       image: 'hallstatt',
-      locale: 'auto'
+      locale: 'auto',
+      allowEmpty: true
     });
 
     anno.addAnnotation(sampleAnnotation);

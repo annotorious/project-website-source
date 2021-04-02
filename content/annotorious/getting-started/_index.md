@@ -11,9 +11,11 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 
 # Getting Started with Annotorious
 
-Annotorious lets your users draw __rectangle__ and __polygon selections__ on images, and add comments
-and labels. Try it out on the image below: __click the annotation__ to edit, __click and drag__ 
-with the mouse to create a new annotation
+Annotorious lets your users select __rectangle__ and __polygon shapes__ on images, and add comments
+and tags.
+
+Try it on the image below: __click__ or __tap__ the annotation to edit, __click or tap anywhere 
+and drag__ to create a new annotation.
 
 {{< inline-demo >}}
 
@@ -53,7 +55,7 @@ and add the script and stylesheet files to your page source code.
 
 ## From CDN
 
-Alternatively, you can grab script and stylesheet from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
+Alternatively, you can grab script and stylesheet directly from the [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@recogito/annotorious). 
 
 ```html
 <!-- CSS stylesheet -->
@@ -77,14 +79,14 @@ const anno = new Annotorious({
 });
 ```
 
-# A Note on Image CSS Styles
+# A Note Styled Images
 
 Because of the way Annotorious works, some CSS style rules applied directly to the \<img\> 
 element can cause compatibility issues. This is especially the case for `position`, `margin` 
 and `padding` rules.
 
-If you need to apply these CSS styles, please do not apply them to the \<img\> directly, but
-instead __wrap the image in a \<div\> and apply your styles to the wrapper \<div\> instead__. 
+If you need to apply these CSS styles, please do not apply them to the `<img>` directly.
+Instead, __wrap the image in a \<div\> and apply your styles to the wrapper \<div\>__. 
 
 ```html
 <!-- This does not work -->
@@ -109,7 +111,11 @@ for high-resolution images. Setup is just as easy as for the standard version. [
 
 # Next Steps
 
-Once you have the basics up and running, you will probably want to know more about the data format
-of the annotations, and how you can store them permanently. Read more about the 
-[W3C Web Annotation Model](/annotorious/getting-started/web-annotation) and [how to integrate Annotorious 
-with a backend](/annotorious/getting-started/storing-annotations).
+Once you have the basics up and running, you will probably want to know more about 
+Annotorious' JavaScript API, the format of the annotations, how you can store them 
+permanently, and how you can customize Annotorious to fit your needs and UI design.
+
+Read the [API docs](/annotorious/api-docs/annotorious/) and check our 
+[Guides section](http://localhost:1313/guides/) for more info. More 
+questions? Feedack? Feature requests? Get in touch via the 
+[Annotorious chat on Gitter](https://gitter.im/recogito/annotorious).
