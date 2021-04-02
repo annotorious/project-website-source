@@ -14,14 +14,19 @@ body, html {
 }
 
 .navbar {
-  position:fixed;
+  position:absolute;
   top:0;
   left:0;
   width:100%;
+  box-sizing:border-box;
   text-align:right;
   background-color:#222;
   font-size:16px;
   z-index:1;
+
+  .mobile-only {
+    display:none;
+  }
 
   ul {
     list-style-type:none;
@@ -63,6 +68,67 @@ body, html {
   li.github:hover {
     background-color:transparent;
   } 
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  .navbar {
+
+    .mobile-only {
+      display:block;
+      
+      button#open-responsive-menu {
+        padding:14px 20px 10px 20px;
+        cursor:pointer;
+        background:none;
+        outline:none;
+        border:none;
+        font-size:28px;
+        color:#fff;
+
+        img {
+          width:28px;
+        }
+
+      }
+
+    }
+
+    ul {
+      display:none;
+    }
+
+  }
+
+}
+
+.navbar.responsive {
+
+  ul, li {
+    display:block;
+  }
+
+  ul {
+    padding:0;
+  }
+
+  li {
+    margin:0;
+    padding:8px;
+    border-radius:0;
+    background-color:#333;
+    border-top:1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  li:hover, li.current {
+    background-color:none;
+    
+    a {
+      color:#fff;
+    }
+
+  }
 
 }
 
@@ -121,18 +187,6 @@ body, html {
 
 }
 
-@media only screen and (max-width: 700px) {
-
-  .column {
-    padding:110px 10px 80px 10px !important;
-  }
-
-  .table-of-contents {
-    display:none;
-  }
-
-}
-
 .column {
   position:relative;
   width:100%;
@@ -160,6 +214,18 @@ body, html {
 
 .column.full-width {
   padding:110px 20px 80px 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .column {
+    padding:90px 20px 80px 20px;
+  }
+
+  .table-of-contents {
+    display:none;
+  }
+
 }
 
 .tabs {
