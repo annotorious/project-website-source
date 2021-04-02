@@ -13,9 +13,9 @@ meta_link: "https://recogito.github.io/annotorious/getting-started/osd-plugin"
 
 # Getting Started with the OpenSeadragon Plugin
 
-The __OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/)
-viewer for zoomable high-resolution images. Click the annotation to edit. Hold `SHIFT` while clicking 
-and dragging the mouse to create a new annotation.
+The __Annotorious OpenSeadragon plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/)
+viewer for zoomable high-resolution images. __Click or tap__ the annotation to edit. Hold the `SHIFT` key while 
+clicking and dragging the mouse to create a new annotation.
 
 {{< inline-osd-demo >}}
 

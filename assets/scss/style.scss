@@ -19,9 +19,6 @@ body, html {
 }
 
 .navbar {
-  position:absolute;
-  top:0;
-  left:0;
   width:100%;
   box-sizing:border-box;
   text-align:right;
@@ -204,7 +201,7 @@ body, html {
 .column {
   position:relative;
   width:100%;
-  padding:110px 20px 80px 240px;
+  padding:40px 20px 80px 240px;
   max-width:980px;
   margin:0 auto;
   box-sizing:border-box;
@@ -228,13 +225,13 @@ body, html {
 }
 
 .column.full-width {
-  padding:110px 20px 80px 20px;
+  padding:40px 20px 80px 20px;
 }
 
 @media only screen and (max-width: 800px) {
 
   .column, .column.full-width {
-    padding:90px 20px 80px 20px;
+    padding:25px 20px 80px 20px;
   }
 
   .table-of-contents {
@@ -243,37 +240,19 @@ body, html {
 
 }
 
-.tabs {
-  padding-bottom:20px;
-  font-size:13px;
-  pointer-events:auto;
+.table-of-contents.api {
 
-  .tab {
-    display:inline-block;
-    padding:0 5px;
-    margin-right:1px;
-    text-decoration:none;
-    color:#fff;    
-  }
-
-  a.tab:hover {
-    text-decoration:none;
-  }
-
-  .current {
-    border-bottom:2px solid #c49865;  
+  li {
+    padding-bottom:25px;
   }
 
 }
 
 .table-of-contents {
-  position:fixed;
-  width:100%;
-  max-width:980px;
-  top:110px;
-  left:50%;
-  transform: translate(-50%, 0);
-  line-height:170%;
+  position:absolute;
+  top:40px;
+  left:0;
+  line-height:180%;
   pointer-events:none;
 
   nav {
@@ -288,7 +267,7 @@ body, html {
   }
 
   ul ul {
-    padding-left:10px;
+    padding-left:5px;
   }
 
   li {
@@ -297,6 +276,7 @@ body, html {
 
   ul ul li {
     font-weight:normal;
+    padding-bottom:0 !important;
   }
 
   a {
@@ -306,18 +286,6 @@ body, html {
   a:hover {
     text-decoration:underline;
   }
-}
-
-.table-of-contents.subsections {
-
-  ul li {
-    font-weight:normal;
-  }
-
-  ul li a.active {
-    font-weight:bold;
-  }
-
 }
 
 .section-overview {

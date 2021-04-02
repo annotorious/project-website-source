@@ -9,9 +9,14 @@
   </head>
   <body>
     {{ partial "header.html" . }}
+
     <div class="column">
       <div class="main-content">
         {{ .Content }}
+      </div>
+
+      <div class="table-of-contents api">
+        {{ .TableOfContents }}
       </div>
     </div>
 
