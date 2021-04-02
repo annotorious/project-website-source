@@ -14,8 +14,6 @@ meta_link: "https://recogito.github.io/annotorious/api-docs/annotorious"
 > or web applications. The API reference for the Annotorious OpenSeadragon plugin is 
 > available [here](/annotorious/api-docs/osd-plugin).
 
-| Methods
-
 ## Initializing Annotorious
 
 Initialize an Annotorious instance on an image with 
