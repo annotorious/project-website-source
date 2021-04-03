@@ -169,14 +169,14 @@ const { snippet, transform } = anno.getSelectedImageSnippet();
 
 Returns an object containing:
 
-- A DOM CANVAS element, in the size of the current selection's bounding box, with 
-  the selected image snippet 
+- A __Canvas__ element, in the size of the current selection's bounding box, with 
+  the selected image snippet (in the same resolution as the current OpenSeadragon viewport)
 - A coordinate transform function that translates X/Y coordinates in the snippet coordinate
   space back to the coordinate space of the full image
 
 | Field       | Type     | Value |
 |-------------|----------|-------|
-| `snippet`   | Canvas   | the image under the current selection bounds as a CANVAS element |
+| `snippet`   | Canvas   | the image under the current selection bounds as a `Canvas` element |
 | `transform` | Function | coordinate conversion function |
 
 ### .listDrawingTools
