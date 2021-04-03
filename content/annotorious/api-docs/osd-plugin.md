@@ -12,12 +12,12 @@ meta_link: "https://recogito.github.io/annotorious/api-docs/osd-plugin"
 
 > The __OpenSeadragon Plugin__ is an extension to the 
 > [OpenSeadragon](http://openseadragon.github.io/) zoomable image viewer. 
-> If you are looking for the standard version of Annotorious,
-> [see here instead](/annotorious/api-docs/annotorious).
+> If you are looking for the standard version of Annotorious, which works with
+> normal images embedded in websites, [see here instead](/annotorious/api-docs/annotorious).
 
 ## Initialization
 
-When icnluded via `<script>` tag: 
+When included via `<script>` tag: 
 
 ```js
 var anno = OpenSeadragon.Annotorious(viewer, config);
@@ -50,7 +50,6 @@ The `config` object is optional, and supports following properties:
 | `allowEmpty`    | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations. |
 | `disableEditor` | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup. |
 | `formatter`     | Function       | -       | A [formatter function](#formatters) providing custom style rules. |
-| `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
 | `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
 | `readOnly`      | Boolean        | false   | Display annotations in read-only mode. |
 | `widgets`       | Array          | -       | A list of editor widget definitions (defaults to __comment__ and __tag__ widget. |
