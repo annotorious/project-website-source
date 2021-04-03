@@ -44,13 +44,34 @@ The config object supports the following properties:
 
 | Property        | Type           | Default | Description |                                                              
 |-----------------|----------------|---------|-------------|
-| `allowEmpty`    | Boolean        | false   | If `false`, empty annotations are discared when created |
-| `disableEditor` | Boolean        | false   | Disables the editor and runs Annotorious in [headless mode](#). |
+| `allowEmpty`    | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations. |
+| `disableEditor` | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup. |
 | `formatter`     | Function       | -       | A [formatter function](#formatters) providing custom style rules. |
 | `image`         | Elem \| String | -       | __Required.__ Image DOM element or element ID. |
 | `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
-| `readOnly`      | Boolean        | false   | Display all annotations as read-only. |
+| `readOnly`      | Boolean        | false   | Display annotations in read-only mode. |
 | `widgets`       | Array          | -       | A list of editor widget definitions (defaults to __comment__ and __tag__ widget. |
+
+## Instance Fields
+
+### disableEditor
+
+```js
+console.log(anno.disableEditor); // true or fals
+anno.disableEditor = !anno.disableEditor; // toggles state
+```
+Change the operation mode between __normal__ (drawing tools & editor popup) and __headless__. In 
+headless mode, only drawing tools and lifecycle events are active. The editor will not open.
+
+### readOnly
+
+```js
+console.log(anno.readOnly); // true or fals
+anno.readOnly = !anno.readOnly; // toggles state
+```
+
+Change display mode between __normal__ (annotations are editabel) and __read-only__. 
+
 
 ## Instance Methods
 
@@ -64,31 +85,35 @@ Adds an annotation programmatically. The format is the
 [W3C WebAnnotation model](/annotorious/getting-started/web-annotation). At the moment, 
 only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
 
-| Argument     | Type    | Value                                                       |
-|--------------|---------|-------------------------------------------------------------|
-| `annotation` | Object  | the annotation according to the W3C WebAnnotation format    |
+| Argument     | Type    | Value |
+|--------------|---------|-------|
+| `annotation` | Object  | the annotation according to the W3C WebAnnotation format |
 | `readOnly`   | Boolean | set the second arg to `true` to display the annotation in read-only mode |
 
-### .applyTemplate
+### .addDrawingTool
 
 ```js
-anno.applyTemplate(template);
+anno.addDrawingTool(plugin);
 ```
 
-When a new annotation is created, Annotorious will automatically apply the given 
-template. The template can be a single annotation body, or an array of bodies.
-If `openEditor` is set to true, the editor popup will open, allowing the user to 
-edit the annotation normally. Otherwise, Annotorious will __instantly__ create an 
-annotation from the template bodies __only__. The editor will not open. 
+Register a drawing tool plugin.
 
-Use this method if you want to implement batch- or fast annotation modes, where
-the same annotation should be applied repeatedly, and the user should only take
-care of drawing selections.
+### .cancelSelected
 
-| Argument   | Type | Value                                    |
-|------------|------|------------------------------------|
-| `template` | Object | the template body or list of bodies to apply automatically |
-| `openEditor` | Boolean | if `true`, the editor will open after the template is applied |
+```js
+anno.cancelSelected();
+```
+
+Programmatically cancel the current selection, if any.
+
+### .clearAnnotations
+
+```js
+anno.clearAnnotations();
+```
+
+Delete all annotations from the image.
+
 
 ### .clearAuthInfo
 
@@ -111,10 +136,45 @@ Destroys this instance of Annotorious, removing the annotation layer on the imag
 ### .getAnnotations
 
 ```js
-anno.getAnnotations();
+const annotations = anno.getAnnotations();
 ```
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
+
+### .getSelected
+
+```js
+const selected = anno.getSelected();
+```
+
+Returns the currently selected annotation.
+
+### .getSelectedImageSnippet
+
+```js
+const { snippet, transform } = anno.getSelectedImageSnippet();
+```
+
+Returns an object containing:
+
+- A DOM CANVAS element, in the size of the current selection's bounding box, with 
+  the selected image snippet 
+- A coordinate transform function that translates X/Y coordinates in the snippet coordinate
+  space back to the coordinate space of the full image
+
+| Field       | Type     | Value |
+|-------------|----------|-------|
+| `snippet`   | Canvas   | the image under the current selection bounds as a CANVAS element |
+| `transform` | Function | coordinate conversion function |
+
+### .listDrawingTools
+
+```js
+const toolNames = anno.listDrawingTools();
+```
+
+Returns a list of the available drawing tools, including those from registered drawing
+tool plugins.
 
 ### .loadAnnotations
 
@@ -173,6 +233,16 @@ Removes an annotation programmatically.
 | Argument     | Type           | Value                                                           |
 |--------------|----------------|-----------------------------------------------------------------|
 | `arg`        | Object, String | the annotation in W3C WebAnnotation format or the annotation ID |
+
+### .saveSelected
+
+```js
+anno.saveSelected();
+```
+
+Saves the current selection. This is essentially a programmatic way to hit the __Ok__ button on 
+the editor.
+
 
 ### .selectAnnotation
 
@@ -255,14 +325,16 @@ Annotorious will insert this data into every new annotation body that gets creat
 anno.setDrawingTool(toolName);
 ```
 
-> This feature is experimental. The API will likely change in the future.
+Switches between the different available drawing tools. Per default, Annotorious
+provides a standard rectangle tool (`rect`) and a standard polygon drawing tool
+(`polygon`).
 
-Switches between the different available drawing tools. At the moment, only
-the built-in rubberband rectangle and polygon tools are available. 
+More tools may be available through plugins. Use [.listDrawingTool](#listdrawingtools)
+to get the list of registered tools.
 
-| Argument   | Type | Value                                         |
-|------------|------|-----------------------------------------|
-| `toolName` | String | Either `rect` or `polygon` |
+| Argument   | Type   | Value                    |
+|------------|--------|--------------------------|
+| `toolName` | String | E.g. `rect` or `polygon` |
 
 ### .setVisible
 
@@ -285,7 +357,55 @@ problems when the clock isn't properly set in the user's browser.
 After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
 server time the user's local clock.
 
+### .updateSelected
+
+```js
+anno.updateSelected(annotation[, saveImmediately]);
+```
+
+Replace the currently selected annotation with the one given as argument to .updateSelected.
+Optionally: save the annotation immediately, triggering a `createAnnotation` or 
+`updateAnnotation` event.
+
+> __Important:__ this method returns a Promise. The update will __not__ be effective
+> immediately. Make sure you wait until the Promise completes before saving the annotation.
+
+Use this method for applications that  (with `disableEditor` set 
+to `true`).
+
+```js
+var anno = Annotorious.init({
+  image: 'my-image'
+  disableEditor: true
+});
+
+anno.on('createSelection', async function(selection) {
+  selection.body = [{
+    type: 'TextualBody',
+    purpose: 'tagging',
+    value: 'MyTag'
+  }];
+
+  // Make sure to wait before saving!
+  await anno.updateSelected(selection);
+  anno.saveSelected();
+
+  // Or: anno.updateSelected(selection, true);
+});
+```
+
 ## Events
+
+### cancelSelected
+
+```js
+anno.on('cancelSelected', function(target) {
+  // 
+});
+```
+
+Fired when the user has canceled a selection, by hitting __Cancel__ in the editor, or by
+clicking or tapping outside the selected annotation shape.
 
 ### changeSelectionTarget
 
@@ -298,8 +418,8 @@ anno.on('changeSelectionTarget', function(target) {
 Fired when the shape of a newly created selection, or of a selected annotation 
 is moved or resized.
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument | Type   | Value                        |
+|----------|--------|------------------------------|
 | `target` | Object | the W3C WebAnnotation target |
 
 ### createAnnotation
@@ -385,8 +505,8 @@ anno.on('selectAnnotation', function(annotation) {
 Fired when the user selects an annotation. Note that this event will __not__ fire when 
 the selection is made programmatically through the `selectAnnotation(arg)` API method.
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument     | Type   | Value                                      |
+|--------------|--------|--------------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
 
 ### updateAnnotation
