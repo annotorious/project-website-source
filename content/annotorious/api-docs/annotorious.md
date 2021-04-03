@@ -50,7 +50,7 @@ The config object supports the following properties:
 | `image`         | Elem \| String | -       | __Required.__ Image DOM element or element ID. |
 | `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
 | `readOnly`      | Boolean        | false   | Display annotations in read-only mode. |
-| `widgets`       | Array          | -       | A list of editor widget definitions (defaults to __comment__ and __tag__ widget. |
+| `widgets`       | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details). |
 
 ## Instance Fields
 

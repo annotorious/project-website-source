@@ -1,19 +1,19 @@
 ---
-title: "Extending the Editor"
+title: "Customizing the Editor"
 date: 2020-09-24T14:24:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
-weight: 2
-meta_title: "Extending the Annotorious/RecogitoJS editor"
-meta_description: "This guide explains how you can extend the Annotorious/RecogitoJS editor popup with your own UI components."
-meta_link: "https://recogito.github.io/guides/extending-the-editor"
+blurb: "This guide explains how you can customize the Annotorious/RecogitoJS editor popup UI components."
+weight: 1
+meta_title: "Customizing the Annotorious editor"
+meta_description: "This guide explains how you can customize the Annotorious/RecogitoJS editor popup UI components."
+meta_link: "https://recogito.github.io/guides/customizing-the-editor"
 ---
 
-# Extending the Editor
+# Customizing the Editor
 
-Per default, the Annotorious/RecogitoJS editor popup features two widgets:
+Per default, the Annotorious editor popup features two widgets:
 
 - A __comment widget__ for writing comments and replies
 - A __tag widget__ for adding tags, either freetext or supported by a pre-configured vocabulary and an autosuggest dropdown
@@ -268,8 +268,3 @@ svg.a9s-annotationlayer .a9s-annotation.BLUE .a9s-inner {
   stroke:none;
 }
 ```
-
-## Extending the Editor with React
-
-If you want to extend the editor with a React component, 
-see [this example](/guides/example-react-plugin).
