@@ -31,8 +31,8 @@ have feature requests, please report them via the GitHub issue trackers:
 
 ## Help Improve this Site!
 
-Found an error on this site? Want to help improve our documentation? Or contribute a guide?
-Fantastic! Do reach out to us [on our chat](https://gitter.im/recogito/annotorious), or simply fork
+Found an error on this site? Want to help improve documentation? Or contribute a guide?
+Fantastic! Do reach out [on the chat](https://gitter.im/recogito/annotorious), or simply fork
 the [repository of this website](https://github.com/recogito/project-website-source) and send us a 
 pull request!
 
