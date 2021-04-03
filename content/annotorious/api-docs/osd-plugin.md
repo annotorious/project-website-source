@@ -10,24 +10,70 @@ meta_link: "https://recogito.github.io/annotorious/api-docs/osd-plugin"
 
 # API Reference: OpenSeadragon Plugin
 
-> The __OpenSeadragon Plugin__ is an extension to the [OpenSeadragon](http://openseadragon.github.io/),
-> zoomable image viewer. The API reference for the Annotorious standard version is available 
-> [here](/annotorious/api-docs/annotorious).
+> The __OpenSeadragon Plugin__ is an extension to the 
+> [OpenSeadragon](http://openseadragon.github.io/) zoomable image viewer. 
+> If you are looking for the standard version of Annotorious,
+> [see here instead](/annotorious/api-docs/annotorious).
 
-## Initializing the Plugin
+## Initialization
 
-Initialize Annotorious on an OpenSeadragon viewer instance with 
+When icnluded via `<script>` tag: 
 
-```javascript
+```js
 var anno = OpenSeadragon.Annotorious(viewer, config);
 ```
 
-The `config` is optional, and must be an object with the following properties:
+With npm:
 
-| Property    | Type | Value                                                                       | Default |
-|-------------|------|-------------------------------------------------------------------------------|---------|
-| `readOnly`  | Boolean | Set to `true` to display annotations read-only            | `false`    |
-| `tagVocabulary` | `Array` | A list of strings to use as a pre-defined tag vocabulary in the tagging widget | - |
+```js
+import OpenSeadragon from 'openseadragon';
+import * as Annotorious from '@recogito/annotorious-openseadragon';
+import '@recogito/annotorious-openseadragon/dist/annotorious.min.css';
+
+const viewer = OpenSeadragon({
+  id: "openseadragon",
+  tileSources: {
+    type: "image",
+    url: "1280px-Hallstatt.jpg"
+  }
+ });
+
+const config = {}; // Optional plugin config options
+
+Annotorious(viewer, config);
+```
+
+The `config` object is optional, and supports following properties:
+
+| Property        | Type           | Default | Description |
+|-----------------|----------------|---------|-------------|
+| `allowEmpty`    | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations. |
+| `disableEditor` | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup. |
+| `formatter`     | Function       | -       | A [formatter function](#formatters) providing custom style rules. |
+| `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
+| `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
+| `readOnly`      | Boolean        | false   | Display annotations in read-only mode. |
+| `widgets`       | Array          | -       | A list of editor widget definitions (defaults to __comment__ and __tag__ widget. |
+
+## Instance Fields
+
+### disableEditor
+
+```js
+console.log(anno.disableEditor); // true or fals
+anno.disableEditor = !anno.disableEditor; // toggles state
+```
+Change the operation mode between __normal__ (drawing tools & editor popup) and __headless__. In 
+headless mode, only drawing tools and lifecycle events are active. The editor will not open.
+
+### readOnly
+
+```js
+console.log(anno.readOnly); // true or fals
+anno.readOnly = !anno.readOnly; // toggles state
+```
+
+Change display mode between __normal__ (annotations are editabel) and __read-only__. 
 
 ## Instance Methods
 
@@ -44,6 +90,30 @@ At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is
 | Argument     | Type | Value                                         |
 |--------------|------|-----------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format    |
+
+### .addDrawingTool
+
+```js
+anno.addDrawingTool(plugin);
+```
+
+Register a drawing tool plugin.
+
+### .cancelSelected
+
+```js
+anno.cancelSelected();
+```
+
+Programmatically cancel the current selection, if any.
+
+### .clearAnnotations
+
+```js
+anno.clearAnnotations();
+```
+
+Delete all annotations from the image.
 
 ### .clearAuthInfo
 
@@ -83,6 +153,41 @@ anno.getAnnotations();
 ```
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
+
+### .getSelected
+
+```js
+const selected = anno.getSelected();
+```
+
+Returns the currently selected annotation.
+
+### .getSelectedImageSnippet
+
+```js
+const { snippet, transform } = anno.getSelectedImageSnippet();
+```
+
+Returns an object containing:
+
+- A DOM CANVAS element, in the size of the current selection's bounding box, with 
+  the selected image snippet 
+- A coordinate transform function that translates X/Y coordinates in the snippet coordinate
+  space back to the coordinate space of the full image
+
+| Field       | Type     | Value |
+|-------------|----------|-------|
+| `snippet`   | Canvas   | the image under the current selection bounds as a CANVAS element |
+| `transform` | Function | coordinate conversion function |
+
+### .listDrawingTools
+
+```js
+const toolNames = anno.listDrawingTools();
+```
+
+Returns a list of the available drawing tools, including those from registered drawing
+tool plugins.
 
 ### .loadAnnotations
 
@@ -154,6 +259,15 @@ Removes an annotation programmatically.
 | Argument     | Type | Value                                         |
 |--------------|------|-----------------------------------------|
 | `arg` | String, Object | the annotation in W3C WebAnnotation format or the annotation ID |
+
+### .saveSelected
+
+```js
+anno.saveSelected();
+```
+
+Saves the current selection. This is essentially a programmatic way to hit the __Ok__ button on 
+the editor.
 
 ### .selectAnnotation
 
@@ -254,14 +368,28 @@ switches back to normal zoom & pan behavior.
 anno.setDrawingTool(toolName);
 ```
 
-> This feature is experimental. The API will likely change in the future.
+Switches between the different available drawing tools. Per default, Annotorious
+provides a standard rectangle tool (`rect`) and a standard polygon drawing tool
+(`polygon`).
 
-Switches between the different available drawing tools. At the moment, only
-the built-in rubberband rectangle and polygon tools are available. 
+More tools may be available through plugins. Use [.listDrawingTool](#listdrawingtools)
+to get the list of registered tools.
 
-| Argument   | Type | Value                                         |
-|------------|------|-----------------------------------------|
-| `toolName` | String | Either `rect` or `polygon` |
+| Argument   | Type   | Value                    |
+|------------|--------|--------------------------|
+| `toolName` | String | E.g. `rect` or `polygon` |
+
+### .setVisible
+
+```js
+anno.setAnnotationsVisible(visible);
+```
+
+Shows or hides the annotation layer.
+
+| Argument  | Type | Value                                    |
+|-----------|------|------------------------------------|
+| `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
 
 ### .setServerTime 
 
@@ -272,21 +400,74 @@ problems when the clock isn't properly set in the user's browser.
 After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
 server time the user's local clock.
 
-## Events
-
-### cancelSelection
+### .updateSelected
 
 ```js
-anno.on('cancelSelection', function(selection) {
+anno.updateSelected(annotation[, saveImmediately]);
+```
+
+Replace the currently selected annotation with the one given as argument to .updateSelected.
+Optionally: save the annotation immediately, triggering a `createAnnotation` or 
+`updateAnnotation` event.
+
+> __Important:__ this method returns a Promise. The update will __not__ be effective
+> immediately. Make sure you wait until the Promise completes before saving the annotation.
+
+Use this method for applications that  (with `disableEditor` set 
+to `true`).
+
+```js
+var anno = Annotorious.init({
+  image: 'my-image'
+  disableEditor: true
+});
+
+anno.on('createSelection', async function(selection) {
+  selection.body = [{
+    type: 'TextualBody',
+    purpose: 'tagging',
+    value: 'MyTag'
+  }];
+
+  // Make sure to wait before saving!
+  await anno.updateSelected(selection);
+  anno.saveSelected();
+
+  // Or: anno.updateSelected(selection, true);
+});
+```
+
+## Events
+
+### cancelSelected
+
+```js
+anno.on('cancelSelected', function(selection) {
   // 
 });
 ```
 
-Fired when the creates a selection and then aborts by clicking cancel.
+Fired when the user has canceled a selection, by hitting __Cancel__ in the editor, or by
+clicking or tapping outside the selected annotation shape.
 
 | Argument     | Type | Value                                      |
 |--------------|------|--------------------------------------|
 | `selection` | Object | the canceled selection in W3C WebAnnotation format |
+
+### changeSelectionTarget
+
+```js
+anno.on('changeSelectionTarget', function(target) {
+  // 
+});
+```
+
+Fired when the shape of a newly created selection, or of a selected annotation 
+is moved or resized.
+
+| Argument | Type   | Value                        |
+|----------|--------|------------------------------|
+| `target` | Object | the W3C WebAnnotation target |
 
 ### createAnnotation
 
@@ -301,6 +482,20 @@ Fired when a new annotation is created from a user selection.
 | Argument     | Type | Value                                      |
 |--------------|------|--------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
+
+### createSelection
+
+```js
+anno.on('createSelection', function(selection) {
+  // 
+});
+```
+
+Fired when a new selection shape is drawn on the image.
+
+| Argument     | Type | Value                                      |
+|--------------|------|--------------------------------------|
+| `selection` | Object | the selection object in W3C WebAnnotation format |
 
 ### deleteAnnotation
 
@@ -375,3 +570,90 @@ Fired when an existing annotation was updated.
 |--------------|------|----------------------------------|
 | `annotation` | Object | the updated annotation                 |
 | `previous`   | Object | the annotation state before the update |
+
+## Formatters
+
+Per default, Annotorious renders annotations as SVG [group](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g)
+elements with an `a9s-annotation` CSS class. A formatter function allows you to dynamically add additional 
+attributes to the SVG annotation shape elements.
+
+A formatter is a JavaScript function takes a single argument - the annotation - and must return either a string or
+an object. 
+
+- If a string is returned, it will be appended to the annotation element CSS class list. 
+- If an object is returned, it should have one or more of the following properties:
+  - `className` a string to be added to the CSS class list
+  - `data-*` a data attribute to add to the annotation SVG element
+  - `style` a list of CSS styles (in the form of a string) 
+
+### String Example
+
+```js
+/** 
+ * This simple formatter will add an extra 'long' CSS class to 
+ * long comments
+ */
+var formatter = function(annotation) {
+
+  var longComments = annotation.bodies.filter(function(body) {
+    var isComment = body.type === 'TextualBody' && 
+      (body.purpose === 'commenting' || body.purpose === 'replying');
+
+    var isLong = body.value.length > 100;
+
+    return isComment && isLong;
+  });
+
+  if (longComments.length > 0) {
+    // This annotation contains long comments - add CSS class
+    return 'long';
+  }
+}
+
+var anno = Annotorious.init({
+  image: document.getElementyById('my-image'),
+  locale: 'auto',
+  formatter: formatter
+});
+```
+
+You can then apply a visual style to long comments in your own CSS stylesheet.
+
+```css
+.a9s-annotation.long {
+  stroke-width:4;
+  stroke:red;
+}
+```
+
+### Object Example
+
+```js
+/**
+ * This formatter will add usernames from the annotation as a data
+ * attribute and apply an inline style (red outline) where multiple 
+ * users have annotated
+ */
+var formatter = function(annotation) {
+
+  var contributors = [];
+
+  annotation.bodies.forEach(function(body) {
+    if (body.creator)
+      contributors.push(body.creator.id);
+  });
+
+  if (contributors.length > 1) {
+    return {
+      'data-users': contributors.join(', '),
+      'style': 'stroke-width:2; stroke: red'
+    }
+  }
+}
+
+var anno = Annotorious.init({
+  image: document.getElementyById('my-image'),
+  locale: 'auto',
+  formatter: formatter
+});
+```

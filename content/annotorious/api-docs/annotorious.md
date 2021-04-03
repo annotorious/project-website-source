@@ -399,13 +399,17 @@ anno.on('createSelection', async function(selection) {
 ### cancelSelected
 
 ```js
-anno.on('cancelSelected', function(target) {
+anno.on('cancelSelected', function(selection) {
   // 
 });
 ```
 
 Fired when the user has canceled a selection, by hitting __Cancel__ in the editor, or by
 clicking or tapping outside the selected annotation shape.
+
+| Argument     | Type | Value                                      |
+|--------------|------|--------------------------------------|
+| `selection` | Object | the canceled selection in W3C WebAnnotation format |
 
 ### changeSelectionTarget
 
