@@ -1,17 +1,17 @@
 ---
-title: "Example React Plugin"
+title: "Example React Widget"
 date: 2021-02-20T10:28:42+02:00
 draft: true
 layout: "section-page"
 subsection: "guides"
-blurb: "An example Annotorious/RecogitoJS editor plugin built with React."
+blurb: "An example Annotorious/RecogitoJS editor widget built with React."
 weight: 3
-meta_title: "Example React Plugin"
-meta_description: "An example Annotorious/RecogitoJS editor plugin built with React."
-meta_link: "https://recogito.github.io/guides/example-react-plugin"
+meta_title: "Example React Widget"
+meta_description: "An example Annotorious/RecogitoJS editor widget built with React."
+meta_link: "https://recogito.github.io/guides/example-react-widget"
 ---
 
-# Example React Plugin
+# Example React Widget
 
 > This guide was created by [Alaksandar Jesus Gene](https://github.com/alaksandarjesus) and
 > is re-published here (with minor modifications) with his kind permission. 

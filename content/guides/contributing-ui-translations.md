@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "We want to make the user interface available in as many languages as possible. If you want to help: contributing a translation is easy. This guide explains how."
-weight: 4
+weight: 98
 meta_title: "Contributing UI Translations"
 meta_description: "We want to make the user interface available in as many languages as possible. If you want to help: contributing a translation is easy. This guide explains how"
 meta_link: "https://recogito.github.io/guides/contributing-ui-translations"
