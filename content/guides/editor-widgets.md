@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "This guide explains how you can write your own widgets to extend the Annotorious/RecogitoJS editor."
-weight: 4
+weight: 5
 meta_title: "Writing Editor Widgets"
 meta_description: "This guide explains how you can write your own widgets to extend the Annotorious/RecogitoJS editor."
 meta_link: "https://recogito.github.io/guides/editor-widgets"
