@@ -4,10 +4,10 @@ date: 2020-06-04T11:46:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "We welcome contributions! Both to our code as well as our documentation. This (work-in-progress) guide aims to explain how to set up your development environment for hacking on Annotorious or RecogitoJS."
+blurb: "We welcome contributions! Both to our code as well as our documentation. This guide explains how to set up your development environment for hacking Annotorious or RecogitoJS."
 weight: 99
 meta_title: "Annotorious/RecogitoJS Development Setup"
-meta_description: "This guide explains how to contribute to Annotorious & RecogitoJS, where to find what in the codebase, and how to set up a development environment"
+meta_description: "This guide explains how to set up your development environment for hacking Annotorious or RecogitoJS."
 meta_link: "https://recogito.github.io/guides/hackers-guide"
 ---
 
@@ -16,19 +16,18 @@ meta_link: "https://recogito.github.io/guides/hackers-guide"
 We welcome pull requests to Annotorious and RecogitoJS - both to the code, as well as to our documentation! To contribute,
 simply fork the relevant repository and hack away. Our code is located in the following repositories
 
-- __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__. A base module that contains most of 
-  the code for RecogitoJS, and all code that is shared between RecogitoJS and Annotorious. You'll need this module if you
-  want to hack anything about RecogitoJS (text selection, relationship drawing) or the common editor popup. 
-- __[recogito/recogito-js](https://github.com/recogito/recogito-js)__. The RecogitoJS application entry point. Doesn't 
-  implement much on its own, except for the JavaScript API. All actual functionality is pulled from __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__.
-- __[recogito/annotorious](https://github.com/recogito/annotorious)__. The Annotorious application entry point.
-  Also implements SVG rendering and shape drawing.
+- __[recogito/annotorious](https://github.com/recogito/annotorious)__. Annotorious application entry point, SVG rendering
+  and drawing tool base classes.
 - __[recogito/annotorious-openseadragon](https://github.com/recogito/annotorious-openseadragon)__. The OpenSeadragon plugin.
-  Imports most functionality from recogito-client-core and annotorious.
+  Imports most functionality from annotorious and recogito-client-core.
+- __[recogito/recogito-client-core](https://github.com/recogito/recogito-client-core)__. A base module that contains shared
+  code for Annotorious and RecogitoJS, most importantly the code for the editor popup. 
+- __[recogito/recogito-js](https://github.com/recogito/recogito-js)__. RecogitoJS application entry point, text annotation
+  functionality.
 
 ## Running in Development Mode
 
-To hack on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you need to run them in development mode.
+To hack on __Annotorious__, the __OpenSeadragon plugin__ or __RecogitoJS__, you need to run them in development mode.
 
 - Clone the repository
 - Run `npm install` to download project dependencies
@@ -42,7 +41,7 @@ To hack on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you
 
 ## Hacking recogito-client-core
 
-> When working on __RecogitoJS__, __Annotorious__, or the __OpenSeadragon plugin__, you may need to modify code in 
+> When working on __Annotorious__, the __OpenSeadragon plugin__ or __RecogitoJS__, you may need to modify code in 
 > __recogito-client-core__, too. To do this, you have to set up your environment so that it points to your local
 > copy of __recogito-client-core__, rather than the official package published on NPM. To make this work, you 
 > have to `npm link` your local projects.

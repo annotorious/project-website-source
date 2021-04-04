@@ -4,10 +4,10 @@ date: 2020-09-24T14:24:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "This guide explains how to change the configuration of the Annotorious/RecogitoJS editor popup."
+blurb: "This guide explains how you can configure the widgets that appear in the editor, and how you can pass additional configuration options to specific widgets."
 weight: 1
 meta_title: "Configuring the Annotorious/RecogitoJS editor"
-meta_description: "This guide explains how to change the configuration of the Annotorious/RecogitoJS editor popup."
+meta_description: "This guide explains how you can configure the widgets that appear in the editor, and how you can pass additional configuration options to specific widgets."
 meta_link: "https://recogito.github.io/guides/configuring-the-editor"
 ---
 

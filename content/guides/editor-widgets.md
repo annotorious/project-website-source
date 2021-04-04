@@ -4,10 +4,10 @@ date: 2020-09-24T14:24:22+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "This guide explains how you can write your own widgets to extend the Annotorious/RecogitoJS editor."
+blurb: "This guide explains how you can write your own widgets and plug them into the annotation editor."
 weight: 5
 meta_title: "Writing Editor Widgets"
-meta_description: "This guide explains how you can write your own widgets to extend the Annotorious/RecogitoJS editor."
+meta_description: "This guide explains how you can write your own widgets and plug them into the annotation editor."
 meta_link: "https://recogito.github.io/guides/editor-widgets"
 ---
 

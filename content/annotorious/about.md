@@ -57,5 +57,5 @@ the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 ## Stay Up To Date 
 
-Want to stay up to date on the latest developments around Annotorious?
-[Follow me on twitter](https://twitter.com/aboutgeo).
+If you want to stay up to date with the latest developments around Annotorious,
+[follow me (@aboutgeo) on twitter](https://twitter.com/aboutgeo).
