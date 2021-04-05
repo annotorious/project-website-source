@@ -26,6 +26,6 @@ examples, the plugin provides tag suggestions automatically.
 
 ## [Tilted Box Drawing Tool](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-tilted-box)
 
-A plugin that adds a new drawing tool to Annotorious or Annotorious OpenSeadragon:
+A plugin that adds a new drawing tool to Annotorious and Annotorious OpenSeadragon:
 the __Tilted Box__. Draw a rectangle with arbitrary rotation with only two clicks.
 
