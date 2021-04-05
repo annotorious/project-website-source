@@ -231,11 +231,7 @@ body, html {
 @media only screen and (max-width: 800px) {
 
   .column, .column.full-width {
-    padding:25px 20px 80px 20px;
-  }
-
-  .table-of-contents {
-    display:none;
+    padding:25px 20px 60px 20px;
   }
 
 }
@@ -286,6 +282,41 @@ body, html {
   a:hover {
     text-decoration:underline;
   }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .table-of-contents {
+    position:relative;
+    top:0;
+    left:0;
+
+    nav {
+      float:none;
+      padding-top:10px;
+    }
+
+    nav::before {
+      content:'Read more...';
+      font-size:24px;
+      font-weight:bold;
+    }
+
+    nav > ul li ul {
+      padding-left:0;
+
+      a {
+        text-decoration:underline;
+      }
+
+    }
+
+    nav > ul > li:first-child {
+      display:none;
+    }
+
+  }
+
 }
 
 .section-overview {
