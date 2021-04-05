@@ -21,8 +21,6 @@ and editing shapes, JavaScript API, lifecycle events. But you are free to
 build your own user interface, without being forced to the standard
 editor popup.  
 
-Demo coming soon...
-
 ## The Headless API
 
 To use Annotorious without the editor popup, the following API options are 
