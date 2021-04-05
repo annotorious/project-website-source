@@ -234,6 +234,10 @@ body, html {
     padding:25px 20px 60px 20px;
   }
 
+  .table-of-contents {
+    display:none;
+  }
+
 }
 
 .table-of-contents.api {
@@ -282,41 +286,6 @@ body, html {
   a:hover {
     text-decoration:underline;
   }
-}
-
-@media only screen and (max-width: 800px) {
-
-  .table-of-contents {
-    position:relative;
-    top:0;
-    left:0;
-
-    nav {
-      float:none;
-      padding-top:10px;
-    }
-
-    nav::before {
-      content:'Read more...';
-      font-size:24px;
-      font-weight:bold;
-    }
-
-    nav > ul li ul {
-      padding-left:0;
-
-      a {
-        text-decoration:underline;
-      }
-
-    }
-
-    nav > ul > li:first-child {
-      display:none;
-    }
-
-  }
-
 }
 
 .section-overview {

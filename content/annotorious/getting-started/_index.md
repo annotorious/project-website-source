@@ -112,10 +112,11 @@ for high-resolution images. Setup is just as easy as for the standard version. [
 # Next Steps
 
 Once you have the basics up and running, you will probably want to know more about 
-Annotorious' JavaScript API, the format of the annotations, how you can store them 
-permanently, and how you can customize Annotorious to fit your needs and UI design.
+Annotorious' [JavaScript API](/annotorious/api-docs/annotorious/), or check our
+[guides section](/guides) for more help and tutorials. 
 
-Read the [API docs](/annotorious/api-docs/annotorious/) and check our 
-[Guides section](http://localhost:1313/guides/) for more info. More 
-questions? Feedack? Feature requests? Get in touch via the 
-[Annotorious chat on Gitter](https://gitter.im/recogito/annotorious).
+# Read More
+
+- [OpenSeadragon Plugin](/annotorious/getting-started/osd-plugin/)
+- [Web Annotation Model](/annotorious/getting-started/web-annotation/)
+- [Storing Annotations](/annotorious/getting-started/storing-annotations/)
