@@ -11,6 +11,11 @@ meta_link: "https://recogito.github.io/annotorious/plugins"
 
 # Coming Soon...
 
+
+## Annotation Toolbar
+
+A simple toolbar GUI component for switching between drawing tools. __Coming soon...__
+
 ## Firebase Storage
 
 A storage plugin that uses Google Firebase as a cloud annotation store. __Coming soon...__
@@ -27,3 +32,4 @@ provides tag suggestions automatically. __Coming soon...__
 A plugin that adds a new drawing tool to Annotorious or Annotorious OpenSeadragon:
 the __Tilted Box__ - a two-click way for selecting a rectangle at an arbitrary 
 rotation. __Coming soon...__
+
