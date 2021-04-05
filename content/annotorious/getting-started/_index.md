@@ -79,7 +79,7 @@ const anno = new Annotorious({
 });
 ```
 
-# A Note Styled Images
+# A Note on Styled Images
 
 Because of the way Annotorious works, some CSS style rules applied directly to the \<img\> 
 element can cause compatibility issues. This is especially the case for `position`, `margin` 
