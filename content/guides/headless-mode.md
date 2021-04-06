@@ -50,7 +50,6 @@ Or you can change the value of the `disableEditor` instance field at any time.
 
 ```js
 anno.disableEditor = true; // Annotorious is now in headless mode
-
 anno.disableEditor = false; // back to normal mode
 ```
 
