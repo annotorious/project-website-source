@@ -4,7 +4,7 @@ date: 2021-02-20T10:28:42+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "An example Annotorious/RecogitoJS editor widget built with React."
+blurb: "This guide re-implements the example widget from the previous guide in React."
 weight: 6
 meta_title: "Example React Widget"
 meta_description: "An example Annotorious/RecogitoJS editor widget built with React."
