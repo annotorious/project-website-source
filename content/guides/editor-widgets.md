@@ -227,3 +227,6 @@ svg.a9s-annotationlayer .a9s-annotation.BLUE .a9s-inner {
   stroke:none;
 }
 ```
+
+A guide that shows how to create the same widget using React is 
+[available here](/example-react-widget/).
