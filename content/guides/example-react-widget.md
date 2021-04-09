@@ -53,11 +53,8 @@ const HelloWorldWidget = props => {
       { [ 'red', 'green', 'blue' ].map(color => 
         <button 
           key={color}
-          // Set class to 'selected' if this button value equals current highlight
           className={currentHighlight?.value === color ? 'selected' : null}
-          // Set color value as CSS background
           style={{ backgroundColor: color }}
-          // On click add (or replace) the current highlight body
           onClick={setHighlightBody(color)} />
       )}
     </div>
