@@ -86,11 +86,11 @@ in the config object when you initialize Annotorious.
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- Loading Annotorious first -->
+    <!-- Load Annotorious first -->
     <link href="/annotorious.min.css" rel="stylesheet">
     <script src="/annotorious.min.js"></script>
 
-    <!-- Loading plugin script next -->
+    <!-- Load plugin script next -->
     <script src="recogito-helloworld-widget.js"></script>
   </head>
   <body>
@@ -99,7 +99,7 @@ in the config object when you initialize Annotorious.
     <script type="text/javascript">
       (function() {
 
-        // Add the plugin to the widgets on init
+        // Add plugin to the widgets on init
         var anno = Annotorious.init({
           image: 'hallstatt',
           widgets: [ 
