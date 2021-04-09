@@ -114,3 +114,5 @@ in the config object when you initialize Annotorious.
   </body>
 </html>
 ```
+
+Full project [available on GitHub](https://github.com/recogito/recogito-client-plugins/tree/main/packages/widget-react-helloworld).
