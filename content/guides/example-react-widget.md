@@ -38,7 +38,6 @@ Here's what the code does, step by step:
 import React from 'preact/compat';
 
 const HelloWorldWidget = props => {
-
   // We'll be using 'highlighting' as body purpose for 
   // this type of widget
   const currentHighlight = props.annotation ? 
@@ -60,7 +59,7 @@ const HelloWorldWidget = props => {
           style={{ backgroundColor: color }}
           // On click add (or replace) the current highlight body
           onClick={setHighlightBody(color)} />
-    )}
+      )}
     </div>
   )
 
