@@ -13,16 +13,26 @@ meta_link: "https://recogito.github.io/guides/example-react-widget"
 
 # An Example React Editor Widget
 
-In this guide, we re-recreate the [example color selector widget](/guides/editor-widgets/) as a React component.
+> __WORK IN PROGRESS!__ The code in this tutorial will __not yet work__ in the current release 
+> versions, but will be supported with the next upcoming Annotorious release.
 
-> __WORK IN PROGRESS__ This tutorial does __not yet work__ in the current release version,
-> but will be supported with the next Annotorious release.
+In this guide, we re-recreate the example [color selector widget from the previous tutorial](/guides/editor-widgets/) 
+as a React component. The widget adds a section to the editor with three buttons: red, green and blue. 
+Clicking one of the buttons will set an annotation body with the color value, and body purpose of `highlighting`. 
+
 
 ![Editor popup](/images/guides/colorselector-widget.png)
 
-The widget adds a section to the editor with three buttons (red, green, blue). Clicking a button sets an annotation
-body with purpose `highlighting`. JSX code for the plugin is below. A full project (including a webpack build 
-configuration) is [available on GitHub](https://github.com/recogito/recogito-client-plugins/tree/main/packages/widget-react-helloworld).
+JSX code for the plugin is below. A full project (including a webpack build configuration) 
+is [available on GitHub](https://github.com/recogito/recogito-client-plugins/tree/main/packages/widget-react-helloworld).
+Here's what the code does, step by step:
+
+1. To get the annotation's current color value, we grab the first body with `purpose: 'highlighting'`.
+2. The `setHighlightBody` function is called when the user selects a color. It uses `props.onUpsertBody`: 
+   this callback either replaces the the annotation's current `highlighting` body (=update), or adds a
+   new `highlighting` body, in case the annotation doesn't have one already (=insert).
+3. The remainder of the code renders the user interface elements: 3 identical buttons
+   in different colors. Clicking a button triggers `setHighlightBody`.
 
 ```jsx
 import React from 'preact/compat';
@@ -66,67 +76,39 @@ const HelloWorldWidget = props => {
 export default HelloWorldWidget;
 ```
 
-Here's what the code does, explained step by step:
-
-1. We grab the first body with `purpose: 'highlighting'` from the annotation.
-2. The `setHighlightBody` function is called whenever the user makes a selection in the widget. 
-   It uses the `props.onUpsertBody` function to add or replace the current `highlighting`
-   body with the currently selected value.
-3. The remainder of the code renders the user interface elements: 3 identical buttons
-   in different colors. Clicking a button triggers `setHighlightBody`.
-
-
 ## Using the Plugin
 
-Include the plugin in your page, and add it to the `widgets` list in the initialization 
-config object. 
+When you include the plugin with a `<script>` tag, it will make itself available
+through a global `recogito.HelloWorldWidget` variable. Add it to the `widgets` list 
+in the config object when you initialize Annotorious.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Loading Annotorious first -->
     <link href="/annotorious.min.css" rel="stylesheet">
     <script src="/annotorious.min.js"></script>
 
-    <!-- Loading the script creates a global 'recogito.HelloWorldWidget' var -->
+    <!-- Loading plugin script next -->
     <script src="recogito-helloworld-widget.js"></script>
-    <style>
-      .helloworld-widget {
-        padding:5px;
-        border-bottom:1px solid #e5e5e5;
-      }
-
-      .helloworld-widget button {
-        outline:none;
-        border:none;
-        display:inline-block;
-        width:20px;
-        height:20px;
-        border-radius:50%;
-        cursor:pointer;
-        opacity:0.5;
-        margin:4px;
-      }
-
-      .helloworld-widget button.selected,
-      .helloworld-widget button:hover {
-        opacity:1;
-      }
-    </style>
   </head>
   <body>
     <img id="hallstatt" src="640px-Hallstatt.jpg" />
 
     <script type="text/javascript">
       (function() {
+
+        // Add the plugin to the widgets on init
         var anno = Annotorious.init({
           image: 'hallstatt',
           widgets: [ 
-            recogito.HelloWorldWidget, // Add the plugin here
+            recogito.HelloWorldWidget,
             'COMMENT',
             'TAG'
           ]
         });
+        
       })();
     </script>
   </body>

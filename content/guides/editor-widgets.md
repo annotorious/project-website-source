@@ -229,4 +229,4 @@ svg.a9s-annotationlayer .a9s-annotation.BLUE .a9s-inner {
 ```
 
 A guide that shows how to create the same widget using React is 
-[available here](/example-react-widget/).
+[available here](/guides/example-react-widget/).
