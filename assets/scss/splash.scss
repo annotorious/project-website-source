@@ -12,6 +12,10 @@ html, body {
   overflow-x:hidden;
 }
 
+a {
+  color:#333;
+}
+
 .no-break {
   white-space:nowrap;
 }
@@ -346,10 +350,6 @@ p {
 
   strong {
     font-size:18px;
-  }
-  
-  a {
-    color:#333;
   }
 
 }
