@@ -12,10 +12,11 @@ meta_link: "https://recogito.github.io/annotorious/getting-started"
 # Getting Started with Annotorious
 
 Annotorious lets your users select __rectangle__ and __polygon shapes__ on images, and add comments
-and tags.
+and tags. Try it on the image below: __click__ or __tap__ the annotation to edit, __click or tap anywhere 
+and drag__ to create a new annotation. 
 
-Try it on the image below: __click__ or __tap__ the annotation to edit, __click or tap anywhere 
-and drag__ to create a new annotation.
+Use the icons to switch between rectangle and polygon drawing mode. When drawing a polygon, double click 
+closes the shape. When using touch, keep the finger on the screen and hold for a while to close the polygon. 
 
 {{< inline-demo >}}
 
