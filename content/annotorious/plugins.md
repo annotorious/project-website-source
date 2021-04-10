@@ -14,6 +14,10 @@ meta_link: "https://recogito.github.io/annotorious/plugins"
 Plugins extend the functionality of Annotorious. The following plugins are currently
 available:
 
+## [Annotorious Toolbar](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-toolbar)
+
+A simple toolbar to switch between drawing tools.
+
 ## [Firebase Storage](https://github.com/recogito/recogito-client-plugins/tree/main/packages/storage-firebase)
 
 A storage plugin that uses Google Firebase as a cloud annotation store.
