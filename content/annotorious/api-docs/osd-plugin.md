@@ -83,8 +83,7 @@ anno.addAnnotation(annotation);
 ```
 
 Adds an annotation programmatically. The format is the 
-[W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model). 
-At the moment, only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
+[W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model).
 
 | Argument     | Type | Value                                         |
 |--------------|------|-----------------------------------------|
