@@ -62,11 +62,11 @@ You can do this by attaching handler functions for the `createSelection` and `se
 events.
 
 ```js
-anno.on('createSelection', async function(selection) {
+anno.on('createSelection', function(selection) {
   // The user has created a new shape...
 });
 
-anno.on('selectAnnotation', async function(annotation) {
+anno.on('selectAnnotation', function(annotation) {
   // The users has selected an existing annotation
 });
 ```
