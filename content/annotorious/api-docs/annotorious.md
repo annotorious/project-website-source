@@ -82,8 +82,7 @@ anno.addAnnotation(annotation [, readOnly]);
 ```
 
 Adds an annotation programmatically. The format is the 
-[W3C WebAnnotation model](/annotorious/getting-started/web-annotation). At the moment, 
-only a single `FragmentSelector` with an `xywh=pixel` fragment is supported.
+[W3C WebAnnotation model](/annotorious/getting-started/web-annotation).
 
 | Argument     | Type    | Value |
 |--------------|---------|-------|
