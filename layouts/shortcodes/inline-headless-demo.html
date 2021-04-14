@@ -23,54 +23,64 @@
       padding:0 14px;
       border-radius:4px;
       cursor:pointer;
-    }
-
-    .toolbar-wrapper .tag-selector .green button {
-      background-color:rgba(0, 212, 0, 0.1);
-    }
-
-    .toolbar-wrapper .tag-selector .orange button {
-      background-color:rgba(255, 180, 0, 0.1);
+      background-color:transparent;
+      font-weight:bold;
+      color:#838282;
     }
 
     .toolbar-wrapper .tag-selector .green.active button {
       color:#fff;
-      background-color:green;
+      background-color:#00ab00;
     }
 
     .toolbar-wrapper .tag-selector .orange.active button {
       color:#fff;
-      background-color:orange
+      background-color:orange;
+    }
+
+    .a9s-annotationlayer .a9s-annotation .a9s-outer, 
+    .a9s-annotationlayer .a9s-selection .a9s-outer {
+      stroke-width:6px;
+      stroke:#000;  
     }
 
     .a9s-annotationlayer .a9s-annotation .a9s-inner,
     .a9s-annotationlayer .a9s-selection .a9s-inner {
       stroke-width:4px;
-      stroke:#fff;  
+      stroke:#fff !important;  
     }
 
-    .a9s-annotationlayer .a9s-annotation .a9s-outer, 
-    .a9s-annotationlayer .a9s-selection .a9s-outer {
-      stroke-width:0;  
+    .a9s-annotationlayer .a9s-annotation.GREEN .a9s-inner {
+      stroke:#00ab00 !important;
     }
 
-    .a9s-annotation.GREEN .a9s-inner,
-    .a9s-annotation.GREEN.editable.selected .a9s-inner 
-    .a9s-annotation.GREEN .a9s-inner:hover  {
-      stroke:green !important;
+    .a9s-annotationlayer .a9s-annotation.GREEN.editable.selected .a9s-inner,
+    .a9s-annotationlayer .a9s-annotation.GREEN:hover .a9s-inner  {
+      stroke:#00e000 !important;
     }
 
-    .a9s-annotation.ORANGE .a9s-inner,
-    .a9s-annotation.ORANGE.editable.selected .a9s-inner,
-    .a9s-annotation.ORANGE .a9s-inner:hover  {
+    .a9s-annotationlayer .a9s-annotation.ORANGE .a9s-inner {
+      stroke:rgb(204, 133, 1) !important;
+    }
+
+    .a9s-annotationlayer .a9s-annotation.ORANGE.editable.selected .a9s-inner,
+    .a9s-annotationlayer .a9s-annotation.ORANGE:hover .a9s-inner  {
       stroke:orange !important;
+    }
+
+    .a9s-annotationlayer circle.a9s-handle-inner {
+      display:none;
+    }
+
+    .a9s-annotationlayer .a9s-annotation.editable .a9s-inner:hover {
+      fill:transparent;
     }
   </style>
   <div class="toolbar-wrapper">
     <div id="toolbar"></div>
     <ul class="tag-selector">
-      <li id="btn-green" class="green active"><button>Green</button></li>
       <li id="btn-orange" class="orange"><button>Orange</button></li>
+      <li id="btn-green" class="green active"><button>Green</button></li>
     </ul>
   </div>
   <img id="hallstatt" src="/images/640px-Hallstatt.jpg">
@@ -124,6 +134,13 @@
       };
 
       anno.updateSelected(selection, true);
+    });
+
+    document.body.addEventListener('keyup', function(evt) {
+      if (evt.which === 46) { // Delete
+        var selected = anno.getSelected();
+        anno.removeAnnotation(selected); 
+      }
     });
 
     Annotorious.Toolbar(anno, document.getElementById('toolbar'));

@@ -14,14 +14,16 @@ meta_link: "https://recogito.github.io/guides/using-headless-mode"
 # Headless Mode: Using Annotorious without the Editor Popup
 
 Want to use Annotorious only for the drawing tools? But don't need 
-the editor? That's what __headless mode__ is for! 
+the editor? That's what __headless mode__ is for!  ith headless mode, you keep 
+all the standard functionality: drawing and editing shapes, JavaScript API, 
+lifecycle events. But you are free to build your own user interface, without being 
+forced to the standardeditor popup.  
+
+The demo uses headless mode to create annotations with either an __Orange__
+or __Green__ tag, and a [formatter](http://localhost:1313/annotorious/api-docs/annotorious/#formatters) 
+to color the shapes. (To delete an annotation, select it and press the __Delete__ key.)
 
 {{< inline-headless-demo >}}
-
-With headless mode, you keep all the standard functionality: drawing 
-and editing shapes, JavaScript API, lifecycle events. But you are free to
-build your own user interface, without being forced to the standard
-editor popup.  
 
 ## The Headless API
 
