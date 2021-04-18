@@ -14,6 +14,10 @@ meta_link: "https://recogito.github.io/annotorious/plugins"
 Plugins extend the functionality of Annotorious. The following plugins are currently
 available:
 
+## [Annotorious Shape Labels](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-shape-labels)
+
+A plugin that adds labels to annotation shapes, using the first tag as the label value. Provides customization options via CSS.
+
 ## [Annotorious Toolbar](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-toolbar)
 
 A simple toolbar to switch between drawing tools.
