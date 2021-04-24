@@ -426,8 +426,13 @@ footer {
     padding:2px 0;
   }
 
-  p.github-link {
+  p.social-links {
     padding-top:4px;
+
+    span:last-child {
+      display:inline-block;
+      margin-top:4px;
+    }
   }
 
   a {
