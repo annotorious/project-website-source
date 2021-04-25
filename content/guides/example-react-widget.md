@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "This guide re-implements the example widget from the previous guide in React."
-weight: 6
+weight: 7
 meta_title: "Example React Widget"
 meta_description: "An example Annotorious/RecogitoJS editor widget built with React."
 meta_link: "https://recogito.github.io/guides/example-react-widget"

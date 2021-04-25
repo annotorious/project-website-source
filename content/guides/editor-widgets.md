@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "This guide explains how you can write your own widgets and plug them into the annotation editor."
-weight: 5
+weight: 6
 meta_title: "Writing Editor Widgets"
 meta_description: "This guide explains how you can write your own widgets and plug them into the annotation editor."
 meta_link: "https://recogito.github.io/guides/editor-widgets"

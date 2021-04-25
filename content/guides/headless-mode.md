@@ -4,10 +4,10 @@ date: 2021-04-03T10:28:42+02:00
 draft: false
 layout: "section-page"
 subsection: "guides"
-blurb: "A Guide to Headless Mode, which allows you to use Annotorious without the editor popup."
+blurb: "A guide to Headless Mode, which allows you to use Annotorious without the editor popup."
 weight: 3
 meta_title: "Using Headless Mode"
-meta_description: "A Guide to Headless Mode, which allows you to use Annotorious without the editor popup."
+meta_description: "A guide to Headless Mode, which allows you to use Annotorious without the editor popup."
 meta_link: "https://recogito.github.io/guides/using-headless-mode"
 ---
 

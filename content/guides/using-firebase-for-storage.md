@@ -5,7 +5,7 @@ draft: false
 layout: "section-page"
 subsection: "guides"
 blurb: "In order to store annotations, you need a server backend that is able to handle W3C Web Annotations. This guide provides a simple recipe for using Firebase, an online cloud storage service by Google, as your personal annotation server."
-weight: 4
+weight: 5
 meta_title: "Firebase Storage Plugin"
 meta_description: "This guide provides a simple recipe for using Firebase, an online cloud storage service by Google, as your personal annotation server"
 meta_link: "https://recogito.github.io/guides/using-firebase-for-storage"
