@@ -378,7 +378,9 @@ p {
     padding:2px;
     margin:4px 8px 4px 0;
     display:flex;
+    justify-content:center;
     align-items:center;
+    flex:1;
   }
 
   img {
