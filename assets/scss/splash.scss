@@ -372,6 +372,11 @@ p {
     justify-content:center;
   }
 
+  ul::after {
+    content:'';
+    flex:2;
+  }
+
   li {
     background-color:#fff;
     border-radius:3px;
@@ -417,6 +422,10 @@ p {
 
     ul {
       justify-content:center;
+    }
+
+    ul::after {
+      display:none;
     }
 
   }
