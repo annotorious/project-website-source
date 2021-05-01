@@ -43,7 +43,7 @@ here's what the German translation file `messages_de.json` looks like.
 - Add a message file to the [src/i18n folder](https://github.com/recogito/recogito-client-core/tree/master/src/i18n) named `messages_{iso}.json`, where {iso} is the 2-character ISO code of
   the language.
 - Copy the dictionary above, and replace the translations accordingly.
-- [Send us a pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/)
+- [Send a pull request](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3/)
 
 Many thanks in advance! If you have questions, do get in touch via the [Annotorious chat on Gitter](https://gitter.im/recogito/annotorious). 
 
