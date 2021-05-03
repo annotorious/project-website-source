@@ -380,7 +380,7 @@ to get the list of registered tools.
 ### .setVisible
 
 ```js
-anno.setAnnotationsVisible(visible);
+anno.setVisible(visible);
 ```
 
 Shows or hides the annotation layer.
