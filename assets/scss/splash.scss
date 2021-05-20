@@ -92,6 +92,11 @@ a {
   .jumbo-header {
     height:260px;
 
+    .jumbo-header-background {
+      display:flex;
+      flex-direction:column;
+    }
+
     img#header-background {
       height:260px;
     }
