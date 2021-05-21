@@ -42,6 +42,9 @@ Alternatively, grab the files from CDN.
 <script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@latest/dist/openseadragon-annotorious.min.js"></script>
 ```
 
+> Important! You __must__ include the stylesheet in the \<head\> of your page. If you include it
+> anywhere in your \<body\>, Annotorious will not work when switching OpenSeadragon to fullscreen mode. 
+
 Create the viewer and initialize the Annotorious plugin.
 
 ```html
