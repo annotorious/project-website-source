@@ -36,10 +36,10 @@ Alternatively, grab the files from CDN.
 
 ```html
 <!-- CSS stylesheet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@latest/dist/annotorious.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@{{< version-osd >}}/dist/annotorious.min.css">
 
 <!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@latest/dist/openseadragon-annotorious.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@recogito/annotorious-openseadragon@{{< version-osd >}}/dist/openseadragon-annotorious.min.js"></script>
 ```
 
 > Important! You __must__ include the stylesheet in the \<head\> of your page. If you include it

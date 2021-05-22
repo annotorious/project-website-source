@@ -13,13 +13,9 @@ meta_link: "https://recogito.github.io/guides/example-react-widget"
 
 # An Example React Editor Widget
 
-> __WORK IN PROGRESS!__ The code in this tutorial will __not yet work__ in the current release 
-> versions, but will be supported with the next upcoming Annotorious release.
-
 In this guide, we re-recreate the example [color selector widget from the previous tutorial](/guides/editor-widgets/) 
 as a React component. The widget adds a section to the editor with three buttons: red, green and blue. 
 Clicking one of the buttons will set an annotation body with the color value, and body purpose of `highlighting`. 
-
 
 ![Editor popup](/images/guides/colorselector-widget.png)
 
