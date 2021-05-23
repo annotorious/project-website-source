@@ -72,7 +72,7 @@ console.log(anno.readOnly); // true or fals
 anno.readOnly = !anno.readOnly; // toggles state
 ```
 
-Change display mode between __normal__ (annotations are editabel) and __read-only__. 
+Change display mode between __normal__ (annotations are editable) and __read-only__. 
 
 
 ## Instance Methods
