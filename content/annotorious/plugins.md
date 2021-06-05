@@ -18,6 +18,10 @@ available:
 
 A simple toolbar to switch between drawing tools.
 
+## [Comments Mention](https://github.com/recogito/recogito-comments-mention)
+
+A comment thread widget for the editor popup that lets you @-mention users like on Facebook or Twitter.
+
 ## [Firebase Storage](https://github.com/recogito/recogito-client-plugins/tree/main/packages/storage-firebase)
 
 A storage plugin that uses Google Firebase as a cloud annotation store.
