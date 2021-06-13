@@ -558,6 +558,20 @@ anno.on('selectAnnotation', function(annotation) {
 |--------------|------|--------------------------------------|
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
 
+### startSelection
+
+```js
+anno.on('startSelection', function(point) {
+  console.log(point.x, point.y)
+});
+```
+
+Fired when the user starts drawing a new shape.
+
+| Argument     | Type   | Value                                      |
+|--------------|--------|--------------------------------------------|
+| `point`      | Object | the x/y coordinates of the start point (image pixel coordinates) |
+
 ### updateAnnotation
 
 ```js
@@ -577,14 +591,15 @@ Fired when an existing annotation was updated.
 
 Per default, Annotorious renders annotations as SVG [group](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/g)
 elements with an `a9s-annotation` CSS class. A formatter function allows you to dynamically add additional 
-attributes to the SVG annotation shape elements.
+attributes and elements to the SVG annotation shape.
 
-A formatter is a JavaScript function takes a single argument - the annotation - and must return either a string or
-an object. 
+A formatter is a JavaScript function takes a single argument - the annotation - and must return a __string__, a
+__DOM element__ or an __object__. 
 
 - If a string is returned, it will be appended to the annotation element CSS class list. 
 - If an object is returned, it should have one or more of the following properties:
   - `className` a string to be added to the CSS class list
+  - `element` a DOM element to be appended to the SVG group
   - `data-*` a data attribute to add to the annotation SVG element
   - `style` a list of CSS styles (in the form of a string) 
 
