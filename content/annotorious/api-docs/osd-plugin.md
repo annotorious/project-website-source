@@ -358,6 +358,8 @@ holding the mouse button.
 After the annotation is created or canceled, OpenSeadragon automatically 
 switches back to normal zoom & pan behavior. 
 
+`.setDrawingEnabled` has no effect while `readOnly` mode is active.
+
 | Argument      | Type | Value                                         |
 |---------------|------|-----------------------------------------|
 | `enabled` | Boolean | if `true` OpenSeadragon switches from navigation to drawing mode |
