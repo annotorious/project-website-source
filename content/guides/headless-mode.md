@@ -14,7 +14,7 @@ meta_link: "https://recogito.github.io/guides/using-headless-mode"
 # Headless Mode: Using Annotorious without the Editor Popup
 
 Want to use Annotorious only for the drawing tools? But don't need 
-the editor? That's what __headless mode__ is for!  ith headless mode, you keep 
+the editor? That's what __headless mode__ is for! In headless mode, you keep 
 all the standard functionality: drawing and editing shapes, JavaScript API, 
 lifecycle events. But you are free to build your own user interface, without being 
 forced to the standardeditor popup.  
