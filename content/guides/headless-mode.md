@@ -17,7 +17,7 @@ Want to use Annotorious only for the drawing tools? But don't need
 the editor? That's what __headless mode__ is for! In headless mode, you keep 
 all the standard functionality: drawing and editing shapes, JavaScript API, 
 lifecycle events. But you are free to build your own user interface, without being 
-forced to the standardeditor popup.  
+forced to the standard editor popup.  
 
 The demo uses headless mode to create annotations with either an __Orange__
 or __Green__ tag, and a [formatter](http://localhost:1313/annotorious/api-docs/annotorious/#formatters) 
