@@ -14,6 +14,11 @@ meta_link: "https://recogito.github.io/annotorious/plugins"
 Plugins extend the functionality of Annotorious. The following plugins are currently
 available:
 
+## [Annotorious Selector Pack](https://github.com/recogito/annotorious-selector-pack)
+
+Additional selection tools for Annotorious and Annotorious OpenSeadragon: __circle__, __ellipse__
+and __freehand drawing__.
+
 ## [Annotorious Toolbar](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-toolbar)
 
 A simple toolbar to switch between drawing tools.
@@ -25,6 +30,11 @@ A comment thread widget for the editor popup that lets you @-mention users like 
 ## [Firebase Storage](https://github.com/recogito/recogito-client-plugins/tree/main/packages/storage-firebase)
 
 A storage plugin that uses Google Firebase as a cloud annotation store.
+
+## [OpenSeadragon Sequence Mode](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-sequence-mode)
+
+Simplifies the use of [Sequence Mode](https://openseadragon.github.io/examples/tilesource-sequence/). The plugin
+lets you add all annotations for the sequence at once, and handles pagination automatically.
 
 ## [Shape Labels](https://github.com/recogito/recogito-client-plugins/tree/main/packages/annotorious-shape-labels)
 
