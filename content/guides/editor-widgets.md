@@ -96,13 +96,13 @@ var ColorSelectorWidget = function(args) {
       args.onUpdateBody(currentColorBody, {
         type: 'TextualBody',
         purpose: 'highlighting',
-        value: evt.target.dataset.tag;
+        value: evt.target.dataset.tag
       });
     } else { 
       args.onAppendBody({
         type: 'TextualBody',
         purpose: 'highlighting',
-        value: evt.target.dataset.tag;
+        value: evt.target.dataset.tag
       });
     }
   }
