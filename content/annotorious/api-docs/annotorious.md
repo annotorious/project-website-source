@@ -62,8 +62,21 @@ The config object supports the following properties:
 console.log(anno.disableEditor); // true or fals
 anno.disableEditor = !anno.disableEditor; // toggles state
 ```
+
 Change the operation mode between __normal__ (drawing tools & editor popup) and __headless__. In 
 headless mode, only drawing tools and lifecycle events are active. The editor will not open.
+
+### disableSelect
+
+```js
+console.log(anno.disableSelect); // true or false
+anno.disableSelect = !anno.disableSelect;
+```
+
+Disables selection functionality. Clicking an annotation will no longer open the editor, or fire
+the `selectAnnotation` event. The `clickAnnotation` event will still fire!
+
+Setting `disableSelect` to `true` will __not__ clear the current selection, if any.
 
 ### readOnly
 
