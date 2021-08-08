@@ -453,6 +453,17 @@ is moved or resized.
 |----------|--------|------------------------------|
 | `target` | Object | the W3C WebAnnotation target |
 
+### clickAnnotation
+
+```js
+anno.on('clickAnnotation', function(annotation) {
+  // 
+});
+```
+
+Fired every time the user clicks an annotation (regardless of whether it is already
+selected or not).
+
 ### createAnnotation
 
 ```js
