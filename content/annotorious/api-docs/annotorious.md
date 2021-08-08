@@ -236,6 +236,19 @@ Subscribe to an event. (See [Events](#events) for the list.)
 | `event`    | String | the name of the event                          |
 | `callback` | Function |the function to call when the event is emitted |
 
+### .once
+
+```js
+anno.once(event, callback);
+```
+
+Subscribe to an event only __once__. (See [Events](#events) for the list.)
+
+| Argument   | Type | Value                                          |
+|------------|------|------------------------------------------|
+| `event`    | String | the name of the event                          |
+| `callback` | Function |the function to call when the event is emitted |
+
 ### .removeAnnotation
 
 ```js
