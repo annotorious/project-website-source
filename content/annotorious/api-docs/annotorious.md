@@ -53,7 +53,7 @@ The config object supports the following properties:
 | `messages`            | Object         | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
 | `readOnly`            | Boolean        | false   | Display annotations in read-only mode.                                                                                     |
 | `widgets`             | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
-| `relativeCoordinates` | Boolean        | false   | Whether to store annotations positions in pixel or percentage values                                                       |
+| `relativeCoordinates` | Boolean        | false   | Store rectangle coordinates as width/height percentage instead of pixels.                                                  |
 
 ## Instance Fields
 
