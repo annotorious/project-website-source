@@ -598,9 +598,10 @@ __DOM element__ or an __object__.
   - `style` a list of CSS styles (in the form of a string) 
 
 #### Element Caveats
+
 When using DOM elements, keep in mind that you should specify at least the x,y positions and the width and height attributes.  
-the x and y positions are calculated from the upper left when using the box tool.  
-if using SVG elements then make sure to use the appropriate fill/stroke attributes.  
+The x and y positions are calculated from the upper left when using the box tool. If using SVG elements then make sure to use 
+the appropriate fill/stroke attributes.  
 
 ### String Example
 
