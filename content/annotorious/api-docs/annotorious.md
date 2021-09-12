@@ -47,13 +47,13 @@ The config object supports the following properties:
 | `allowEmpty`          | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
 | `disableEditor`       | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `formatter`           | Function       | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
+| `fragmentUnit`        | String         | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
 | `handleRadius`        | Number         | 6       | Radius of the shape resize handles.                                                                                        |
 | `image`               | Elem \| String | -       | __Required.__ Image DOM element or element ID.                                                                             |
 | `locale`              | String         | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
 | `messages`            | Object         | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
 | `readOnly`            | Boolean        | false   | Display annotations in read-only mode.                                                                                     |
 | `widgets`             | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
-| `relativeCoordinates` | Boolean        | false   | Store rectangle coordinates as width/height percentage instead of pixels.                                                  |
 
 ## Instance Fields
 
