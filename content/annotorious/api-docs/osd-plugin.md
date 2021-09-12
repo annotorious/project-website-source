@@ -45,16 +45,17 @@ Annotorious(viewer, config);
 
 The `config` object is optional, and supports following properties:
 
-| Property        | Type           | Default | Description |
-|-----------------|----------------|---------|-------------|
-| `allowEmpty`    | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations. |
-| `disableEditor` | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup. |
-| `formatter`     | Function       | -       | A [formatter function](#formatters) providing custom style rules. |
-| `handleRadius`  | Number         | 6       | Radius of the shape resize handles. |
-| `locale`        | String         | -       | Two-character ISO language code or `auto` to use the browser setting. |
-| `messages`      | Object         | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
-| `readOnly`      | Boolean        | false   | Display annotations in read-only mode. |
-| `widgets`       | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details). |
+| Property              | Type     | Default | Description                                                                                                                |
+| --------------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `allowEmpty`          | Boolean  | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
+| `disableEditor`       | Boolean  | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
+| `formatter`           | Function | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
+| `handleRadius`        | Number   | 6       | Radius of the shape resize handles.                                                                                        |
+| `locale`              | String   | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
+| `messages`            | Object   | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
+| `readOnly`            | Boolean  | false   | Display annotations in read-only mode.                                                                                     |
+| `widgets`             | Array    | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
+| `relativeCoordinates` | Boolean  | false   | Store rectangle coordinates as width/height percentage instead of pixels.                                                  |
 
 ## Instance Fields
 
@@ -99,9 +100,9 @@ anno.addAnnotation(annotation);
 Adds an annotation programmatically. The format is the 
 [W3C WebAnnotation model](https://github.com/recogito/annotorious-openseadragon/wiki/Web-Annotation-Model).
 
-| Argument     | Type | Value                                         |
-|--------------|------|-----------------------------------------|
-| `annotation` | Object | the annotation in W3C WebAnnotation format    |
+| Argument     | Type   | Value                                      |
+| ------------ | ------ | ------------------------------------------ |
+| `annotation` | Object | the annotation in W3C WebAnnotation format |
 
 ### .addDrawingTool
 
@@ -155,10 +156,10 @@ anno.fitBounds(arg [, immediately]);
 
 Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation.
 
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `arg` | String, Object | the annotation or the annotation ID |
-| `immediately` | Boolean | if `true` pans and zooms without animation |
+| Argument      | Type           | Value                                      |
+| ------------- | -------------- | ------------------------------------------ |
+| `arg`         | String, Object | the annotation or the annotation ID        |
+| `immediately` | Boolean        | if `true` pans and zooms without animation |
 
 ### .getAnnotations
 
@@ -189,10 +190,10 @@ Returns an object containing:
 - A coordinate transform function that translates X/Y coordinates in the snippet coordinate
   space back to the coordinate space of the full image
 
-| Field       | Type     | Value |
-|-------------|----------|-------|
+| Field       | Type     | Value                                                              |
+| ----------- | -------- | ------------------------------------------------------------------ |
 | `snippet`   | Canvas   | the image under the current selection bounds as a `Canvas` element |
-| `transform` | Function | coordinate conversion function |
+| `transform` | Function | coordinate conversion function                                     |
 
 ### .listDrawingTools
 
@@ -218,9 +219,9 @@ anno.loadAnnotations(url).then(function(annotations) {
 });
 ```
 
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `url`     | String | the URL to HTTP GET the annotations from |
+| Argument | Type   | Value                                    |
+| -------- | ------ | ---------------------------------------- |
+| `url`    | String | the URL to HTTP GET the annotations from |
 
 ### .off
 
@@ -231,9 +232,9 @@ anno.off(event [, callback]);
 Unsubscribe from an event. If no callback is provided,
 all event handlers for this event will be unsubscribed.
 
-| Argument   | Type | Value                                       |
-|------------|------|---------------------------------------|
-| `event`    | String | the name of the event                       |
+| Argument   | Type     | Value                                       |
+| ---------- | -------- | ------------------------------------------- |
+| `event`    | String   | the name of the event                       |
 | `callback` | Function | the function used when binding to the event |
 
 ### .on
@@ -244,9 +245,9 @@ anno.on(event, callback);
 
 Subscribe to an event. (See [Events](#events) for the list.)
 
-| Argument   | Type | Value                                          |
-|------------|------|------------------------------------------|
-| `event`    | String | the name of the event                          |
+| Argument   | Type     | Value                                          |
+| ---------- | -------- | ---------------------------------------------- |
+| `event`    | String   | the name of the event                          |
 | `callback` | Function | the function to call when the event is emitted |
 
 ### .once
@@ -257,10 +258,10 @@ anno.once(event, callback);
 
 Subscribe to an event only __once__. (See [Events](#events) for the list.)
 
-| Argument   | Type | Value                                          |
-|------------|------|------------------------------------------|
-| `event`    | String | the name of the event                          |
-| `callback` | Function |the function to call when the event is emitted |
+| Argument   | Type     | Value                                          |
+| ---------- | -------- | ---------------------------------------------- |
+| `event`    | String   | the name of the event                          |
+| `callback` | Function | the function to call when the event is emitted |
 
 ### .panTo
 
@@ -270,10 +271,10 @@ anno.panTo(arg [, immediately]);
 
 Pans the OpenSeadragon viewport to the specified annotation.
 
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `arg` | String, Object | the annotation or the annotation ID |
-| `immediately` | Boolean | if `true` pans without animation |
+| Argument      | Type           | Value                               |
+| ------------- | -------------- | ----------------------------------- |
+| `arg`         | String, Object | the annotation or the annotation ID |
+| `immediately` | Boolean        | if `true` pans without animation    |
 
 ### .removeAnnotation
 
@@ -283,9 +284,9 @@ anno.removeAnnotation(arg);
 
 Removes an annotation programmatically. __Note:__ programmatic remove __will not__ trigger the [deleteAnnotation event](#deleteannotation)!
 
-| Argument     | Type | Value                                         |
-|--------------|------|-----------------------------------------|
-| `arg` | String, Object | the annotation in W3C WebAnnotation format or the annotation ID |
+| Argument | Type           | Value                                                           |
+| -------- | -------------- | --------------------------------------------------------------- |
+| `arg`    | String, Object | the annotation in W3C WebAnnotation format or the annotation ID |
 
 ### .saveSelected
 
@@ -310,9 +311,9 @@ __Note:__ programmatic select __will not__ trigger the [selectAnnotation event](
 - The method will return the selected annotation as a result
 - Note that the the `selectAnnotation` event will __not__ fire when using this method
 
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
-| `arg` | String, Object | the annotation or the annotation ID |
+| Argument | Type           | Value                               |
+| -------- | -------------- | ----------------------------------- |
+| `arg`    | String, Object | the annotation or the annotation ID |
 
 ### .setAnnotations
 
@@ -323,8 +324,8 @@ anno.setAnnotations(annotations);
 Renders the list of annotations to the image, removing any previously
 existing annotations.
 
-| Argument      | Type | Value                                         |
-|---------------|------|-----------------------------------------|
+| Argument      | Type  | Value                                            |
+| ------------- | ----- | ------------------------------------------------ |
 | `annotations` | Array | array of annotations in W3C WebAnnotation format |
 
 ### .setAuthInfo 
@@ -346,9 +347,9 @@ are created or updated, and display it in the editor popup.
 Set this data right after initializing Annotorious, and in case the user login status in your host
 application changes. The argument to `.setAuthInfo` is an object with the following properties:
 
-| Property      | Type | Value                                             |
-|---------------|------|---------------------------------------------|
-| `id`          | String | __REQUIRED__ the user ID, which should be a URI  |
+| Property      | Type   | Value                                             |
+| ------------- | ------ | ------------------------------------------------- |
+| `id`          | String | __REQUIRED__ the user ID, which should be a URI   |
 | `displayName` | String | __REQUIRED__ the user name, for display in the UI |
 
 Annotorious will insert this data into every new annotation body that gets created:
@@ -388,8 +389,8 @@ switches back to normal zoom & pan behavior.
 
 `.setDrawingEnabled` has no effect while `readOnly` mode is active.
 
-| Argument      | Type | Value                                         |
-|---------------|------|-----------------------------------------|
+| Argument  | Type    | Value                                                            |
+| --------- | ------- | ---------------------------------------------------------------- |
 | `enabled` | Boolean | if `true` OpenSeadragon switches from navigation to drawing mode |
 
 ### .setDrawingTool
@@ -406,7 +407,7 @@ More tools may be available through plugins. Use [.listDrawingTool](#listdrawing
 to get the list of registered tools.
 
 | Argument   | Type   | Value                    |
-|------------|--------|--------------------------|
+| ---------- | ------ | ------------------------ |
 | `toolName` | String | E.g. `rect` or `polygon` |
 
 ### .setVisible
@@ -417,8 +418,8 @@ anno.setVisible(visible);
 
 Shows or hides the annotation layer.
 
-| Argument  | Type | Value                                    |
-|-----------|------|------------------------------------|
+| Argument  | Type    | Value                                                  |
+| --------- | ------- | ------------------------------------------------------ |
 | `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
 
 ### .setServerTime 
@@ -480,8 +481,8 @@ anno.on('cancelSelected', function(selection) {
 Fired when the user has canceled a selection, by hitting __Cancel__ in the editor, or by
 clicking or tapping outside the selected annotation shape.
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument    | Type   | Value                                              |
+| ----------- | ------ | -------------------------------------------------- |
 | `selection` | Object | the canceled selection in W3C WebAnnotation format |
 
 ### changeSelectionTarget
@@ -496,7 +497,7 @@ Fired when the shape of a newly created selection, or of a selected annotation
 is moved or resized.
 
 | Argument | Type   | Value                        |
-|----------|--------|------------------------------|
+| -------- | ------ | ---------------------------- |
 | `target` | Object | the W3C WebAnnotation target |
 
 ### clickAnnotation
@@ -520,8 +521,8 @@ anno.on('createAnnotation', function(annotation) {
 
 Fired when a new annotation is created from a user selection.
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument     | Type   | Value                                      |
+| ------------ | ------ | ------------------------------------------ |
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
 
 ### createSelection
@@ -534,8 +535,8 @@ anno.on('createSelection', function(selection) {
 
 Fired when a new selection shape is drawn on the image.
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument    | Type   | Value                                            |
+| ----------- | ------ | ------------------------------------------------ |
 | `selection` | Object | the selection object in W3C WebAnnotation format |
 
 ### deleteAnnotation
@@ -548,9 +549,9 @@ anno.on('deleteAnnotation', function(annotation) {
 
 Fired when an existing annotation was deleted.
 
-| Argument     | Type | Value                                  |
-|--------------|------|----------------------------------|
-| `annotation` | Object | the deleted annotation                 |
+| Argument     | Type   | Value                  |
+| ------------ | ------ | ---------------------- |
+| `annotation` | Object | the deleted annotation |
 
 ### mouseEnterAnnotation
 
@@ -562,10 +563,10 @@ anno.on('mouseEnterAnnotation', function(annotation, event) {
 
 Fired when the mouse moves into an existing annotation.
 
-| Argument     | Type | Value                                  |
-|--------------|------|----------------------------------|
-| `annotation` | Object | the annotation                         |
-| `event`      | Object | the original mouse event               |
+| Argument     | Type   | Value                    |
+| ------------ | ------ | ------------------------ |
+| `annotation` | Object | the annotation           |
+| `event`      | Object | the original mouse event |
 
 ### mouseLeaveAnnotation
 
@@ -577,10 +578,10 @@ anno.on('mouseLeaveAnnotation', function(annotation, event) {
 
 Fired when the mouse moves out of an existing annotation.
 
-| Argument     | Type | Value                                  |
-|--------------|------|----------------------------------|
-| `annotation` | Object | the annotation                         |
-| `event`      | Object | the original mouse event               |
+| Argument     | Type   | Value                    |
+| ------------ | ------ | ------------------------ |
+| `annotation` | Object | the annotation           |
+| `event`      | Object | the original mouse event |
 
 ### selectAnnotation
 
@@ -593,8 +594,8 @@ anno.on('selectAnnotation', function(annotation) {
 });
 ```
 
-| Argument     | Type | Value                                      |
-|--------------|------|--------------------------------------|
+| Argument     | Type   | Value                                      |
+| ------------ | ------ | ------------------------------------------ |
 | `annotation` | Object | the annotation in W3C WebAnnotation format |
 
 ### startSelection
@@ -607,9 +608,9 @@ anno.on('startSelection', function(point) {
 
 Fired when the user starts drawing a new shape.
 
-| Argument     | Type   | Value                                      |
-|--------------|--------|--------------------------------------------|
-| `point`      | Object | the x/y coordinates of the start point (image pixel coordinates) |
+| Argument | Type   | Value                                                            |
+| -------- | ------ | ---------------------------------------------------------------- |
+| `point`  | Object | the x/y coordinates of the start point (image pixel coordinates) |
 
 ### updateAnnotation
 
@@ -621,8 +622,8 @@ anno.on('updateAnnotation', function(annotation, previous) {
 
 Fired when an existing annotation was updated.
 
-| Argument     | Type | Value                                  |
-|--------------|------|----------------------------------|
+| Argument     | Type   | Value                                  |
+| ------------ | ------ | -------------------------------------- |
 | `annotation` | Object | the updated annotation                 |
 | `previous`   | Object | the annotation state before the update |
 
