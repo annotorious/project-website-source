@@ -18,7 +18,7 @@ an open standard for interoperable annotations.
 
 - Only a __single target__ shape per annotation is supported.
 - __[FragmentSelectors](https://www.w3.org/TR/annotation-model/#fragment-selector)__ of type [Media Fragment](https://www.w3.org/TR/media-frags/) 
-  are supported for rectangle shapes (see example below).
+  are supported for rectangle shapes (see example below), with both pixel- and percent-encoded coordinates.
 - __[SVG Selectors](https://www.w3.org/TR/annotation-model/#svg-selector)__ aer supported for polygon shapes (see example below).
 - Annotation `TextualBody` types with a `purpose` of `commenting`, `replying` or no `purpose` are displayed as __comments__.
 - Annotation bodies with a `purpose` of `tagging` are displayed as __tags__.
