@@ -119,6 +119,8 @@ anno.cancelSelected();
 
 Programmatically cancel the current selection, if any.
 
+__Note:__ programmatic cancel __will not__ trigger the [cancelSelected event](#cancelselected-1)!
+
 ### .clearAnnotations
 
 ```js
@@ -279,7 +281,7 @@ Pans the OpenSeadragon viewport to the specified annotation.
 anno.removeAnnotation(arg);
 ```
 
-Removes an annotation programmatically. 
+Removes an annotation programmatically. __Note:__ programmatic remove __will not__ trigger the [deleteAnnotation event](#deleteannotation)!
 
 | Argument     | Type | Value                                         |
 |--------------|------|-----------------------------------------|
@@ -301,6 +303,7 @@ anno.selectAnnotation(arg);
 ```
 
 Selects an annotation programmatically, highlighting its shape, and opening the editor popup. 
+__Note:__ programmatic select __will not__ trigger the [selectAnnotation event](#selectannotation-1)!
 
 - If no argument is provided (or the annotation or ID is unknown), this method will deselect 
   the current selection, if any
