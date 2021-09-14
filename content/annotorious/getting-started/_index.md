@@ -44,7 +44,7 @@ and add the script and stylesheet files to your page source code.
       anno.loadAnnotations('annotations.w3c.json');
 
       // Add event handlers using .on  
-      r.on('createAnnotation', function(annotation) {
+      anno.on('createAnnotation', function(annotation) {
         // Do something
       });
     })()
