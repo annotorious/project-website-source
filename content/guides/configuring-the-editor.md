@@ -45,6 +45,16 @@ var anno = Annotorious.init({
 });
 ``` 
 
+Each item in the `widgets` array can be one of the following:
+
+- The name of a __built-in widget__ - currently either `COMMENT` or `TAG`
+- An editor __plugin__ 
+- An object with a `widget` property that has the widget name or plugin as value, and 
+  additional configuration arguments for the widget
+
+If you want to learn how to write your own extensions for the editor, 
+[start with this guide](/guides/editor-widgets/).
+
 ## Tagging Vocabularies
 
 __Note:__ the tag widget also supports semantic vocabularies, where each term has a label and a URI.
@@ -62,13 +72,3 @@ var anno = Annotorious.init({
   }]
 });
 ```
-
-Each item in the `widgets` array can be one of the following:
-
-- The name of a __built-in widget__ - currently either `COMMENT` or `TAG`
-- An editor __plugin__ 
-- An object with a `widget` property that has the widget name or plugin as value, and 
-  additional configuration arguments for the widget
-
-If you want to learn how to write your own extensions for the editor, 
-[start with this guide](/guides/editor-widgets/).
