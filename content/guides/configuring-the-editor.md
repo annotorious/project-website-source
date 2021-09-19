@@ -34,6 +34,22 @@ var anno = Annotorious.init({
 });
 ```
 
+> The tag widget also supports semantic vocabularies, where each term has a label and a URI.
+
+```js
+var anno = Annotorious.init({
+  image: 'hallstatt',
+  widgets: [{ 
+    widget: 'TAG',
+    vocabulary: [ 
+      { label: 'Place', uri: 'http://www.example.com/ontology/place' },
+      { label: 'Person', uri: 'http://www.example.com/ontology/person' }, 
+      { label: 'Event', uri: 'http://www.example.com/ontology/event' }
+    ] 
+  }]
+});
+```
+
 Alternatively, the configuration below will give you an editor with just a comment widget, but no tag widget.
 
 ```js
