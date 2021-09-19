@@ -54,12 +54,14 @@ Many thanks in advance! If you have questions, do get in touch via the [Annotori
 | Arabic | ar  | __Partial__ | [messages_ar.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ar.json) |
 | Czech | cs | Complete | [messages_cs.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_cs.json) |
 | Dutch | nl | Complete | [messages_nl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_nl.json) |
+| Finnish | fi | Complete | [messages_fi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_fi.json) |
 | French | fr | Complete | [messages_fr.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_fr.json) |
 | Galician | gl | Complete  | [messages_gl.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_gl.json) |
 | German | de   | Complete  | [messages_de.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_de.json) |
 | Greek | el   | Complete  | [messages_el.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_el.json) |
 | Hindi | hi | Complete   | [messages_hi.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_hi.json) |
 | Italian | it | __Partial__ | [messages_it.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_it.json) |
+| Korean | ko | Complete | [messages_ko.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_ko.json) |
 | Portugese | pt | Complete | [messages_pt.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_pt.json) |
 | Spanish | es  | Complete  | [messages_es.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_es.json) |
 | Swedish | sv | __Partial__ | [messages_sv.json](https://github.com/recogito/recogito-client-core/blob/master/src/i18n/messages_sv.json) |
