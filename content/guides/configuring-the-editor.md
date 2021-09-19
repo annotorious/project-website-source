@@ -34,7 +34,20 @@ var anno = Annotorious.init({
 });
 ```
 
-> The tag widget also supports semantic vocabularies, where each term has a label and a URI.
+Alternatively, the configuration below will give you an editor with just a comment widget, but no tag widget.
+
+```js
+var anno = Annotorious.init({
+  image: 'hallstatt',
+  widgets: [
+    'COMMENT'
+  ]
+});
+``` 
+
+## Tagging Vocabularies
+
+__Note:__ the tag widget also supports semantic vocabularies, where each term has a label and a URI.
 
 ```js
 var anno = Annotorious.init({
@@ -49,17 +62,6 @@ var anno = Annotorious.init({
   }]
 });
 ```
-
-Alternatively, the configuration below will give you an editor with just a comment widget, but no tag widget.
-
-```js
-var anno = Annotorious.init({
-  image: 'hallstatt',
-  widgets: [
-    'COMMENT'
-  ]
-});
-``` 
 
 Each item in the `widgets` array can be one of the following:
 
