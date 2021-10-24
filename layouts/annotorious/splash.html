@@ -4,7 +4,7 @@
     <title>Annotorious | A Javascript Image Annotation Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {{ $style := resources.Get "scss/splash.scss" | toCSS (dict "targetPath" "css/splash.css" "enableSourceMap" true) }}    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@latest/dist/annotorious.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/annotorious@{{.Site.Data.versions.annotorious}}/dist/annotorious.min.css">
     <link rel="stylesheet" href="{{ ($style | minify | fingerprint).RelPermalink }}">  
     <link rel="apple-touch-icon" sizes="180x180" href="/images/annotorious-touch-icon.png">
     <link rel="apple-touch-icon" sizes="152x152" href="/images/annotorious-touch-icon-152.png">
