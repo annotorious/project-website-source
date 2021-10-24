@@ -51,7 +51,7 @@ The `config` object is optional, and supports following properties:
 | `disableEditor` | Boolean  | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `formatter`     | Function | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
 | `fragmentUnit`  | String   | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
-| `gigapixelMode` | Boolean  | false   | Enables slower, but more accurate shape rendering on images with extrememly high resolution. __Note that gigapixelMode current doesn't support rotate or flip |
+| `gigapixelMode` | Boolean  | false   | Enables slower, but more accurate shape rendering on images with extrememly high resolution. Note that gigapixelMode current doesn't support rotate or flipped OSD views. |
 | `handleRadius`  | Number   | 6       | Radius of the shape resize handles.                                                                                        |
 | `locale`        | String   | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
 | `messages`      | Object   | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
