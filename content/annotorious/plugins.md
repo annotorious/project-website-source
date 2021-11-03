@@ -14,6 +14,12 @@ meta_link: "https://recogito.github.io/annotorious/plugins"
 Plugins extend the functionality of Annotorious. The following plugins are currently
 available:
 
+## [Annotorious Better Polygon](https://github.com/recogito/recogito-client-plugins/tree/main/plugins/annotorious-better-polygon)
+
+A better polygon drawing tool for for Annotorious and Annotorious OpenSeadragon. Provides extra features not found in
+the built-in polygon tool, such as adding and removing points, closing the polygon by re-selecting the first point, and
+selecting/moving multiple corners.
+
 ## [Annotorious Selector Pack](https://github.com/recogito/annotorious-selector-pack)
 
 Additional selection tools for Annotorious and Annotorious OpenSeadragon: __circle__, __ellipse__
