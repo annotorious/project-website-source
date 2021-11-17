@@ -37,4 +37,4 @@ anno.on('createAnnotation', function(annotation) {
 ## Using Cloud Storage Services
 
 If you don't want to run your own application backend, cloud storage services offer a good alternative.
-See [our Google Firebase storage plugin](#) for a free & personal annotation store solution.
+See [our Google Firebase storage plugin](https://recogito.github.io/guides/using-firebase-for-storage/) for a free & personal annotation store solution.
