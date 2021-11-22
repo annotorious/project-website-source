@@ -504,13 +504,18 @@ is moved or resized.
 ### clickAnnotation
 
 ```js
-anno.on('clickAnnotation', function(annotation) {
+anno.on('clickAnnotation', function(annotation, element) {
   // 
 });
 ```
 
 Fired every time the user clicks an annotation (regardless of whether it is already
 selected or not).
+
+| Argument     | Type    | Value                                      |
+| ------------ | ------- | ------------------------------------------ |
+| `annotation` | Object  | the clicked annotation                     |
+| `element`    | Element | the clicked annotation SVG shape element   |
 
 ### createAnnotation
 
@@ -572,7 +577,7 @@ Fired when an existing annotation was deleted.
 ### mouseEnterAnnotation
 
 ```js
-anno.on('mouseEnterAnnotation', function(annotation, event) {
+anno.on('mouseEnterAnnotation', function(annotation, element) {
   // 
 });
 ```
@@ -582,12 +587,12 @@ Fired when the mouse moves into an existing annotation.
 | Argument     | Type   | Value                    |
 | ------------ | ------ | ------------------------ |
 | `annotation` | Object | the annotation           |
-| `event`      | Object | the original mouse event |
+| `element`    | Object | the annotation shape SVG element |
 
 ### mouseLeaveAnnotation
 
 ```js
-anno.on('mouseLeaveAnnotation', function(annotation, event) {
+anno.on('mouseLeaveAnnotation', function(annotation, element) {
   // 
 });
 ```
@@ -597,22 +602,23 @@ Fired when the mouse moves out of an existing annotation.
 | Argument     | Type   | Value                    |
 | ------------ | ------ | ------------------------ |
 | `annotation` | Object | the annotation           |
-| `event`      | Object | the original mouse event |
+| `element`    | Object | the annotation shape SVG element |
 
 ### selectAnnotation
 
-Fired when the user selects an annotation. Note that this event will __not__ fire when 
-the selection is made programmatically through the `selectAnnotation(arg)` API method.
-
 ```js
-anno.on('selectAnnotation', function(annotation) {
+anno.on('selectAnnotation', function(annotation, element) {
   // 
 });
 ```
 
-| Argument     | Type   | Value                                      |
-| ------------ | ------ | ------------------------------------------ |
-| `annotation` | Object | the annotation in W3C WebAnnotation format |
+Fired when the user selects an annotation. Note that this event will __not__ fire when 
+the selection is made programmatically through the `selectAnnotation(arg)` API method.
+
+| Argument     | Type    | Value                                      |
+| ------------ | ------- | ------------------------------------------ |
+| `annotation` | Object  | the annotation in W3C WebAnnotation format |
+| `element`    | Element | the annotation SVG shape element           |
 
 ### startSelection
 
