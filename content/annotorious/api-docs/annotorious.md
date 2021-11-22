@@ -42,18 +42,19 @@ const anno = new Annotorious(config);
 
 The config object supports the following properties:
 
-| Property              | Type           | Default | Description                                                                                                                |
-| --------------------- | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `allowEmpty`          | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
-| `disableEditor`       | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
-| `formatter`           | Function       | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
-| `fragmentUnit`        | String         | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
-| `handleRadius`        | Number         | 6       | Radius of the shape resize handles.                                                                                        |
-| `image`               | Elem \| String | -       | __Required.__ Image DOM element or element ID.                                                                             |
-| `locale`              | String         | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
-| `messages`            | Object         | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
-| `readOnly`            | Boolean        | false   | Display annotations in read-only mode.                                                                                     |
-| `widgets`             | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
+| Property            | Type           | Default | Description                                                                                                                |
+| ------------------- | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `allowEmpty`        | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
+| `disableEditor`     | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
+| `drawOnSingleClick` | Boolean        | false   | If `true` users drawing starts with a single click, rather than click-and-drag                                             |
+| `formatter`         | Function       | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
+| `fragmentUnit`      | String         | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
+| `handleRadius`      | Number         | 6       | Radius of the shape resize handles.                                                                                        |
+| `image`             | Elem \| String | -       | __Required.__ Image DOM element or element ID.                                                                             |
+| `locale`            | String         | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
+| `messages`          | Object         | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
+| `readOnly`          | Boolean        | false   | Display annotations in read-only mode.                                                                                     |
+| `widgets`           | Array          | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
 
 ## Instance Fields
 
@@ -149,6 +150,18 @@ anno.destroy();
 ```
 
 Destroys this instance of Annotorious, removing the annotation layer on the image.
+
+### .getAnnotationById
+
+```js
+const annotation = getAnnotationById(id);
+```
+
+Returns the annotation with the specified ID.
+
+| Argument      | Type   | Value             |
+| ------------- | ------ | ----------------- |
+| `id`          | String | the annotation ID |
 
 ### .getAnnotations
 
@@ -263,6 +276,18 @@ Removes an annotation programmatically. __Note:__ programmatic remove __will not
 | Argument | Type           | Value                                                           |
 | -------- | -------------- | --------------------------------------------------------------- |
 | `arg`    | Object, String | the annotation in W3C WebAnnotation format or the annotation ID |
+
+### .removeDrawingTool
+
+```js
+anno.removeDrawingTool(id);
+```
+
+Removes the drawing tool with the specified tool ID.
+
+| Argument | Type   | Value               |
+| -------- | ------ | ------------------- |
+| `id`     | String | the drawing tool ID |
 
 ### .saveSelected
 

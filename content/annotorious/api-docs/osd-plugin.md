@@ -49,6 +49,7 @@ The `config` object is optional, and supports following properties:
 | --------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
 | `allowEmpty`    | Boolean  | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
 | `disableEditor` | Boolean  | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
+| `drawOnSingleClick` | Boolean        | false   | If `true` users drawing starts with a single click, rather than click-and-drag                                   |
 | `formatter`     | Function | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
 | `fragmentUnit`  | String   | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
 | `gigapixelMode` | Boolean  | false   | Enables slower, but more accurate shape rendering on images with extrememly high resolution. Note that gigapixelMode current doesn't support rotate or flipped OSD views. |
@@ -165,10 +166,14 @@ Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified ann
 ### .getAnnotationById
 
 ```js
-const annotation = getAnnotationById('#ee2a2264-9930-4f66-8513-8a7af3c9ecb0');
+const annotation = getAnnotationById(id);
 ```
 
 Returns the annotation with the specified ID.
+
+| Argument      | Type   | Value             |
+| ------------- | ------ | ----------------- |
+| `id`          | String | the annotation ID |
 
 ### .getAnnotations
 
@@ -296,6 +301,18 @@ Removes an annotation programmatically. __Note:__ programmatic remove __will not
 | Argument | Type           | Value                                                           |
 | -------- | -------------- | --------------------------------------------------------------- |
 | `arg`    | String, Object | the annotation in W3C WebAnnotation format or the annotation ID |
+
+### .removeDrawingTool
+
+```js
+anno.removeDrawingTool(id);
+```
+
+Removes the drawing tool with the specified tool ID.
+
+| Argument | Type   | Value               |
+| -------- | ------ | ------------------- |
+| `id`     | String | the drawing tool ID |
 
 ### .saveSelected
 
