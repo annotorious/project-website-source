@@ -162,6 +162,14 @@ Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified ann
 | `arg`         | String, Object | the annotation or the annotation ID        |
 | `immediately` | Boolean        | if `true` pans and zooms without animation |
 
+### .getAnnotationById
+
+```js
+const annotation = getAnnotationById('#ee2a2264-9930-4f66-8513-8a7af3c9ecb0');
+```
+
+Returns the annotation with the specified ID.
+
 ### .getAnnotations
 
 ```js
