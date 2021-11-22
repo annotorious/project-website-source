@@ -471,16 +471,31 @@ selected or not).
 ### createAnnotation
 
 ```js
-anno.on('createAnnotation', function(annotation) {
+anno.on('createAnnotation', function(annotation, overrideId) {
   // 
 });
 ```
 
 Fired when a new annotation is created from a user selection.
 
-| Argument     | Type   | Value                                      |
-| ------------ | ------ | ------------------------------------------ |
-| `annotation` | Object | the annotation in W3C WebAnnotation format |
+| Argument     | Type     | Value                                      |
+| ------------ | -------- | ------------------------------------------ |
+| `annotation` | Object   | the annotation in W3C WebAnnotation format |
+| `overrideId` | Function | a callback function for assigning a custom annotation ID |
+
+When an annotation is created, Annotorious automatically assigns it a globally unique 
+ID. It is possible to override this ID with your own (e.g. server-generated) ID via 
+the overrideId callback function.
+
+```js
+r.on('createAnnotation', async (annotation, overrideId) => {
+  // POST to the server and receive a new ID
+  const newId = await server.createAnnotation(annotation);
+
+  // Inject that ID into RecogitoJS
+  overrideId(newId);
+});
+```
 
 ### createSelection
 
