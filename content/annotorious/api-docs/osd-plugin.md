@@ -49,6 +49,7 @@ The `config` object is optional, and supports following properties:
 | --------------- | -------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
 | `allowEmpty`    | Boolean  | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
 | `disableEditor` | Boolean  | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
+| `disableSelect` | Boolean  | false   | Disables selection functionality. Clicking will no longer open the editor. (The `clickAnnotation` event still fires.)      |
 | `drawOnSingleClick` | Boolean        | false   | If `true` users drawing starts with a single click, rather than click-and-drag                                   |
 | `formatter`     | Function | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
 | `fragmentUnit`  | String   | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
@@ -87,6 +88,16 @@ Setting `disableSelect` to `true` will __not__ clear the current selection, if a
 ```js
 console.log(anno.readOnly); // true or fals
 anno.readOnly = !anno.readOnly; // toggles state
+```
+
+Change display mode between __normal__ (annotations are editable) and __read-only__. 
+
+### widgets
+
+Dynamically changes the current set of editor widgets.
+
+```js
+anno.widgets = [...anno.widgets, MyCustomWidget ];
 ```
 
 Change display mode between __normal__ (annotations are editable) and __read-only__. 
