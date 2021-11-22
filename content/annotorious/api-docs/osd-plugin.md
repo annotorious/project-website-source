@@ -447,6 +447,15 @@ to get the list of registered tools.
 | ---------- | ------ | ------------------------ |
 | `toolName` | String | E.g. `rect` or `polygon` |
 
+### .setServerTime 
+
+Set a "server time" timestamp. When using [authInfo](#setauthinfo), this method helps to synchronize the
+`created` timestamp that Annotorious inserts into the annotation with your server environment, avoiding 
+problems when the clock isn't properly set in the user's browser.
+
+After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
+server time the user's local clock.
+
 ### .setVisible
 
 ```js
@@ -458,15 +467,6 @@ Shows or hides the annotation layer.
 | Argument  | Type    | Value                                                  |
 | --------- | ------- | ------------------------------------------------------ |
 | `visible` | Boolean | if `true` show the annotation layer, otherwise hide it |
-
-### .setServerTime 
-
-Set a "server time" timestamp. When using [authInfo](#setauthinfo), this method helps to synchronize the
-`created` timestamp that Annotorious inserts into the annotation with your server environment, avoiding 
-problems when the clock isn't properly set in the user's browser.
-
-After setting server time, the Annotorious will adjust the `created` timestamps by the difference between
-server time the user's local clock.
 
 ### .updateSelected
 
