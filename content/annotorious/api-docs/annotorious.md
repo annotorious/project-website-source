@@ -47,7 +47,7 @@ The config object supports the following properties:
 | `allowEmpty`        | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
 | `disableEditor`     | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `disableSelect`     | Boolean        | false   | Disables selection functionality. Clicking will no longer open the editor. (The `clickAnnotation` event still fires.)      |
-| `drawOnSingleClick` | Boolean        | false   | If `true` users drawing starts with a single click, rather than click-and-drag                                             |
+| `drawOnSingleClick` | Boolean        | false   | If `true` users can start drawing with a single click also, not just with click-and-drag                                             |
 | `formatter`         | Function       | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
 | `fragmentUnit`      | String         | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
 | `handleRadius`      | Number         | 6       | Radius of the shape resize handles.                                                                                        |
