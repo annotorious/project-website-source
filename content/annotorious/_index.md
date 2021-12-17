@@ -18,9 +18,9 @@ var anno = Annotorious.init({
 anno.loadAnnotations('annotations.json');
 
 // Attach listeners to handle annotation events
-anno.on('createAnnotation', function(annotation)) {
+anno.on('createAnnotation', function(annotation) {
   console.log('Created!');
-};
+});
 ```
 
 
