@@ -48,7 +48,7 @@ The config object supports the following properties:
 | `disableEditor`     | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `disableSelect`     | Boolean        | false   | Disables selection functionality. Clicking will no longer open the editor. (The `clickAnnotation` event still fires.)      |
 | `drawOnSingleClick` | Boolean        | false   | If `true` users can start drawing with a single click also, not just with click-and-drag                                             |
-| `formatter`         | Function       | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
+| `formatters`        | Array \| Function | -       | A [formatter function](#formatters) or list of functions providing custom style rules.                                                          |
 | `fragmentUnit`      | String         | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
 | `handleRadius`      | Number         | 6       | Radius of the shape resize handles.                                                                                        |
 | `image`             | Elem \| String | -       | __Required.__ Image DOM element or element ID.                                                                             |
@@ -80,6 +80,14 @@ Disables selection functionality. Clicking an annotation will no longer open the
 the `selectAnnotation` event. The `clickAnnotation` event will still fire!
 
 Setting `disableSelect` to `true` will __not__ clear the current selection, if any.
+
+### formatters
+
+```js
+anno.formatters = [ ...anno.formatters, MyFormatter ];
+```
+
+The [formatter](#formatters) functions on this Annotorious instance.
 
 ### readOnly
 
