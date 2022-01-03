@@ -28,7 +28,7 @@ OpenSeadragon script.
 <link rel="stylesheet" href="annotorious.min.css">
 
 <!-- JS -->
-<script src="openseadragon/openseadragon.2.4.2.min.js"></script>
+<script src="openseadragon/openseadragon.3.0.0.min.js"></script>
 <script src="openseadragon-annotorious.min.js"></script>
 ```
 
