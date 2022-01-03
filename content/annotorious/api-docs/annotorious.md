@@ -179,6 +179,23 @@ const annotations = anno.getAnnotations();
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
+### .getImageSnippetById
+
+```js
+const { snippet, transform } = anno.getImageSnippetById(annotationId);
+```
+
+Returns an object containing:
+
+- A DOM CANVAS element with the given annotation's image snippet
+- A coordinate transform function that translates X/Y coordinates in the 
+  snippet coordinate space back to the coordinate space of the full image
+
+| Field       | Type     | Value                                                             |
+| ----------- | -------- | ----------------------------------------------------------------- |
+| `snippet`   | Canvas   | the image under the given annotations' bounds as a CANVAS element |
+| `transform` | Function | coordinate conversion function                                    |
+
 ### .getSelected
 
 ```js
