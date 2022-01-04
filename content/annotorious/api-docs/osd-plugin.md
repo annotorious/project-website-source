@@ -51,7 +51,7 @@ The `config` object is optional, and supports following properties:
 | `disableEditor` | Boolean  | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `disableSelect` | Boolean  | false   | Disables selection functionality. Clicking will no longer open the editor. (The `clickAnnotation` event still fires.)      |
 | `drawOnSingleClick` | Boolean        | false   | If `true` users can start drawing with a single click also, not just with click-and-drag                                   |
-| `formatter`     | Function | -       | A [formatter function](#formatters) providing custom style rules.                                                          |
+| `formatters`    | Array \| Function  | -       | A [formatter function](#formatters) or list of functions providing custom style rules. |
 | `fragmentUnit`  | String   | 'pixel' | Store rectangle coordinates in `pixel` units (default) or `percent` units.                                                 | 
 | `gigapixelMode` | Boolean  | false   | Enables slower, but more accurate shape rendering on images with extrememly high resolution. Note that gigapixelMode current doesn't support rotate or flipped OSD views. |
 | `handleRadius`  | Number   | 6       | Radius of the shape resize handles.                                                                                        |
@@ -82,6 +82,14 @@ Disables selection functionality. Clicking an annotation will no longer open the
 the `selectAnnotation` event. The `clickAnnotation` event will still fire!
 
 Setting `disableSelect` to `true` will __not__ clear the current selection, if any.
+
+### formatters
+
+```js
+anno.formatters = [ ...anno.formatters, MyFormatter ];
+```
+
+The [formatter](#formatters) functions on this Annotorious instance.
 
 ### readOnly
 
@@ -193,6 +201,23 @@ anno.getAnnotations();
 ```
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
+
+### .getImageSnippetById
+
+```js
+const { snippet, transform } = anno.getImageSnippetById(annotationId);
+```
+
+Returns an object containing:
+
+- A DOM CANVAS element with the given annotation's image snippet
+- A coordinate transform function that translates X/Y coordinates in the 
+  snippet coordinate space back to the coordinate space of the full image
+
+| Field       | Type     | Value                                                             |
+| ----------- | -------- | ----------------------------------------------------------------- |
+| `snippet`   | Canvas   | the image under the given annotations' bounds as a CANVAS element |
+| `transform` | Function | coordinate conversion function                                    |
 
 ### .getSelected
 
