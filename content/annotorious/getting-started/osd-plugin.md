@@ -95,3 +95,16 @@ const config = {}; // Optional plugin config options
 
 Annotorious(viewer, config);
 ```
+
+# A Note on Fullscreen Mode
+
+If you experience the problem that __annotations don't appear in OpenSeadragon
+fullscreen mode__: please make sure that you include the Annotorious 
+stylesheet file (`annotorious.min.css`) __in the &lt;head&gt; of your document!__
+
+Reason: when switching to fullscreen mode, OpenSeadragon temporarily removes 
+all content from the page body, and replaces it with the viewer element. If you
+include the Annotorious stylesheet somewhere inside the body, it will get removed 
+from the page in fullscreen mode, causing annotations to disappear. __ALWAYS add 
+the Annotorious stylesheet in the document &lt;head&gt;!__
+
