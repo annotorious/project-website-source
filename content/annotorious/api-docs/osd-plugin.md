@@ -182,6 +182,20 @@ Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified ann
 | `arg`         | String, Object | the annotation or the annotation ID        |
 | `immediately` | Boolean        | if `true` pans and zooms without animation |
 
+### .fitBoundsWithConstraints
+
+```js
+anno.fitBoundsWithConstraints(arg [, immediately]);
+```
+
+Makes the OpenSeadragon viewport pan and zoom to the bounds of the specified annotation,
+while enforcing the constraints (minZoom, maxZoom and visibilityRatio).
+
+| Argument      | Type           | Value                                      |
+| ------------- | -------------- | ------------------------------------------ |
+| `arg`         | String, Object | the annotation or the annotation ID        |
+| `immediately` | Boolean        | if `true` pans and zooms without animation |
+
 ### .getAnnotationById
 
 ```js

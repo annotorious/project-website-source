@@ -45,6 +45,7 @@ The config object supports the following properties:
 | Property            | Type           | Default | Description                                                                                                                |
 | ------------------- | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------- |
 | `allowEmpty`        | Boolean        | false   | Annotations created without bodies are normally discarded. Set to `true` to allow empty annotations.                       |
+| `crosshair`         | Boolean        | false   | When the mouse is over the image, show a crosshair instead of the mouse cursor                                             |
 | `disableEditor`     | Boolean        | false   | Disable the editor if you only need drawing functionality, but not the popup.                                              |
 | `disableSelect`     | Boolean        | false   | Disables selection functionality. Clicking will no longer open the editor. (The `clickAnnotation` event still fires.)      |
 | `drawOnSingleClick` | Boolean        | false   | If `true` users can start drawing with a single click also, not just with click-and-drag                                             |
