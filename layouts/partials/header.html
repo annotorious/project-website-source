@@ -20,19 +20,19 @@
         <a href="/annotorious/">Home</a>
       </li>
 
-      <li class='{{ cond (eq .Dir "annotorious/getting-started/") "current" "" }}'>
+      <li class='{{ cond (eq .File.Dir "annotorious/getting-started/") "current" "" }}'>
         <a href="/annotorious/getting-started">Getting Started</a>
       </li>
 
-      <li class='{{ cond (eq .Dir "annotorious/api-docs/") "current" "" }}'>
+      <li class='{{ cond (eq .File.Dir "annotorious/api-docs/") "current" "" }}'>
         <a href="/annotorious/api-docs">API Docs</a>
       </li>
       
-      <li class='{{ cond (eq .Dir "guides/") "current" "" }}'>
+      <li class='{{ cond (eq .File.Dir "guides/") "current" "" }}'>
         <a href="/guides">Guides</a>
       </li>
 
-      <li class='{{ cond (eq .Dir "annotorious/plugins/") "current" "" }}'>
+      <li class='{{ cond (eq .File.Dir "annotorious/plugins/") "current" "" }}'>
         <a href="/annotorious/plugins">Plugins</a>
       </li>
 
