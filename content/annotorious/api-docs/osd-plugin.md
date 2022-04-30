@@ -228,6 +228,10 @@ Returns an object containing:
 - A coordinate transform function that translates X/Y coordinates in the 
   snippet coordinate space back to the coordinate space of the full image
 
+> __Warning:__ this method is currently for experimental use __only.__
+> It will only return a valid snippet if the given annotation is currently 
+> visible in the OpenSeadragon viewport.
+
 | Field       | Type     | Value                                                             |
 | ----------- | -------- | ----------------------------------------------------------------- |
 | `snippet`   | Canvas   | the image under the given annotations' bounds as a CANVAS element |
