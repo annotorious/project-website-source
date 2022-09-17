@@ -217,6 +217,18 @@ anno.getAnnotations();
 
 Returns all annotations according to the current rendered state, in W3C Web Annotation format. 
 
+### .getAnnotationsIntersecting
+
+```js
+anno.getAnnotationsIntersecting(arg);
+```
+
+Returns the annotations whose bounding boxes intersect with the bounding box of the specified annotation.
+
+| Argument | Type           | Value                               |
+| -------- | -------------- | ----------------------------------- |
+| `arg`    | String, Object | the annotation or the annotation ID |
+
 ### .getImageSnippetById
 
 ```js
