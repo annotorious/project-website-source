@@ -77,3 +77,47 @@ Below is a minimal example for using Annotorious in Vue.js. Thanks to
   }
 </script>
 ```
+
+## Using Plugins
+
+Most Annotorioous plugins are fully compatible with Vue. Below is an example for
+using the [SelectorPack](https://github.com/recogito/annotorious-selector-pack).
+Thanks to [Pierre Baudin](https://github.com/pvbaudin) for this contribution!
+
+
+```html
+<template>
+  <div>
+    <img id="plan" src="img.png" style="width: 100%; max-width: 1024px;" />
+  </div>
+</template>
+
+<script>
+  import { Annotorious} from '@recogito/annotorious';
+  import '@recogito/annotorious/dist/annotorious.min.css';
+  import  SelectorPack  from '@recogito/annotorious-selector-pack';
+
+  export default {
+
+    data() {
+      return {
+        anno: null
+      }
+    },
+
+    methods: {
+      initAnno() {
+        this.anno = new Annotorious({
+          image: document.getElementById("plan")
+        });
+      }
+    },
+
+    mounted() {
+      this.initAnno();
+      SelectorPack(this.anno)
+    }
+  }
+</script>
+```
+
