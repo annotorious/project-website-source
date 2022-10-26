@@ -28,7 +28,7 @@ Subscribe to these events, and execute the corresponding write operations to you
 ```javascript
 anno.on('createAnnotation', function(annotation) {
   // This part depends entirely on how your backend works
-  axios.post('http://www.example.com/annotations/).then((response) => {
+  axios.post('http://www.example.com/annotations/').then((response) => {
     console.log('Stored.');
   });
 });
