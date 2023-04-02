@@ -5,7 +5,7 @@ draft: false
 layout: "api-doc"
 meta_title: "Annotorious API Docs"
 meta_description: "API Documentation for the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/annotorious/api-docs/annotorious"
+meta_link: "https://annotorious.github.io/api-docs/annotorious"
 ---
 
 # API Reference: Annotorious

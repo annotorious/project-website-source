@@ -6,7 +6,7 @@ type: "annotorious"
 layout: "splash"
 meta_title: "Annotorious | JavaScript image annotation library"
 meta_description: "Add drawing, commenting and labeling functionality to images on your website with a few lines of JavaScript."
-meta_link: "https://recogito.github.io/annotorious"
+meta_link: "https://annotorious.github.io"
 ---
 
 ```js

@@ -1,6 +1,6 @@
-baseURL = "http://recogito.github.io/"
+baseURL = "http://annotorious.github.io/"
 languageCode = "en-us"
-title = "recogito.github.io"
+title = "annotorious.github.io"
 
 [markup]
   [markup.highlight]

@@ -5,7 +5,7 @@ draft: false
 layout: "api-doc"
 meta_title: "Annotorious OpenSeadragon API"
 meta_description: "API Documentation for the Annotorious OpenSeadragon plugin"
-meta_link: "https://recogito.github.io/annotorious/api-docs/osd-plugin"
+meta_link: "https://annotorious.github.io/api-docs/osd-plugin"
 ---
 
 # API Reference: OpenSeadragon Plugin

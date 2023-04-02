@@ -6,7 +6,7 @@ layout: "single"
 include_summaries: false
 meta_title: "Annotorious Plugins and Extensions"
 meta_description: "Plugins and Extensions for the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/annotorious/plugins"
+meta_link: "https://annotorious.github.io/plugins"
 ---
 
 # Plugins
