@@ -108,16 +108,16 @@ Instead, __wrap the image in a \<div\> and apply your styles to the wrapper \<di
 # OpenSeadragon Plugin
 
 There is a separate version of Annotorious which plugs into the [OpenSeadragon viewer](http://openseadragon.github.io/)
-for high-resolution images. Setup is just as easy as for the standard version. [Read more](/annotorious/getting-started/osd-plugin)
+for high-resolution images. Setup is just as easy as for the standard version. [Read more](/getting-started/osd-plugin)
 
 # Next Steps
 
 Once you have the basics up and running, you will probably want to know more about 
-Annotorious' [JavaScript API](/annotorious/api-docs/annotorious/), or check our
+Annotorious' [JavaScript API](/api-docs/annotorious/), or check our
 [guides section](/guides) for more help and tutorials. 
 
 # Read More
 
-- [OpenSeadragon Plugin](/annotorious/getting-started/osd-plugin/)
-- [Web Annotation Model](/annotorious/getting-started/web-annotation/)
-- [Storing Annotations](/annotorious/getting-started/storing-annotations/)
+- [OpenSeadragon Plugin](/getting-started/osd-plugin/)
+- [Web Annotation Model](/getting-started/web-annotation/)
+- [Storing Annotations](/getting-started/storing-annotations/)
