@@ -23,6 +23,10 @@ Download the [latest release](https://github.com/recogito/annotorious-openseadra
 and include script and stylesheet file in your web page. Make sure to include the script __after__ the
 OpenSeadragon script.
 
+> Important! Current versions of Annotorious only work with OpenSeadragon 3.x 
+> (and should work with OSD 4.0, although it's a bit untested...)
+
+
 ```html
 <!-- CSS stylesheet -->
 <link rel="stylesheet" href="annotorious.min.css">
