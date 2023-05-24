@@ -23,7 +23,7 @@ Download the [latest release](https://github.com/recogito/annotorious-openseadra
 and include script and stylesheet file in your web page. Make sure to include the script __after__ the
 OpenSeadragon script.
 
-> Important! From version 2.7.x Annotorious strictly requires OpenSeadragon 3.0 or higher.
+> Important! Annotorious version 2.7.x strictly requires OpenSeadragon 3.0 or higher.
 > For compatibility with OpenSeadragon v2.4 and below, please use Annotorious 2.6.x. 
 
 ```html
