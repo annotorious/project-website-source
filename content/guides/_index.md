@@ -12,7 +12,7 @@ meta_link: "https://recogito.github.io/guides"
 # Guides
 
 The __Guides__ section collects useful articles, tutorials and examples for 
-[Annotorious](/https://github.com/annotorious/annotorious) and [RecogitoJS](https://github.com/recogito/recogito-js). If you 
+[Annotorious](https://github.com/annotorious/annotorious) and [RecogitoJS](https://github.com/recogito/recogito-js). If you 
 want to learn about a specific topic that isn't covered yet, please get in touch via 
 the [Gitter chat](https://gitter.im/recogito/annotorious). 
 
