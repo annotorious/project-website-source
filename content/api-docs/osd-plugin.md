@@ -57,9 +57,9 @@ The `config` object is optional, and supports following properties:
 | `handleRadius`  | Number   | 6       | Radius of the shape resize handles.                                                                                        |
 | `hotkey`        | Object   | -       | Re-assigns the key that activates drawing mode (Shift by default). Allowed values are, either, a keycode (e.g. 'Shift', 'Alt', 'Control'), or an object with a `key` and an optional `inverted` property. If `inverted` is set to `true`, Annotorious is permanently in drawing mode. Image navigation is only possible when the hotkey is pressed. |
 | `locale`        | String   | -       | Two-character ISO language code or `auto` to use the browser setting.                                                      |
-| `messages`      | Object   | -       | Custom UI labels. Requires a [message dictionary](https://recogito.github.io/guides/contributing-ui-translations/) object. |
+| `messages`      | Object   | -       | Custom UI labels. Requires a [message dictionary](https://annotorious.github.io/guides/contributing-ui-translations/) object. |
 | `readOnly`      | Boolean  | false   | Display annotations in read-only mode.                                                                                     |
-| `widgets`       | Array    | -       | A list of editor widget definitions (see [this guide](/guides/customizing-the-editor/) for details).                       |
+| `widgets`       | Array    | -       | A list of editor widget definitions (see [this guide](/guides/configuring-the-editor/) for details).                       |
 
 ## Instance Fields
 
