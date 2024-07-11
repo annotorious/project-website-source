@@ -8,7 +8,7 @@ blurb: "We welcome contributions! Both to our code as well as our documentation.
 weight: 99
 meta_title: "Annotorious/RecogitoJS Development Setup"
 meta_description: "This guide explains how to set up your development environment for hacking Annotorious or RecogitoJS."
-meta_link: "https://recogito.github.io/guides/hackers-guide"
+meta_link: "https://annotorious.github.io/guides/hackers-guide"
 ---
 
 # Hacker's Guide to Annotorious and RecogitoJS

@@ -6,7 +6,7 @@ layout: "section-index"
 include_summaries: true
 meta_title: "Guides"
 meta_description: "Guides, recipes and examples around Annotorious and RecogitoJS"
-meta_link: "https://recogito.github.io/guides"
+meta_link: "https://annotorious.github.io/guides"
 ---
 
 # Guides

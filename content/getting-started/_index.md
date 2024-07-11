@@ -6,7 +6,7 @@ layout: "section-index"
 include_summaries: false
 meta_title: "Getting Started With Annotorious"
 meta_description: "Examples and instructions for getting started with the Annotorious image annotation library"
-meta_link: "https://recogito.github.io/annotorious/getting-started"
+meta_link: "https://annotorious.github.io/getting-started"
 ---
 
 # Getting Started with Annotorious

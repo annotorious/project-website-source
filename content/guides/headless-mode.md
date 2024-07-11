@@ -8,7 +8,7 @@ blurb: "A guide to Headless Mode, which allows you to use Annotorious without th
 weight: 3
 meta_title: "Using Headless Mode"
 meta_description: "A guide to Headless Mode, which allows you to use Annotorious without the editor popup."
-meta_link: "https://recogito.github.io/guides/using-headless-mode"
+meta_link: "https://annotorious.github.io/guides/using-headless-mode"
 ---
 
 # Headless Mode: Using Annotorious without the Editor Popup
