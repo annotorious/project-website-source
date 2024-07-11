@@ -20,7 +20,7 @@ lifecycle events. But you are free to build your own user interface, without bei
 forced to the standard editor popup.  
 
 The demo uses headless mode to create annotations with either an __Orange__
-or __Green__ tag, and a [formatter](/annotorious/api-docs/annotorious/#formatters)
+or __Green__ tag, and a [formatter](/api-docs/annotorious/#formatters)
 to color the shapes. (To delete an annotation, select it and press the __Delete__ key.)
 
 {{< inline-headless-demo >}}

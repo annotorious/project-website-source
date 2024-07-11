@@ -12,7 +12,7 @@ meta_link: "https://annotorious.github.io/api-docs/annotorious"
 
 > The __standard version__ of Annotorious works with normal images embedded in websites
 > or web applications. If you are looking for the Annotorious OpenSeadragon plugin,
-> [see here instead](/annotorious/api-docs/osd-plugin).
+> [see here instead](/api-docs/osd-plugin).
 
 ## Initialization
 
@@ -116,7 +116,7 @@ anno.addAnnotation(annotation [, readOnly]);
 ```
 
 Adds an annotation programmatically. The format is the 
-[W3C WebAnnotation model](/annotorious/getting-started/web-annotation).
+[W3C WebAnnotation model](/getting-started/web-annotation).
 
 | Argument     | Type    | Value                                                                    |
 | ------------ | ------- | ------------------------------------------------------------------------ |
