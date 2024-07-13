@@ -8,7 +8,7 @@ blurb: "This guide explains how you can configure the widgets that appear in the
 weight: 1
 meta_title: "Configuring the Annotorious/RecogitoJS editor"
 meta_description: "This guide explains how you can configure the widgets that appear in the editor, and how you can pass additional configuration options to specific widgets."
-meta_link: "https://recogito.github.io/guides/configuring-the-editor"
+meta_link: "https://annotorious.github.io/guides/configuring-the-editor"
 ---
 
 # Customizing the Editor

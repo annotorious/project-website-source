@@ -13,7 +13,7 @@ meta_link: "https://annotorious.github.io/api-docs/osd-plugin"
 > The __OpenSeadragon Plugin__ is an extension to the 
 > [OpenSeadragon](http://openseadragon.github.io/) zoomable image viewer. 
 > If you are looking for the standard version of Annotorious, which works with
-> normal images embedded in websites, [see here instead](/annotorious/api-docs/annotorious).
+> normal images embedded in websites, [see here instead](/api-docs/annotorious).
 
 ## Initialization
 

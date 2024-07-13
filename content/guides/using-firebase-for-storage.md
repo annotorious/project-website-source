@@ -8,7 +8,7 @@ blurb: "In order to store annotations, you need a server backend that is able to
 weight: 5
 meta_title: "Firebase Storage Plugin"
 meta_description: "This guide provides a simple recipe for using Firebase, an online cloud storage service by Google, as your personal annotation server"
-meta_link: "https://recogito.github.io/guides/using-firebase-for-storage"
+meta_link: "https://annotorious.github.io/guides/using-firebase-for-storage"
 ---
 
 # Using Firebase for Storage

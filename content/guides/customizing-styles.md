@@ -8,7 +8,7 @@ blurb: "This guide explains how you can customize the visual appearance of Annot
 weight: 2
 meta_title: "Customizing Annotorious Styles"
 meta_description: "This guide explains how you can customize the visual appearance of Annotorious with CSS."
-meta_link: "https://recogito.github.io/guides/customizing-styles"
+meta_link: "https://annotorious.github.io/guides/customizing-styles"
 ---
 
 # Customizing Visual Appearance

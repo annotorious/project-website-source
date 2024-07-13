@@ -8,7 +8,7 @@ blurb: "This guide explains how you can write your own widgets and plug them int
 weight: 6
 meta_title: "Writing Editor Widgets"
 meta_description: "This guide explains how you can write your own widgets and plug them into the annotation editor."
-meta_link: "https://recogito.github.io/guides/editor-widgets"
+meta_link: "https://annotorious.github.io/guides/editor-widgets"
 ---
 
 # Writing Your Own Editor Widgets
@@ -21,7 +21,7 @@ You can extend the editor with your own __widgets__. A widget can be:
    same interface conventions as the built-in widgets.
 
 > Before you start writing your own widgets, you should first familiarize yourself with the
-> the [W3C Web Annotation specification](/annotorious/getting-started/web-annotation), in 
+> the [W3C Web Annotation specification](/getting-started/web-annotation), in 
 > particular the concepts of __annotation bodies__ and body __purposes__.
 
 ## Annotation Bodies
@@ -148,7 +148,7 @@ Here's what the code does, explained step by step:
 5. Just add a bit of CSS for style
 
 Since the `highlighting` body is now stored in the annotation, we can write a 
-[formatter](/annotorious/api-docs/annotorious/#formatters) that renders highlighted 
+[formatter](/api-docs/annotorious/#formatters) that renders highlighted 
 annotations in different colors. 
 
 ```js

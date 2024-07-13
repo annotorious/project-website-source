@@ -8,7 +8,7 @@ blurb: "This guide re-implements the example widget from the previous guide in R
 weight: 7
 meta_title: "Example React Widget"
 meta_description: "An example Annotorious/RecogitoJS editor widget built with React."
-meta_link: "https://recogito.github.io/guides/example-react-widget"
+meta_link: "https://annotorious.github.io/guides/example-react-widget"
 ---
 
 # An Example React Editor Widget

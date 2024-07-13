@@ -8,7 +8,7 @@ blurb: "A code example that shows how to use Annotorious in a Vue application."
 weight: 4
 meta_title: "Annotorious in Vue"
 meta_description: "A code example that shows how to use Annotorious in Vue.js"
-meta_link: "https://recogito.github.io/guides/annotorious-in-vue"
+meta_link: "https://annotorious.github.io/guides/annotorious-in-vue"
 ---
 
 # Using Annotorious in Vue.js

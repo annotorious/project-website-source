@@ -8,7 +8,7 @@ blurb: "Annotorious uses the [W3C Web Annotation model](https://www.w3.org/TR/an
 weight: 3
 meta_title: "Annotorious & Web Annotation"
 meta_description: "Learn the basics of how Annotorious uses the W3C Web Annotation standard"
-meta_link: "https://recogito.github.io/annotorious/getting-started/web-annotation"
+meta_link: "https://annotorious.github.io/getting-started/web-annotation"
 ---
 
 # The W3C Web Annotation Model 

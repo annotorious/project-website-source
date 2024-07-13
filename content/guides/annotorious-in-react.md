@@ -8,7 +8,7 @@ blurb: "A how-to that explains how you can use Annotorious in a React applicatio
 weight: 4
 meta_title: "Annotorious in React"
 meta_description: "A how-to that explains how you can use Annotorious in a React application."
-meta_link: "https://recogito.github.io/guides/annotorious-in-react"
+meta_link: "https://annotorious.github.io/guides/annotorious-in-react"
 ---
 
 # Using Annotorious in React
