@@ -12,6 +12,26 @@ html, body {
   overflow-x:hidden;
 }
 
+header.banner {
+  align-items: center;
+  background-color: #f5851e;
+  color: #fff;
+  display: flex;
+  font-weight: 500;
+  font-size: 1.2rem;
+  height: 80px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:3;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
 a {
   color:#333;
 }
@@ -118,7 +138,7 @@ a {
   width:100%;
   box-sizing:border-box;
   text-align:right;
-  top:0;
+  top:80px;
   left:0;
   z-index:3;
 
